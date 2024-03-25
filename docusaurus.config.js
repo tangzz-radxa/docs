@@ -19,7 +19,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "radxa-docs", // Usually your GitHub org/user name.
-  projectName: "documentation", // Usually your repo name.
+  projectName: "docs", // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -48,14 +48,14 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: ({ locale, docPath }) => {
             if (locale !== "zh") {
-              return `https://github.com/radxa-docs/documentation/edit/main/i18n/${locale}/docusaurus-plugin-content-docs/current/${docPath}`;
+              return `https://github.com/radxa-docs/docs/edit/main/i18n/${locale}/docusaurus-plugin-content-docs/current/${docPath}`;
             }
-            return `https://github.com/radxa-docs/documentation/edit/main/docs/${docPath}`;
+            return `https://github.com/radxa-docs/docs/edit/main/docs/${docPath}`;
           },
         },
         blog: {
           showReadingTime: true,
-          editUrl: "https://github.com/radxa-docs/documentation/edit/main/",
+          editUrl: "https://github.com/radxa-docs/docs/edit/main/",
         },
         theme: {
           customCss: [
