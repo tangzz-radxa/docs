@@ -1,0 +1,521 @@
+.card > li:hover .goH1 {
+  color: #74bc1f;
+}
+
+.card > li > a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.card > li:hover {
+  box-shadow: 0px 5.06748px 10.135px rgba(0, 0, 0, 0.25);
+}
+
+.card > li:hover {
+  color: #74bc1f;
+}
+
+.card > li:hover .goToIcon {
+  background: url(/static/colorRig.svg) no-repeat;
+  background-size: 55%;
+}
+
+.list {
+  min-height: 800px;
+}
+
+.spaceBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selectBox {
+  overflow: hidden;
+}
+
+.card {
+  padding: 0;
+}
+
+@media screen and (min-width: 1350px) {
+  .selectBox {
+    width: 100%;
+    height: 428px;
+    margin: 0 auto;
+    background-color: rgb(9, 9, 9);
+  }
+
+  .centerBox {
+    width: 880px;
+    height: 300px;
+    margin: 100px auto 0;
+  }
+
+  .card > .doc {
+    cursor: pointer;
+    width: 418px;
+    height: 230px;
+    background-color: #fff;
+    transition: 0.3s;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+
+  .card > .doc .goTo {
+    height: 46px;
+    margin-top: 50px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .card > li .goTo > h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 0;
+    color: #000000;
+    transition: 0.3s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .seleH {
+    color: #fff;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 120%;
+  }
+
+  .seleP {
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    margin-bottom: 65px;
+  }
+
+  .list {
+    width: 1300px;
+    margin: 80px auto;
+  }
+
+  .list > h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 150%;
+    color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .card {
+    width: 1300px;
+    margin: 0 auto 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .card > li {
+    cursor: pointer;
+    width: 418px;
+    height: 230px;
+    background-color: #fff;
+    transition: 0.3s;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+
+  .card > li .goTo {
+    height: 46px;
+    margin-top: 50px;
+    margin-left: 12px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+  }
+
+  .card > li .goTo > h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 0;
+    color: #000000;
+    transition: 0.3s;
+  }
+
+  .card > li p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: -0.015em;
+    color: rgba(0, 0, 0, 0.8);
+    margin-left: 12px;
+  }
+
+  .goToIcon {
+    width: 30.47px;
+    height: 30.47px;
+    background: url(/static/rig.svg) no-repeat;
+    background-size: 50%;
+    margin-left: 10px;
+    margin-top: 8px;
+    transition: 0.3s;
+  }
+
+  .card > .longli {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 1350px) and (min-width: 1050px) {
+  .selectBox {
+    width: 100%;
+    height: 328px;
+    margin: 0 auto;
+    background-color: rgb(9, 9, 9);
+  }
+
+  .centerBox {
+    width: 880px;
+    height: 300px;
+    margin: 50px auto 0;
+  }
+
+  .seleH {
+    color: #fff;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 120%;
+  }
+
+  .seleP {
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    margin-bottom: 65px;
+  }
+
+  .list {
+    width: 1050px;
+    margin: 80px auto;
+  }
+
+  .list > h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 150%;
+    color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  .card {
+    width: 1050px;
+    margin: 0 auto 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .card > li {
+    cursor: pointer;
+    width: 336.42px;
+    height: 230px;
+    background-color: #fff;
+    transition: 0.3s;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+
+  .card > li .goTo {
+    height: 46px;
+    margin-top: 50px;
+    margin-left: 12px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .card > li .goTo > h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 0;
+    color: #000000;
+    transition: 0.3s;
+  }
+
+  .card > li p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: -0.015em;
+    color: rgba(0, 0, 0, 0.8);
+    margin-left: 12px;
+  }
+
+  .goToIcon {
+    width: 30.47px;
+    height: 30.47px;
+    background: url(/static/rig.svg) no-repeat;
+    background-size: 50%;
+    margin-left: 10px;
+    margin-top: 8px;
+    transition: 0.3s;
+  }
+
+  .card > .longli {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 1050px) and (min-width: 750px) {
+  .selectBox {
+    width: 100%;
+    height: 328px;
+    margin: 0 auto;
+    background-color: rgb(9, 9, 9);
+  }
+
+  .centerBox {
+    width: 700px;
+    height: 300px;
+    margin: 50px auto 0;
+  }
+
+  .seleH {
+    color: #fff;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 120%;
+  }
+
+  .seleP {
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    margin-bottom: 65px;
+  }
+
+  .list {
+    width: 750px;
+    margin: 50px auto;
+  }
+
+  .list > h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 150%;
+    color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .card {
+    width: 700px;
+    margin: 0 auto 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .card > li {
+    cursor: pointer;
+    width: 216.42px;
+    height: 162px;
+    background-color: #fff;
+    transition: 0.3s;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+
+  .card > li .goTo {
+    height: 46px;
+    margin-top: 30px;
+    margin-left: 12px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .card > li .goTo > h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 0;
+    color: #000000;
+    transition: 0.3s;
+  }
+
+  .card > li p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    letter-spacing: -0.015em;
+    color: rgba(0, 0, 0, 0.8);
+    margin-left: 12px;
+  }
+
+  .goToIcon {
+    width: 30.47px;
+    height: 30.47px;
+    background: url(/static/rig.svg) no-repeat;
+    background-size: 50%;
+    margin-left: 10px;
+    margin-top: 8px;
+    transition: 0.3s;
+  }
+
+  .card > .longli {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  html {
+    width: 100%;
+    font-size: 16px;
+    height: 100%;
+  }
+
+  body {
+    width: 100%;
+  }
+
+  .selectBox {
+    width: 100%;
+    height: 15rem;
+    margin: 0 auto;
+    background-color: rgb(9, 9, 9);
+  }
+
+  .centerBox {
+    width: 20rem;
+    margin: 1.6rem auto 0;
+  }
+
+  .seleH {
+    color: #fff;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 120%;
+  }
+
+  .seleP {
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.8em;
+    line-height: 120%;
+    margin-bottom: 3rem;
+  }
+
+  .list {
+    width: 90%;
+    margin: 1.5rem auto;
+  }
+
+  .list > h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 150%;
+    color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .card {
+    width: 100%;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .card > li {
+    cursor: pointer;
+    width: 100%;
+    height: 8rem;
+    background-color: #fff;
+    transition: 0.3s;
+    margin-right: 0.3125rem;
+    margin-top: 0.3125rem;
+  }
+
+  .card > li .goTo {
+    height: 2rem;
+    margin-top: 0.9rem;
+    margin-left: 1rem;
+    margin-bottom: 0.15rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .card > li .goTo > h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 0;
+    color: #000000;
+    transition: 0.3s;
+  }
+
+  .card > li p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: -0.015em;
+    color: rgba(0, 0, 0, 0.8);
+    margin-left: 1rem;
+  }
+
+  .goToIcon {
+    width: 0.75rem;
+    height: 0.75rem;
+    background: url(/static/rig.svg) no-repeat;
+    background-size: 50%;
+    margin-left: 0.15rem;
+    transition: 0.3s;
+  }
+
+  .card > .longli {
+    width: 15rem;
+  }
+
+  .list {
+    min-height: 25rem;
+  }
+}

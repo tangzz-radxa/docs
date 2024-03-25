@@ -1,0 +1,24 @@
+# Lines starting with '#' are comments.
+# Each line is a file pattern followed by one or more owners.
+# These owners will be the default owners for everything in the repo.
+# * <@insert_github_username>
+#
+# Order is important. The last matching pattern has the most precedence.
+
+
+# This file is also being managed automatically by the gitown tool.
+####################Global####################
+*                   @radxa-docs/Editor
+###################Front End##################
+*.js                @xzuoqi @akgnah
+*.ts                @xzuoqi @akgnah
+*.css               @xzuoqi @akgnah
+*.json              @xzuoqi @akgnah
+src                 @xzuoqi @akgnah
+#####################CI/CD####################
+.github             @RadxaYuntian
+.pre-commit-config.* @CodeChenL @RadxaYuntian
+####################gitown####################
+.github/CODEOWNERS @radxa-docs/Editor
+.gitownrc @CodeChenL
+.cz.toml @CodeChenL

@@ -1,0 +1,257 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme="dark"] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+li {
+  list-style: none;
+}
+
+.markdown li {
+  list-style: unset;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.navbar__logo {
+  height: 30px;
+  margin-right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar__logo img {
+  margin-top: -8px;
+  height: 100%;
+}
+
+.theme-doc-sidebar-item-link-level-1 > a {
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  line-height: 22px !important;
+  color: #606770;
+}
+
+.theme-doc-sidebar-item-category > .menu__list-item-collapsible > a {
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  line-height: 22px !important;
+  color: #606770;
+}
+
+.theme-doc-sidebar-item-category-level-2
+  > .menu__list
+  > .theme-doc-sidebar-item-category-level-3
+  > .menu__list-item-collapsible
+  > a {
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 22px !important;
+  color: #606770;
+}
+
+.menu__link--active {
+  color: #6aa700 !important;
+  font-weight: 700 !important;
+}
+
+.ant-select-item-option-active {
+  opacity: 1;
+  background-color: #74bc1f !important;
+}
+
+.footer {
+  background-color: #090909 !important;
+}
+
+.footer_box {
+  background-color: #090909 !important;
+}
+
+.ant-select-item-option-active > .ant-select-item-option-content {
+  color: #fff;
+}
+
+.theme-doc-sidebar-item-category-level-1 {
+  border-left: 1.5px solid #000;
+}
+
+.theme-doc-sidebar-item-category-level-2 {
+  border-left: 1.5px solid #666;
+}
+
+.menu__list-item--collapsed {
+  border: none;
+}
+
+.theme-doc-sidebar-item-category-level-3 {
+  border-left: 1.5px solid #ccc;
+}
+
+.menu__link--active {
+  font-weight: 600;
+}
+
+.menu__list-item--collapsed {
+  border: none;
+}
+
+.menu [tabindex="0"] {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: #999999;
+}
+
+.navbar__inner {
+  width: 1300px !important;
+  margin: 0 auto;
+}
+
+[data-theme="light"] .DocSearch {
+  /* --docsearch-primary-color: var(--ifm-color-primary); */
+  /* --docsearch-text-color: var(--ifm-font-color-base); */
+  --docsearch-muted-color: var(--ifm-color-secondary-darkest);
+  --docsearch-container-background: rgba(94, 100, 112, 0.7);
+  /* 弹窗 */
+  --docsearch-modal-background: var(--ifm-color-secondary-lighter);
+  /* 搜索框 */
+  --docsearch-searchbox-background: var(--ifm-color-secondary);
+  --docsearch-searchbox-focus-background: var(--ifm-color-white);
+  /* 条目 */
+  --docsearch-hit-color: var(--ifm-font-color-base);
+  --docsearch-hit-active-color: var(--ifm-color-white);
+  --docsearch-hit-background: var(--ifm-color-white);
+  /* 页脚 */
+  --docsearch-footer-background: var(--ifm-color-white);
+}
+
+[data-theme="dark"] .DocSearch {
+  --docsearch-text-color: var(--ifm-font-color-base);
+  --docsearch-muted-color: var(--ifm-color-secondary-darkest);
+  --docsearch-container-background: rgba(47, 55, 69, 0.7);
+  /* 弹窗 */
+  --docsearch-modal-background: var(--ifm-background-color);
+  /* 搜索框 */
+  --docsearch-searchbox-background: var(--ifm-background-color);
+  --docsearch-searchbox-focus-background: var(--ifm-color-black);
+  /* 条目 */
+  --docsearch-hit-color: var(--ifm-font-color-base);
+  --docsearch-hit-active-color: var(--ifm-color-white);
+  --docsearch-hit-background: var(--ifm-color-emphasis-100);
+  /* 页脚 */
+  --docsearch-footer-background: var(--ifm-background-surface-color);
+  --docsearch-key-gradient: linear-gradient(
+    -26.5deg,
+    var(--ifm-color-emphasis-200) 0%,
+    var(--ifm-color-emphasis-100) 100%
+  );
+}
+
+@media screen and (min-width: 1350px) {
+  .ant-select {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 1350px) and (min-width: 1050px) {
+  .ant-select {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 1050px) and (min-width: 750px) {
+  .ant-select {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .ant-select {
+    width: 20rem;
+  }
+
+  .navbar {
+    height: 3.5rem;
+  }
+
+  .navbar__inner {
+    height: 100%;
+  }
+}
+
+.gpio_style > table {
+  overflow: visible;
+}
+
+.gpio_style > table td {
+  padding: 3px 5px;
+  font-size: 12px;
+}
+
+.green {
+  background-color: green;
+  color: #fff;
+}
+
+.black {
+  color: #fff;
+  background-color: black;
+}
+
+.blue {
+  color: #fff;
+  background-color: blue;
+}
+
+.yellow {
+  color: #000;
+  background-color: yellow;
+}
+
+.red {
+  color: #000;
+  background-color: red;
+}
+
+.orange {
+  color: #000;
+  background-color: orange;
+}
+
+img {
+  display: block;
+  margin: 0px auto;
+}
+
+.hidden {
+  display: none !important;
+}
