@@ -46,6 +46,7 @@ const config = {
           routeBasePath: "/",
           docItemComponent: "@site/src/components/CustomDocItem",
           sidebarPath: require.resolve("./sidebars.js"),
+          exclude: ['**/template/**', '**/common/**'],
           editUrl: ({ locale, docPath }) => {
             if (locale !== "zh") {
               return `https://github.com/radxa-docs/docs/edit/main/i18n/${locale}/docusaurus-plugin-content-docs/current/${docPath}`;
@@ -281,7 +282,7 @@ const config = {
         ],
       },
     }),
-    plugins: [require.resolve(path.join(__dirname, '/plugins/symlink-resolver'))]
+  plugins: [require.resolve(path.join(__dirname, '/plugins/symlink-resolver'))]
 };
 
 module.exports = config;
