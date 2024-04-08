@@ -1,9 +1,16 @@
 # Radxa Documentation
 
+## Fork
+
+Fork https://github.com/radxa-docs/docs to your own github account.
+
 ## Clone
 
 ```bash
-git clone --recurse-submodules https://github.com/radxa-docs/docs-template.git
+git clone https://github.com/radxa-docs/docs-template.git
+cd docs-template
+git submodule set-url contents git@github.com:your_username/docs.git
+git submodule update --init --recursive
 ```
 
 ## Build
