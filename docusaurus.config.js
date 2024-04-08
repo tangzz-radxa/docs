@@ -110,31 +110,31 @@ const config = {
           {
             position: "right",
             label: "Home",
-            to: "http://www.radxa.com/",
+            to: "https://radxa.com/",
             target: "_self",
           },
           {
             position: "right",
             label: "Products",
-            to: "http://www.radxa.com/products",
+            to: "https://radxa.com/products",
             target: "_self",
           },
           {
             position: "right",
             label: "News",
-            to: "http://www.radxa.com/news",
+            to: "https://radxa.com/news",
             target: "_self",
           },
           {
             position: "right",
             label: "About",
-            to: "http://www.radxa.com/about",
+            to: "https://radxa.com/about",
             target: "_self",
           },
           {
             position: "right",
             label: "Services",
-            to: "http://www.radxa.com/services",
+            to: "https://radxa.com/services",
             target: "_self",
           },
           {
@@ -144,7 +144,7 @@ const config = {
             items: [
               {
                 label: "Community",
-                href: "http://www.radxa.com/community",
+                href: "https://radxa.com/community",
               },
               {
                 label: "Forum",
@@ -174,27 +174,27 @@ const config = {
             items: [
               {
                 label: "Home",
-                to: "http://www.radxa.com/",
+                to: "https://radxa.com/",
                 target: "_self",
               },
               {
                 label: "Products",
-                to: "http://www.radxa.com/product",
+                to: "https://radxa.com/product",
                 target: "_self",
               },
               {
                 label: "News",
-                to: "http://www.radxa.com/news",
+                to: "https://radxa.com/news",
                 target: "_self",
               },
               {
                 label: "Services",
-                to: "http://www.radxa.com/services",
+                to: "https://radxa.com/services",
                 target: "_self",
               },
               {
                 label: "Community",
-                to: "http://www.radxa.com/association",
+                to: "https://radxa.com/association",
                 target: "_self",
               },
             ],
@@ -221,15 +221,15 @@ const config = {
             items: [
               {
                 label: "About Radxa",
-                to: "http://www.radxa.com/about",
+                to: "https://radxa.com/about",
               },
               {
                 label: "Contact Radxa",
-                to: "http://www.radxa.com/about?#contact",
+                to: "https://radxa.com/about?#contact",
               },
               {
                 label: "About Distributors",
-                to: "http://www.radxa.com/about#distributors",
+                to: "https://radxa.com/about#distributors",
               },
               {
                 html: `
