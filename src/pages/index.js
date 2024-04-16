@@ -1,109 +1,100 @@
 import React, { useState } from "react";
-import Link from "@docusaurus/Link";
-import { Select, Space, ConfigProvider } from "antd";
-import Layout from "@theme/Layout";
 import styles from "./index.module.css";
+import Layout from "@theme/Layout";
+import Link from "@docusaurus/Link";
 import { getDocs } from "../utils/getDocs";
-import {
-  getProduct_Line,
-  getProduct_Name,
-  getProduct_doc,
-} from "../utils/getProducts";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Translate from "@docusaurus/Translate";
+import SearchBar from '@theme/SearchBar';
 
 export default () => {
-  const { i18n } = useDocusaurusContext();
-  const homeDoc = getDocs().Home.sidebar_custom_props.product_docs;
-  const productLine = getProduct_Line(homeDoc, i18n.currentLocale);
-  const productName = getProduct_Name(homeDoc, i18n.currentLocale);
-  const [products, setProducts] = useState(productName[productLine[0]]);
-  const [selectedProduct, setSelectedProduct] = useState(
-    productName[productLine[0]][0],
-  );
-  const element = getProduct_doc(homeDoc, selectedProduct, i18n.currentLocale);
+	const { i18n } = useDocusaurusContext();
+	const currentLocale = i18n.currentLocale === 'zh'
+	const homeDocData = getDocs().Home.sidebar_custom_props.product_docs || [];
+	const [seriesKey, setSeriesKey] = useState(0);
 
-  const onProductLineChange = (value) => {
-    setProducts(productName[value]);
-    setSelectedProduct(productName[value][0]);
-  };
+	const svgEle = <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+		<path d="M13.5039 27L22.5039 18L13.5039 9" stroke="#333333" strokeWidth="2.88018" strokeLinecap="round" strokeLinejoin="round" />
+	</svg>
 
-  const onProductChange = (value) => {
-    setSelectedProduct(value);
-  };
+	const icons = {
+		Overview: '/home/overview.svg',
+		Download: '/home/download.svg',
+		Accessories: '/home/accessories.svg',
+		GettingStart: '/home/gettingstart.svg',
+		Certification: '/home/certification.svg',
+		SystemConfigrations: '/home/radxaos.svg',
+	}
 
-  return (
-    <Layout>
-      <div style={{ backgroundColor: "rgb(249, 249, 249)" }}>
-        <ConfigProvider
-          theme={{
-            token: {
-              colorPrimary: "#fff",
-            },
-          }}
-        >
-          <div className={styles.selectBox}>
-            <div className={styles.centerBox}>
-              <h1 className={styles.seleH}>
-                <Translate id="home.page.HomePageTitle"></Translate>
-              </h1>
-              <p className={styles.seleP}>
-                <Translate id="home.page.HomePageIntroduction"></Translate>
-              </p>
-              <div className={styles.spaceBox}>
-                <Space wrap>
-                  <Select
-                    placement="bottomRight"
-                    bordered="false"
-                    defaultValue={productLine[0]}
-                    onChange={onProductLineChange}
-                    options={productLine.map((productLine) => ({
-                      label: productLine,
-                      value: productLine,
-                    }))}
-                  />
-                  <Select
-                    bordered="false"
-                    value={selectedProduct}
-                    onChange={onProductChange}
-                    options={products.map((product) => ({
-                      label: product,
-                      value: product,
-                    }))}
-                  />
-                </Space>
-              </div>
-              <div style={{ float: "right" }}></div>
-            </div>
-          </div>
-          <div className={styles.list}>
-            <h1>{selectedProduct}</h1>
-            <ul className={styles.card}>
-              {element.map((item, idx) => {
-                return (
-                  <li key={idx} className={styles.doc}>
-                    <Link to={item.url}>
-                      <div className={styles.goTo}>
-                        <h1 className={styles.goH1}>
-                          {i18n.currentLocale === "zh"
-                            ? item.title_zh
-                            : item.title_en}
-                        </h1>
-                        <div className={styles.goToIcon}></div>
-                      </div>
-                      <p>
-                        {i18n.currentLocale === "zh"
-                          ? item.info_zh
-                          : item.info_en}
-                      </p>
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        </ConfigProvider>
-      </div>
-    </Layout>
-  );
+	return (
+		<Layout>
+			<div className={styles.docs_home_main}>
+				<div className={styles.docs_entry}>
+					<h1>Radxa Documentation Center</h1>
+					<p>Choose a product</p>
+					<div className={styles.search_box}>
+						<SearchBar />
+					</div>
+					<div className={styles.hot_topic}>
+						<p>Hot Topic</p>
+						<div>
+							<Link to='/rock3'>ROCK 3 Family</Link>
+							<Link to='/rock4'>ROCK 4 Family</Link>
+							<Link to='/rock5'>ROCK 5 Family</Link>
+							<Link to='/rock5'>ROCK 5 Family</Link>
+						</div>
+					</div>
+				</div>
+				<div className={styles.products_center}>
+					<ul className={styles.product_lines}>
+						{
+							homeDocData.map((item, index) => {
+								return (
+									<li key={index}
+										className={seriesKey === index ? styles.current_series : null}
+										onClick={() => {
+											setSeriesKey(index)
+										}}
+									>
+										{currentLocale ? item.series_zh : item.series_en}
+									</li>
+								)
+							})
+						}
+					</ul>
+					<div className={styles.line_info}>
+						<p>{currentLocale ? homeDocData[seriesKey].series_zh : homeDocData[seriesKey].series_en}</p>
+						<p>{currentLocale ? homeDocData[seriesKey].series_introduction_zh : homeDocData[seriesKey].series_introduction_en}</p>
+						<ul className={styles.photos}>
+							{
+								homeDocData[seriesKey].products.length > 0 ? homeDocData[seriesKey].products.map((item, index) => {
+									return (
+										<li key={index}>
+											<p>{item.products_name}</p>
+											<img src={item.products_photo_url} alt={item.products_name} />
+										</li>
+									)
+								}) : null
+							}
+						</ul>
+						<div className={styles.doc_links}>
+							{
+								homeDocData[seriesKey].docs.length > 0 ? homeDocData[seriesKey].docs.map((item, index) => {
+									return (
+										<Link to={item.docs_link} key={index}>
+											<img src={icons[item.docs_photo_type]} />
+											<p className={styles.link_title}>
+												<span>{currentLocale ? item.docs_name_zh : item.docs_name_en} {svgEle}</span>
+												<span>{currentLocale ? item.docs_info_zh : item.docs_info_en}</span>
+											</p>
+										</Link>
+									)
+								}) : null
+							}
+						</div>
+					</div>
+				</div>
+			</div>
+		</Layout>
+	);
 };
