@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./index.module.css";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
@@ -17,6 +17,11 @@ export default () => {
 	const svgEle = <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
 		<path d="M13.5039 27L22.5039 18L13.5039 9" stroke="#333333" strokeWidth="2.88018" strokeLinecap="round" strokeLinejoin="round" />
 	</svg>
+
+	useEffect(() => {
+		if (localStorage.getItem('radxa_doc_current')) return
+		localStorage.getItem('radxa_doc_current') ? null : localStorage.setItem('radxa_doc_current', 0)
+	}, [])
 
 	const icons = {
 		Overview: '/home/overview.svg',
