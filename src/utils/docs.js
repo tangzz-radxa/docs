@@ -38,6 +38,38 @@ const Image = ({ src, alt, width, height, ...rest }) => {
   return <img src={_src} alt={_alt} width={width} height={height} />;
 };
 
+const PreView = ({ children, params }) => {
+  if (!params || typeof params !== 'object') {
+    return <pre style={{ whiteSpace: 'pre-wrap' }}>{children}</pre>;
+  }
+
+  let content = '';
+  if (typeof children === 'string') {
+    content = children;
+  } else if (Array.isArray(children)) {
+    children.forEach(child => {
+      if (typeof child === 'string') {
+        content += child;
+      } else if (React.isValidElement(child)) {
+        content += React.Children.toArray(child.props.children).join('');
+      }
+    });
+  } else if (React.isValidElement(children)) {
+    content = React.Children.toArray(children.props.children).join('');
+  } else {
+    content = String(children);
+  }
+
+  for (const key in params) {
+    if (params.hasOwnProperty(key)) {
+      const placeholder = `#${key}#`;
+      content = content.replace(new RegExp(placeholder, 'g'), params[key]);
+    }
+  }
+
+  return <pre style={{ whiteSpace: 'pre-wrap' }}>{content}</pre>;
+};
+
 const Details = ({ summary, children }) => {
   return (
     <details>
@@ -47,4 +79,4 @@ const Details = ({ summary, children }) => {
   );
 };
 
-export { Section, Image, Details };
+export { Section, Image, Details ,PreView};
