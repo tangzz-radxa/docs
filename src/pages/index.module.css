@@ -517,4 +517,120 @@
     }
 }
 
-@media screen and (max-width: 750px) {}
+@media screen and (max-width: 750px) {
+    .docs_entry>h1 {
+        font-size: 1.6rem;
+        margin: 3rem 0 1rem;
+    }
+
+    .docs_entry>p {
+        font-size: 1rem;
+    }
+
+    .search_box {
+        margin: 2rem auto;
+    }
+
+    .search_box>button {
+        width: 15rem;
+    }
+
+    .hot_topic {
+        width: 90%;
+        margin: 0 auto 2rem;
+    }
+
+    .hot_topic>p {
+        font-size: 1rem;
+    }
+
+    .hot_topic>div {
+        gap: .4rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hot_topic>div>a {
+        font-size: 1rem;
+        padding: 1rem;
+        gap: .2rem;
+    }
+
+    .products_center {
+        width: 95%;
+        margin: 2rem auto 0;
+        flex-direction: column;
+        /* position: relative; */
+    }
+
+    .product_lines {
+        width: 100%;
+        position: sticky;
+        top: 10rem;
+        left: 0;
+    }
+
+    .product_lines>li {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        font-size: 1.6rem;
+    }
+
+    .line_info>p:first-child {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .line_info>p:last-child {
+        font-size: 1.4rem;
+    }
+
+    .photos {
+        grid-template-columns: repeat(1, 1fr);
+        gap: .5rem;
+    }
+
+    .line_info {
+        width: 100%;
+    }
+
+    .photos>li {
+        width: 100%;
+        padding-bottom: 2rem;
+        gap: 1rem;
+    }
+
+    .photos>li>p {
+        font-size: 1.6rem;
+        padding: 1rem;
+    }
+
+    .doc_links {
+        gap: 1rem;
+        margin: 3rem 0 6rem;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .doc_links>a {
+        padding: 1.5rem;
+    }
+
+    .doc_links>a>img {
+        width: 4rem;
+        height: 4rem;
+        margin-right: 1rem;
+    }
+
+    .link_title>span:first-child {
+        font-size: 1.6rem;
+    }
+
+    .link_title>span:last-child {
+        font-size: 1.2rem;
+    }
+
+    .link_title>span>svg {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-left: 0rem;
+    }
+}
