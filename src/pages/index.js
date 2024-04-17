@@ -12,7 +12,7 @@ export default () => {
 	const isBrowser = useIsBrowser();
 	const currentLocale = i18n.currentLocale === 'zh'
 	const homeDocData = getDocs().Home.sidebar_custom_props.product_docs || [];
-	const [seriesKey, setSeriesKey] = useState(isBrowser ? sessionStorage.getItem('radxa_doc_current') : 0 || 0);
+	const [seriesKey, setSeriesKey] = useState(isBrowser ? localStorage.getItem('radxa_doc_current') : 0 || 0);
 
 	const svgEle = <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
 		<path d="M13.5039 27L22.5039 18L13.5039 9" stroke="#333333" strokeWidth="2.88018" strokeLinecap="round" strokeLinejoin="round" />
@@ -49,20 +49,19 @@ export default () => {
 				<div className={styles.products_center}>
 					<ul className={styles.product_lines}>
 						{
-							homeDocData.map((item, index) => {
+							homeDocData.length > 0 ? homeDocData.map((item, index) => {
 								return (
 									<li key={index}
 										className={seriesKey == index ? styles.current_series : null}
 										onClick={() => {
 											setSeriesKey(index)
-											console.log(sessionStorage.getItem('radxa_doc_current'));
-											sessionStorage.setItem('radxa_doc_current', index)
+											localStorage.setItem('radxa_doc_current', index)
 										}}
 									>
 										{currentLocale ? item.series_zh : item.series_en}
 									</li>
 								)
-							})
+							}) : null
 						}
 					</ul>
 					<div className={styles.line_info}>
