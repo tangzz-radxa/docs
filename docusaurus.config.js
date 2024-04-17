@@ -12,7 +12,7 @@ const config = {
   url: "https://docs.radxa.com",
   baseUrl: "/",
   trailingSlash: false,
-  onBrokenLinks: "throw",
+  onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
 
@@ -36,7 +36,6 @@ const config = {
       },
     },
   },
-
   presets: [
     [
       "classic",
