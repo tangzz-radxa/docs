@@ -6,12 +6,13 @@ import { getDocs } from "../utils/getDocs";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Translate from "@docusaurus/Translate";
 import SearchBar from '@theme/SearchBar';
-
+import useIsBrowser from '@docusaurus/useIsBrowser';
 export default () => {
 	const { i18n } = useDocusaurusContext();
+	const isBrowser = useIsBrowser();
 	const currentLocale = i18n.currentLocale === 'zh'
 	const homeDocData = getDocs().Home.sidebar_custom_props.product_docs || [];
-	const [seriesKey, setSeriesKey] = useState(0);
+	const [seriesKey, setSeriesKey] = useState(isBrowser ? sessionStorage.getItem('radxa_doc_current') : 0 || 0);
 
 	const svgEle = <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
 		<path d="M13.5039 27L22.5039 18L13.5039 9" stroke="#333333" strokeWidth="2.88018" strokeLinecap="round" strokeLinejoin="round" />
@@ -30,18 +31,18 @@ export default () => {
 		<Layout>
 			<div className={styles.docs_home_main}>
 				<div className={styles.docs_entry}>
-					<h1>Radxa Documentation Center</h1>
-					<p>Choose a product</p>
+					<h1><Translate id="radxa.docs" /></h1>
+					<p><Translate id="radxa.docs.info1" /></p>
 					<div className={styles.search_box}>
 						<SearchBar />
 					</div>
 					<div className={styles.hot_topic}>
-						<p>Hot Topic</p>
+						<p><Translate id="radxa.docs.hot" /></p>
 						<div>
 							<Link to='/rock3'>ROCK 3 Family</Link>
-							<Link to='/rock4'>ROCK 4 Family</Link>
 							<Link to='/rock5'>ROCK 5 Family</Link>
-							<Link to='/rock5'>ROCK 5 Family</Link>
+							<Link to='/zero'>ZERO Family</Link>
+							<Link to='/nio'>NIO Family</Link>
 						</div>
 					</div>
 				</div>
@@ -51,9 +52,11 @@ export default () => {
 							homeDocData.map((item, index) => {
 								return (
 									<li key={index}
-										className={seriesKey === index ? styles.current_series : null}
+										className={seriesKey == index ? styles.current_series : null}
 										onClick={() => {
 											setSeriesKey(index)
+											console.log(sessionStorage.getItem('radxa_doc_current'));
+											sessionStorage.setItem('radxa_doc_current', index)
 										}}
 									>
 										{currentLocale ? item.series_zh : item.series_en}
@@ -65,18 +68,18 @@ export default () => {
 					<div className={styles.line_info}>
 						<p>{currentLocale ? homeDocData[seriesKey].series_zh : homeDocData[seriesKey].series_en}</p>
 						<p>{currentLocale ? homeDocData[seriesKey].series_introduction_zh : homeDocData[seriesKey].series_introduction_en}</p>
-						<ul className={styles.photos}>
+						<div className={styles.photos}>
 							{
 								homeDocData[seriesKey].products.length > 0 ? homeDocData[seriesKey].products.map((item, index) => {
 									return (
-										<li key={index}>
+										<Link key={index} to={item.products_link}>
 											<p>{item.products_name}</p>
 											<img src={item.products_photo_url} alt={item.products_name} />
-										</li>
+										</Link>
 									)
 								}) : null
 							}
-						</ul>
+						</div>
 						<div className={styles.doc_links}>
 							{
 								homeDocData[seriesKey].docs.length > 0 ? homeDocData[seriesKey].docs.map((item, index) => {

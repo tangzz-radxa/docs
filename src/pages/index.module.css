@@ -127,7 +127,7 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
-.photos>li {
+.photos>a {
     border-radius: 20px;
     border: 1px solid #E9E9E9;
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
@@ -136,7 +136,7 @@
     align-items: center;
 }
 
-.photos>li>p {
+.photos>a>p {
     color: #555;
     font-family: "Familjen Grotesk";
     font-style: normal;
@@ -148,7 +148,7 @@
     margin: 0;
 }
 
-.photos>li>img {
+.photos>a>img {
     flex-shrink: 0;
     width: 100%;
     aspect-ratio: 33/15;
@@ -251,7 +251,7 @@
 
     .products_center {
         width: 1400px;
-
+        min-height: 1000px;
         margin: 60px auto 0;
     }
 
@@ -274,12 +274,12 @@
         gap: 20px;
     }
 
-    .photos>li {
+    .photos>a {
         padding-bottom: 20px;
         gap: 10px;
     }
 
-    .photos>li>p {
+    .photos>a>p {
         font-size: 24px;
         padding: 10px;
     }
@@ -353,6 +353,7 @@
 
     .products_center {
         width: 90%;
+        min-height: 800px;
         margin: 40px auto 0;
     }
 
@@ -375,12 +376,12 @@
         gap: 20px;
     }
 
-    .photos>li {
+    .photos>a {
         padding-bottom: 20px;
         gap: 10px;
     }
 
-    .photos>li>p {
+    .photos>a>p {
         font-size: 24px;
         padding: 10px;
     }
@@ -454,6 +455,7 @@
 
     .products_center {
         width: 90%;
+        min-height: 800px;
         margin: 30px auto 0;
     }
 
@@ -477,12 +479,12 @@
         gap: 15px;
     }
 
-    .photos>li {
+    .photos>a {
         padding-bottom: 20px;
         gap: 10px;
     }
 
-    .photos>li>p {
+    .photos>a>p {
         font-size: 20px;
         padding: 10px;
     }
@@ -593,13 +595,13 @@
         width: 100%;
     }
 
-    .photos>li {
+    .photos>a {
         width: 100%;
         padding-bottom: 2rem;
         gap: 1rem;
     }
 
-    .photos>li>p {
+    .photos>a>p {
         font-size: 1.6rem;
         padding: 1rem;
     }
