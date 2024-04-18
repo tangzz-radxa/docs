@@ -5,7 +5,7 @@
 
 .docs_entry {
     width: 100%;
-    background-color: #000;
+    background-color: #2c2c2c;
     overflow: hidden;
 }
 
@@ -136,6 +136,10 @@
     align-items: center;
 }
 
+.photos>a:hover {
+    border: 1.5px solid #74BC1F;
+}
+
 .photos>a>p {
     color: #555;
     font-family: "Familjen Grotesk";
@@ -162,11 +166,12 @@
 
 .doc_links>a {
     border-radius: 20px;
-    border: 1px solid #F4F4F4;
+    border: 1.5px solid #F4F4F4;
     background: #FFF;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.05);
 }
 
 .doc_links>a:hover {
@@ -209,7 +214,6 @@
 .product_lines>.current_series {
     background-color: #74BC1F;
     color: #fff;
-    cursor: auto;
 }
 
 @media screen and (min-width: 1450px) {
@@ -223,7 +227,7 @@
     }
 
     .search_box {
-        margin: 50px auto 130px;
+        margin: 50px auto 90px;
     }
 
     .search_box>button {
@@ -325,7 +329,7 @@
     }
 
     .search_box {
-        margin: 40px auto 80px;
+        margin: 40px auto 70px;
     }
 
     .search_box>button {
