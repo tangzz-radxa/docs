@@ -14,6 +14,7 @@ export default () => {
 	const homeDocData = getDocs().Home.sidebar_custom_props.product_docs || [];
 	const [seriesKey, setSeriesKey] = useState(isBrowser ? localStorage.getItem('radxa_doc_current') : 0 || 0);
 	const [productKey, setProductKey] = useState(isBrowser ? localStorage.getItem('radxa_product_current') : 0 || 0);
+	const [loading, setLoading] = useState(true)
 
 	const svgEle = <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
 		<path d="M13.5039 27L22.5039 18L13.5039 9" stroke="#333333" strokeWidth="2.88018" strokeLinecap="round" strokeLinejoin="round" />
@@ -37,6 +38,10 @@ export default () => {
 		Certification: '/home/certification.svg',
 		SystemConfigrations: '/home/radxaos.svg',
 	}
+
+	useEffect(() => {
+
+	}, [loading])
 
 	return (
 		<Layout>
@@ -68,6 +73,7 @@ export default () => {
 											setSeriesKey(index)
 											if (index !== seriesKey) {
 												setProductKey(0)
+												setLoading(true)
 											}
 											localStorage.setItem('radxa_doc_current', index)
 										}}
@@ -94,9 +100,16 @@ export default () => {
 											}}
 										>
 											<p>{item.products_name}</p>
+											{
+												loading ? <div className={styles.loading_box}><p className={styles.loading_spinner}></p></div> : null
+											}
 											<img
+												style={{ display: `${loading ? 'none' : 'block'}` }}
 												src={item.products_photo_url}
 												alt={item.products_name}
+												onLoad={() => {
+													setLoading(false)
+												}}
 											/>
 										</p>
 									)

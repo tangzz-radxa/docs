@@ -157,6 +157,13 @@
     margin: 0;
 }
 
+.loading_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading_box,
 .photos>p>img {
     flex-shrink: 0;
     width: 100%;
@@ -219,6 +226,25 @@
 .product_lines>.current_series {
     background-color: #74BC1F;
     color: #fff;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading_spinner {
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #74BC1F;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
 }
 
 @media screen and (min-width: 1450px) {
