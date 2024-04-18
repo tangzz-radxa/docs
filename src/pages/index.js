@@ -95,7 +95,13 @@ export default () => {
 											}}
 										>
 											<p>{item.products_name}</p>
-											<img src={item.products_photo_url} alt={item.products_name} />
+											<img
+												src={item.products_photo_url}
+												alt={item.products_name}
+												onLoad={(e) => {
+													e.target.style.opacity = 1
+												}}
+											/>
 										</Link>
 									)
 								}) : null

@@ -160,6 +160,8 @@
     flex-shrink: 0;
     width: 100%;
     aspect-ratio: 33/15;
+    opacity: 0;
+    transition: .5s;
 }
 
 .doc_links {
