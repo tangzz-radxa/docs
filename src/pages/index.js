@@ -81,15 +81,14 @@ export default () => {
 					<div className={styles.line_info}>
 						<p>{currentLocale ? homeDocData[seriesKey].series_zh : homeDocData[seriesKey].series_en}</p>
 						<p>{currentLocale ? homeDocData[seriesKey].series_introduction_zh : homeDocData[seriesKey].series_introduction_en}</p>
-						<div className={styles.photos}>
+						<div className={styles.photos} id="photo">
 							{
 								homeDocData[seriesKey].products.length > 0 ? homeDocData[seriesKey].products.map((item, index) => {
 									return (
-										<Link
+										<p
 											key={index}
-											to={item.products_link}
 											className={productKey == index ? styles.current_photo : null}
-											onMouseMove={() => {
+											onClick={() => {
 												setProductKey(index)
 												localStorage.setItem('radxa_product_current', index)
 											}}
@@ -98,11 +97,8 @@ export default () => {
 											<img
 												src={item.products_photo_url}
 												alt={item.products_name}
-												onLoad={(e) => {
-													e.target.style.opacity = 1
-												}}
 											/>
-										</Link>
+										</p>
 									)
 								}) : null
 							}

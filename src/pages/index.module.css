@@ -127,24 +127,25 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
-.photos>a {
+.photos>p {
     border-radius: 20px;
     border: 1px solid #E9E9E9;
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
 }
 
 .photos>.current_photo {
     border: 1.5px solid #74BC1F;
 }
 
-.photos>a:hover {
+.photos>p:hover {
     border: 1.5px solid #74BC1F;
 }
 
-.photos>a>p {
+.photos>p>p {
     color: #555;
     font-family: "Familjen Grotesk";
     font-style: normal;
@@ -156,12 +157,10 @@
     margin: 0;
 }
 
-.photos>a>img {
+.photos>p>img {
     flex-shrink: 0;
     width: 100%;
     aspect-ratio: 33/15;
-    opacity: 0;
-    transition: .5s;
 }
 
 .doc_links {
@@ -284,12 +283,12 @@
         gap: 20px;
     }
 
-    .photos>a {
+    .photos>p {
         padding-bottom: 20px;
         gap: 10px;
     }
 
-    .photos>a>p {
+    .photos>p>p {
         font-size: 24px;
         padding: 10px;
     }
@@ -386,12 +385,12 @@
         gap: 20px;
     }
 
-    .photos>a {
+    .photos>p {
         padding-bottom: 20px;
         gap: 10px;
     }
 
-    .photos>a>p {
+    .photos>p>p {
         font-size: 24px;
         padding: 10px;
     }
@@ -489,12 +488,12 @@
         gap: 15px;
     }
 
-    .photos>a {
+    .photos>p {
         padding-bottom: 20px;
         gap: 10px;
     }
 
-    .photos>a>p {
+    .photos>p>p {
         font-size: 20px;
         padding: 10px;
     }
@@ -605,13 +604,13 @@
         width: 100%;
     }
 
-    .photos>a {
+    .photos>p {
         width: 100%;
         padding-bottom: 2rem;
         gap: 1rem;
     }
 
-    .photos>a>p {
+    .photos>p>p {
         font-size: 1.6rem;
         padding: 1rem;
     }
