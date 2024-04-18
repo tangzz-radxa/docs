@@ -58,7 +58,7 @@ export default () => {
 								return (
 									<li key={index}
 										className={seriesKey == index ? styles.current_series : null}
-										onClick={() => {
+										onMouseMove={() => {
 											setSeriesKey(index)
 											localStorage.setItem('radxa_doc_current', index)
 										}}
