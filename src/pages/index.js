@@ -13,6 +13,7 @@ export default () => {
 	const currentLocale = i18n.currentLocale === 'zh'
 	const homeDocData = getDocs().Home.sidebar_custom_props.product_docs || [];
 	const [seriesKey, setSeriesKey] = useState(isBrowser ? localStorage.getItem('radxa_doc_current') : 0 || 0);
+	const [productKey, setProductKey] = useState(isBrowser ? localStorage.getItem('radxa_product_current') : 0 || 0);
 
 	const svgEle = <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
 		<path d="M13.5039 27L22.5039 18L13.5039 9" stroke="#333333" strokeWidth="2.88018" strokeLinecap="round" strokeLinejoin="round" />
@@ -21,6 +22,11 @@ export default () => {
 	useEffect(() => {
 		if (localStorage.getItem('radxa_doc_current')) return
 		localStorage.getItem('radxa_doc_current') ? null : localStorage.setItem('radxa_doc_current', 0)
+	}, [])
+
+	useEffect(() => {
+		if (localStorage.getItem('radxa_product_current')) return
+		localStorage.getItem('radxa_product_current') ? null : localStorage.setItem('radxa_product_current', 0)
 	}, [])
 
 	const icons = {
@@ -58,8 +64,11 @@ export default () => {
 								return (
 									<li key={index}
 										className={seriesKey == index ? styles.current_series : null}
-										onMouseMove={() => {
+										onClick={() => {
 											setSeriesKey(index)
+											if (index !== seriesKey) {
+												setProductKey(0)
+											}
 											localStorage.setItem('radxa_doc_current', index)
 										}}
 									>
@@ -76,7 +85,15 @@ export default () => {
 							{
 								homeDocData[seriesKey].products.length > 0 ? homeDocData[seriesKey].products.map((item, index) => {
 									return (
-										<Link key={index} to={item.products_link}>
+										<Link
+											key={index}
+											to={item.products_link}
+											className={productKey == index ? styles.current_photo : null}
+											onMouseMove={() => {
+												setProductKey(index)
+												localStorage.setItem('radxa_product_current', index)
+											}}
+										>
 											<p>{item.products_name}</p>
 											<img src={item.products_photo_url} alt={item.products_name} />
 										</Link>
@@ -86,7 +103,7 @@ export default () => {
 						</div>
 						<div className={styles.doc_links}>
 							{
-								homeDocData[seriesKey].docs.length > 0 ? homeDocData[seriesKey].docs.map((item, index) => {
+								homeDocData[seriesKey].products[productKey].docs.length > 0 && homeDocData[seriesKey].products[productKey].docs ? homeDocData[seriesKey].products[productKey].docs.map((item, index) => {
 									return (
 										<Link to={item.docs_link} key={index}>
 											<img src={icons[item.docs_photo_type]} />

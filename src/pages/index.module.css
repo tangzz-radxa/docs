@@ -136,6 +136,10 @@
     align-items: center;
 }
 
+.photos>.current_photo {
+    border: 1.5px solid #74BC1F;
+}
+
 .photos>a:hover {
     border: 1.5px solid #74BC1F;
 }
