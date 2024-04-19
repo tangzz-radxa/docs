@@ -37,6 +37,8 @@ export default () => {
 		GettingStart: '/home/gettingstart.svg',
 		Certification: '/home/certification.svg',
 		SystemConfigrations: '/home/radxaos.svg',
+		FAQ: '/home/faq.svg',
+		Android: '/home/android.svg',
 	}
 
 	useEffect(() => {
