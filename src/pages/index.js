@@ -14,7 +14,7 @@ export default () => {
 	const homeDocData = getDocs().Home.sidebar_custom_props.product_docs || [];
 	const [seriesKey, setSeriesKey] = useState(isBrowser ? localStorage.getItem('radxa_doc_current') : 0 || 0);
 	const [productKey, setProductKey] = useState(isBrowser ? localStorage.getItem('radxa_product_current') : 0 || 0);
-	const [loading, setLoading] = useState(true)
+	const [loading, setLoading] = useState(false)
 
 	const svgEle = <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
 		<path d="M13.5039 27L22.5039 18L13.5039 9" stroke="#333333" strokeWidth="2.88018" strokeLinecap="round" strokeLinejoin="round" />
@@ -40,10 +40,6 @@ export default () => {
 		FAQ: '/home/faq.svg',
 		Android: '/home/android.svg',
 	}
-
-	useEffect(() => {
-
-	}, [loading])
 
 	return (
 		<Layout>
@@ -92,29 +88,29 @@ export default () => {
 						<div className={styles.photos} id="photo">
 							{
 								homeDocData[seriesKey].products.length > 0 ? homeDocData[seriesKey].products.map((item, index) => {
-									return (
-										<p
-											key={index}
-											className={productKey == index ? styles.current_photo : null}
-											onClick={() => {
-												setProductKey(index)
-												localStorage.setItem('radxa_product_current', index)
+									return <div
+										key={index}
+										className={productKey == index ? styles.current_photo : null
+										}
+										onClick={() => {
+											setProductKey(index)
+											localStorage.setItem('radxa_product_current', index)
+										}}
+									>
+										{
+											loading ? <div className={styles.loading_box}><p className={styles.loading_spinner}></p></div> : <>
+												<span>{item.products_name}</span>
+											</>
+										}
+										<img
+											style={{ display: `${loading ? 'none' : 'block'}` }}
+											src={item.products_photo_url}
+											alt={item.products_name}
+											onLoad={() => {
+												setLoading(false)
 											}}
-										>
-											<p>{item.products_name}</p>
-											{
-												loading ? <div className={styles.loading_box}><p className={styles.loading_spinner}></p></div> : null
-											}
-											<img
-												style={{ display: `${loading ? 'none' : 'block'}` }}
-												src={item.products_photo_url}
-												alt={item.products_name}
-												onLoad={() => {
-													setLoading(false)
-												}}
-											/>
-										</p>
-									)
+										/>
+									</div>
 								}) : null
 							}
 						</div>
@@ -136,6 +132,6 @@ export default () => {
 					</div>
 				</div>
 			</div>
-		</Layout>
+		</Layout >
 	);
 };
