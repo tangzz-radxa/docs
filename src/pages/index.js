@@ -88,11 +88,12 @@ export default () => {
 						<div className={styles.photos} id="photo">
 							{
 								homeDocData[seriesKey].products.length > 0 ? homeDocData[seriesKey].products.map((item, index) => {
-									return <div
+									return <Link
+										to={item.products_link}
 										key={index}
 										className={productKey == index ? styles.current_photo : null
 										}
-										onClick={() => {
+										onMouseMove={() => {
 											setProductKey(index)
 											localStorage.setItem('radxa_product_current', index)
 										}}
@@ -110,7 +111,7 @@ export default () => {
 												setLoading(false)
 											}}
 										/>
-									</div>
+									</Link>
 								}) : null
 							}
 						</div>
