@@ -99,17 +99,13 @@ const config = {
           src: "logo.svg",
           width: 90,
           height: 20,
+          href: "https://radxa.com/",
         },
         items: [
           {
-            type: "doc",
-            label: "Welcome",
-            docId: "welcome",
-          },
-          {
-            position: "right",
-            label: "Home",
-            to: "https://radxa.com/",
+            label: "Docs",
+            to: "/",
+            position: "left",
             target: "_self",
           },
           {
