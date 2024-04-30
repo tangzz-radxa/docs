@@ -104,7 +104,7 @@ const config = {
         items: [
           {
             label: "Docs",
-            to: "/",
+            to: "/wellcome",
             position: "left",
             target: "_self",
           },
