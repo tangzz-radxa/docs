@@ -51,11 +51,11 @@ export default function DocItemFooter() {
   pathname = pathname.replace("/en", "");
   const filename = "docs" + pathname + ".md";
   const filename_readme = "docs" + pathname + "/README.md";
-
   const contributorsIndex =
     contributorsData[filename] || contributorsData[filename_readme];
   const { metadata } = useDoc();
   const {
+    id,
     editUrl,
     lastUpdatedAt,
     formattedLastUpdatedAt,
@@ -75,7 +75,7 @@ export default function DocItemFooter() {
       >
         <div className={clsx(styles.issues_center)}>
           <img src="/page/issue.svg" className={styles.issues_icon} />
-          <Link to="https://github.com/radxa-docs/docs/issues/new">
+          <Link to={`https://github.com/radxa-docs/docs/issues/new?title=Issue%20from%20${encodeURIComponent(id)}`}>
             <Translate id="docs.issue" />
           </Link>
         </div >
