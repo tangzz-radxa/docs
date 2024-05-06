@@ -96,7 +96,7 @@ const config = {
         hideOnScroll: true,
         logo: {
           alt: "Radxa",
-          src: "logo.svg",
+          src: "/page/logo.svg",
           width: 90,
           height: 20,
           href: "https://radxa.com/",
