@@ -26,14 +26,14 @@
     align-items: center;
   }
 
-  .footer_box > .footer_center > .log {
+  .footer_box>.footer_center>.log {
     width: 90px;
     height: 25.64px;
-    background: url(/static/logo.svg) no-repeat;
+    background: url(/static/page/logo.svg) no-repeat;
     background-size: 100%;
   }
 
-  .footer_box > .footer_center > .iconBox {
+  .footer_box>.footer_center>.iconBox {
     width: 300px;
     height: 24px;
     display: flex;
@@ -41,14 +41,14 @@
     align-items: center;
   }
 
-  .footer_box > .footer_center > .iconBox > .men {
+  .footer_box>.footer_center>.iconBox>.men {
     height: 24px;
     font-size: 18px;
     color: #fff;
     font-weight: 500;
   }
 
-  .footer_box > .footer_center > .iconBox > ul {
+  .footer_box>.footer_center>.iconBox>ul {
     width: 180px;
     height: 24px;
     display: flex;
@@ -56,13 +56,13 @@
     align-items: center;
   }
 
-  .footer_box > .footer_center > .iconBox > ul > li {
+  .footer_box>.footer_center>.iconBox>ul>li {
     position: relative;
     width: 24px;
     height: 24px;
   }
 
-  .footer_box > .footer_center > .iconBox > ul > li > .iconpg {
+  .footer_box>.footer_center>.iconBox>ul>li>.iconpg {
     display: block;
     width: 100%;
     height: 100%;
@@ -80,7 +80,7 @@
     left: -38px;
     width: 100px;
     height: 100px;
-    background: url(/static/wxma.svg) no-repeat;
+    background: url(/static/page/wxma.svg) no-repeat;
     background-size: 100%;
   }
 
@@ -95,34 +95,34 @@
     left: -38px;
     width: 100px;
     height: 100px;
-    background: url(/static/QQma.svg) no-repeat;
+    background: url(/static/page/QQma.svg) no-repeat;
     background-size: 100%;
   }
 
   .a_on1 {
-    background: url(/static/mingit.svg) no-repeat;
+    background: url(/static/page/mingit.svg) no-repeat;
     background-size: 100%;
   }
 
   .a_on2 {
-    background: url(/static/mindis.svg) no-repeat;
+    background: url(/static/page/mindis.svg) no-repeat;
     background-size: 100%;
   }
 
   .a_on3 {
-    background: url(/static/mintel.svg) no-repeat;
+    background: url(/static/page/mintel.svg) no-repeat;
     background-size: 100%;
   }
 
   .a_on4 {
     cursor: pointer;
-    background: url(/static/minvx.svg) no-repeat;
+    background: url(/static/page/minvx.svg) no-repeat;
     background-size: 100%;
   }
 
   .a_on5 {
     cursor: pointer;
-    background: url(/static/minqq.svg) no-repeat;
+    background: url(/static/page/minqq.svg) no-repeat;
     background-size: 100%;
   }
 
@@ -132,27 +132,27 @@
 }
 
 .a_on1:hover {
-  background: url(/static/gitgreen.svg) no-repeat;
+  background: url(/static/page/gitgreen.svg) no-repeat;
   background-size: 100%;
 }
 
 .a_on2:hover {
-  background: url(/static/disgreen.svg) no-repeat;
+  background: url(/static/page/disgreen.svg) no-repeat;
   background-size: 100%;
 }
 
 .a_on3:hover {
-  background: url(/static/telgreen.svg) no-repeat;
+  background: url(/static/page/telgreen.svg) no-repeat;
   background-size: 100%;
 }
 
 .a_on4:hover {
-  background: url(/static/wxgreen.svg) no-repeat;
+  background: url(/static/page/wxgreen.svg) no-repeat;
   background-size: 100%;
 }
 
 .a_on5:hover {
-  background: url(/static/QQgreen.svg) no-repeat;
+  background: url(/static/page/QQgreen.svg) no-repeat;
   background-size: 100%;
 }
 
@@ -184,14 +184,14 @@
     align-items: center;
   }
 
-  .footer_box > .footer_center > .log {
+  .footer_box>.footer_center>.log {
     width: 90px;
     height: 25.64px;
-    background: url(/static/logo.svg) no-repeat;
+    background: url(/static/page/logo.svg) no-repeat;
     background-size: 100%;
   }
 
-  .footer_box > .footer_center > .iconBox {
+  .footer_box>.footer_center>.iconBox {
     width: 300px;
     height: 24px;
     display: flex;
@@ -199,14 +199,14 @@
     align-items: center;
   }
 
-  .footer_box > .footer_center > .iconBox > .men {
+  .footer_box>.footer_center>.iconBox>.men {
     height: 24px;
     font-size: 18px;
     color: #fff;
     font-weight: 500;
   }
 
-  .footer_box > .footer_center > .iconBox > ul {
+  .footer_box>.footer_center>.iconBox>ul {
     width: 180px;
     height: 24px;
     display: flex;
@@ -214,13 +214,13 @@
     align-items: center;
   }
 
-  .footer_box > .footer_center > .iconBox > ul > li {
+  .footer_box>.footer_center>.iconBox>ul>li {
     position: relative;
     width: 24px;
     height: 24px;
   }
 
-  .footer_box > .footer_center > .iconBox > ul > li > .iconpg {
+  .footer_box>.footer_center>.iconBox>ul>li>.iconpg {
     display: block;
     width: 100%;
     height: 100%;
@@ -258,29 +258,29 @@
   }
 
   .a_on1 {
-    background: url(/static/mingit.svg) no-repeat;
+    background: url(/static/page/mingit.svg) no-repeat;
     background-size: 100%;
   }
 
   .a_on2 {
-    background: url(/static/mindis.svg) no-repeat;
+    background: url(/static/page/mindis.svg) no-repeat;
     background-size: 100%;
   }
 
   .a_on3 {
-    background: url(/static/mintel.svg) no-repeat;
+    background: url(/static/page/mintel.svg) no-repeat;
     background-size: 100%;
   }
 
   .a_on4 {
     cursor: pointer;
-    background: url(/static/minvx.svg) no-repeat;
+    background: url(/static/page/minvx.svg) no-repeat;
     background-size: 100%;
   }
 
   .a_on5 {
     cursor: pointer;
-    background: url(/static/minqq.svg) no-repeat;
+    background: url(/static/page/minqq.svg) no-repeat;
     background-size: 100%;
   }
 
@@ -317,14 +317,14 @@
     align-items: center;
   }
 
-  .footer_box > .footer_center > .log {
+  .footer_box>.footer_center>.log {
     width: 90px;
     height: 25.64px;
-    background: url(/static/logo.svg) no-repeat;
+    background: url(/static/page/logo.svg) no-repeat;
     background-size: 100%;
   }
 
-  .footer_box > .footer_center > .iconBox {
+  .footer_box>.footer_center>.iconBox {
     width: 300px;
     height: 24px;
     display: flex;
@@ -332,14 +332,14 @@
     align-items: center;
   }
 
-  .footer_box > .footer_center > .iconBox > .men {
+  .footer_box>.footer_center>.iconBox>.men {
     height: 24px;
     font-size: 18px;
     color: #fff;
     font-weight: 500;
   }
 
-  .footer_box > .footer_center > .iconBox > ul {
+  .footer_box>.footer_center>.iconBox>ul {
     width: 180px;
     height: 24px;
     display: flex;
@@ -347,13 +347,13 @@
     align-items: center;
   }
 
-  .footer_box > .footer_center > .iconBox > ul > li {
+  .footer_box>.footer_center>.iconBox>ul>li {
     width: 24px;
     height: 24px;
     position: relative;
   }
 
-  .footer_box > .footer_center > .iconBox > ul > li > .iconpg {
+  .footer_box>.footer_center>.iconBox>ul>li>.iconpg {
     display: block;
     width: 100%;
     height: 100%;
@@ -391,29 +391,29 @@
   }
 
   .a_on1 {
-    background: url(/static/mingit.svg) no-repeat;
+    background: url(/static/page/mingit.svg) no-repeat;
     background-size: 100%;
   }
 
   .a_on2 {
-    background: url(/static/mindis.svg) no-repeat;
+    background: url(/static/page/mindis.svg) no-repeat;
     background-size: 100%;
   }
 
   .a_on3 {
-    background: url(/static/mintel.svg) no-repeat;
+    background: url(/static/page/mintel.svg) no-repeat;
     background-size: 100%;
   }
 
   .a_on4 {
     cursor: pointer;
-    background: url(/static/minvx.svg) no-repeat;
+    background: url(/static/page/minvx.svg) no-repeat;
     background-size: 100%;
   }
 
   .a_on5 {
     cursor: pointer;
-    background: url(/static/minqq.svg) no-repeat;
+    background: url(/static/page/minqq.svg) no-repeat;
     background-size: 100%;
   }
 

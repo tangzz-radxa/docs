@@ -1,5 +1,6 @@
 import React from "react";
 import clsx from "clsx";
+import Link from "@docusaurus/Link";
 import { useLocation } from "@docusaurus/router";
 import { ThemeClassNames } from "@docusaurus/theme-common";
 import { useDoc } from "@docusaurus/theme-common/internal";
@@ -8,7 +9,7 @@ import EditThisPage from "@theme/EditThisPage";
 import TagsListInline from "@theme/TagsListInline";
 import styles from "./styles.module.css";
 import Translate from "@docusaurus/Translate";
-const contributorsData = require("@site/static/contributors.json");
+const contributorsData = require("@site/static/page/contributors.json");
 
 function TagsRow(props) {
   return (
@@ -72,23 +73,33 @@ export default function DocItemFooter() {
       <footer
         className={clsx(ThemeClassNames.docs.docFooter, "docusaurus-mt-lg")}
       >
-        {canDisplayTagsRow && <TagsRow tags={tags} />}
-        {canDisplayEditMetaRow && (
-          <EditMetaRow
-            editUrl={editUrl}
-            lastUpdatedAt={lastUpdatedAt}
-            lastUpdatedBy={lastUpdatedBy}
-            formattedLastUpdatedAt={formattedLastUpdatedAt}
-          />
-        )}
-      </footer>
+        <div className={clsx(styles.issues_center)}>
+          <img src="/page/issue.svg" className={styles.issues_icon} />
+          <Link to="https://github.com/radxa-docs/docs/issues/new">
+            <Translate id="docs.issue" />
+          </Link>
+        </div >
+        {canDisplayTagsRow && <TagsRow tags={tags} />
+        }
+        {
+          canDisplayEditMetaRow && (
+            <EditMetaRow
+              editUrl={editUrl}
+              lastUpdatedAt={lastUpdatedAt}
+              lastUpdatedBy={lastUpdatedBy}
+              formattedLastUpdatedAt={formattedLastUpdatedAt}
+            />
+          )
+        }
+      </footer >
       {contributorsIndex && (
         <h3
           className={clsx(ThemeClassNames.docs.docFooter, "docusaurus-mt-lg")}
         >
           <Translate id="docs.contributors" />
         </h3>
-      )}
+      )
+      }
       <ul className={styles.dedicateUl}>
         {contributorsIndex &&
           contributorsIndex.map((item, key) => {
