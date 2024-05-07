@@ -74,7 +74,7 @@ export default function DocItemFooter() {
         className={clsx(ThemeClassNames.docs.docFooter, "docusaurus-mt-lg")}
       >
         <div className={clsx(styles.issues_center)}>
-          <img src="/page/issue.svg" className={styles.issues_icon} />
+          <span className={styles.issues_icon}>🐞</span>
           <Link to={`https://github.com/radxa-docs/docs/issues/new?title=Issue%20from%20${encodeURIComponent(id)}`}>
             <Translate id="docs.issue" />
           </Link>
