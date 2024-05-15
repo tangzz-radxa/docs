@@ -2,17 +2,17 @@ import React from "react";
 import PropTypes from 'prop-types';
 import styles from './index.module.css'
 
-const TipField = (props) => {
+const NewCodeBlock = (props) => {
     const { tip } = props
     if (!props.children || typeof (props.children.props.children) === 'string') {
         throw new Error(`请补充code内容，code不能为空，内容格式参考:
-        <TipField tip='Your text'>
+        <NewCodeBlock tip='Your text'>
             \`\`\`
 
             Your Content
 
             \`\`\`
-        </TipField>
+        </NewCodeBlock>
         `);
     }
     return <div className={styles.textBox}>
@@ -23,11 +23,11 @@ const TipField = (props) => {
     </div>
 }
 
-TipField.prototype = {
+NewCodeBlock.prototype = {
     tip: PropTypes.string.isRequired,
 }
-TipField.defaultProps = {
+NewCodeBlock.defaultProps = {
     tip: 'Code',
 }
 
-export default TipField
+export default NewCodeBlock

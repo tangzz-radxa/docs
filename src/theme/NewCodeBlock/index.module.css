@@ -5,11 +5,11 @@
 .superscript {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     display: inline;
     background-color: #74bc1f;
     padding: 0.5rem 2rem;
-    border-radius: 0 .4rem 0 .4rem;
+    border-radius: .4rem 0 .4rem 0;
     display: block;
     color: #fff;
     font-size: 1rem;
