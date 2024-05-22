@@ -6,6 +6,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
+  --ifm-container-width-xl: 100%;
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
@@ -53,6 +54,7 @@ a:hover {
   height: 100%;
 }
 
+/*
 .theme-doc-sidebar-item-link-level-1>a {
   font-weight: 600 !important;
   font-size: 16px !important;
@@ -72,11 +74,11 @@ a:hover {
   font-size: 16px !important;
   line-height: 22px !important;
   color: #606770;
-}
+} */
 
 .menu__link--active {
   color: #6aa700 !important;
-  font-weight: 700 !important;
+  font-weight: 600 !important;
 }
 
 .ant-select-item-option-active {
@@ -92,7 +94,7 @@ a:hover {
   background-color: #090909 !important;
 }
 
-.ant-select-item-option-active>.ant-select-item-option-content {
+.ant-select-item-option-active > .ant-select-item-option-content {
   color: #fff;
 }
 
@@ -165,9 +167,11 @@ a:hover {
   --docsearch-hit-background: var(--ifm-color-emphasis-100);
   /* 页脚 */
   --docsearch-footer-background: var(--ifm-background-surface-color);
-  --docsearch-key-gradient: linear-gradient(-26.5deg,
-      var(--ifm-color-emphasis-200) 0%,
-      var(--ifm-color-emphasis-100) 100%);
+  --docsearch-key-gradient: linear-gradient(
+    -26.5deg,
+    var(--ifm-color-emphasis-200) 0%,
+    var(--ifm-color-emphasis-100) 100%
+  );
 }
 
 @media screen and (min-width: 1350px) {
@@ -202,11 +206,11 @@ a:hover {
   }
 }
 
-.gpio_style>table {
+.gpio_style > table {
   overflow: visible;
 }
 
-.gpio_style>table td {
+.gpio_style > table td {
   padding: 3px 5px;
   font-size: 12px;
 }
