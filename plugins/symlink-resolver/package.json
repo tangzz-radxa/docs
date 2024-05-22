@@ -1,5 +1,5 @@
 {
-    "name": "symlink-resolver",
-    "version": "0.0.1",
-    "private": true
+  "name": "symlink-resolver",
+  "private": true,
+  "version": "0.0.1"
 }

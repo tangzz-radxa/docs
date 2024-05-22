@@ -75,31 +75,31 @@ export default function DocItemFooter() {
       >
         <div className={clsx(styles.issues_center)}>
           <span className={styles.issues_icon}>🐞</span>
-          <Link to={`https://github.com/radxa-docs/docs/issues/new?title=Issue%20from%20${encodeURIComponent(id)}`}>
+          <Link
+            to={`https://github.com/radxa-docs/docs/issues/new?title=Issue%20from%20${encodeURIComponent(
+              id,
+            )}`}
+          >
             <Translate id="docs.issue" />
           </Link>
-        </div >
-        {canDisplayTagsRow && <TagsRow tags={tags} />
-        }
-        {
-          canDisplayEditMetaRow && (
-            <EditMetaRow
-              editUrl={editUrl}
-              lastUpdatedAt={lastUpdatedAt}
-              lastUpdatedBy={lastUpdatedBy}
-              formattedLastUpdatedAt={formattedLastUpdatedAt}
-            />
-          )
-        }
-      </footer >
+        </div>
+        {canDisplayTagsRow && <TagsRow tags={tags} />}
+        {canDisplayEditMetaRow && (
+          <EditMetaRow
+            editUrl={editUrl}
+            lastUpdatedAt={lastUpdatedAt}
+            lastUpdatedBy={lastUpdatedBy}
+            formattedLastUpdatedAt={formattedLastUpdatedAt}
+          />
+        )}
+      </footer>
       {contributorsIndex && (
         <h3
           className={clsx(ThemeClassNames.docs.docFooter, "docusaurus-mt-lg")}
         >
           <Translate id="docs.contributors" />
         </h3>
-      )
-      }
+      )}
       <ul className={styles.dedicateUl}>
         {contributorsIndex &&
           contributorsIndex.map((item, key) => {

@@ -1,8 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-import { themes as prismThemes } from 'prism-react-renderer';
-const path = require("path")
+import { themes as prismThemes } from "prism-react-renderer";
+const path = require("path");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -277,7 +277,7 @@ const config = {
         ],
       },
     }),
-  plugins: [require.resolve(path.join(__dirname, '/plugins/symlink-resolver'))]
+  plugins: [require.resolve(path.join(__dirname, "/plugins/symlink-resolver"))],
 };
 
 module.exports = config;
