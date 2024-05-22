@@ -245,9 +245,9 @@ a:hover {
   background-color: orange;
 }
 
-img {
+.container img {
   display: block;
-  margin: 0px auto;
+  margin: 0 auto;
 }
 
 .hidden {
