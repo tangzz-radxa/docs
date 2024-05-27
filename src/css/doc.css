@@ -1,0 +1,129 @@
+/* 文档默认style */
+.navbar__logo {
+    height: 30px;
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar__logo img {
+    margin-top: -8px;
+    height: 100%;
+}
+
+.markdown li {
+    list-style: unset;
+}
+
+.menu__link--active {
+    color: #6aa700 !important;
+    font-weight: 600 !important;
+}
+
+.ant-select-item-option-active {
+    opacity: 1;
+    background-color: #74bc1f !important;
+}
+
+.footer {
+    background-color: #090909 !important;
+}
+
+.footer_box {
+    background-color: #090909 !important;
+}
+
+.theme-doc-sidebar-item-category-level-1 {
+    border-left: 1.5px solid #000;
+}
+
+.theme-doc-sidebar-item-category-level-2 {
+    border-left: 1.5px solid #666;
+}
+
+.menu__list-item--collapsed {
+    border: none;
+}
+
+.theme-doc-sidebar-item-category-level-3 {
+    border-left: 1.5px solid #ccc;
+}
+
+.menu__link--active {
+    font-weight: 600;
+}
+
+.menu__list-item--collapsed {
+    border: none;
+}
+
+.menu [tabindex="0"] {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: #999999;
+}
+
+.navbar__inner {
+    margin: 0 auto;
+}
+
+/* 文档自定义style */
+.gpio_style>table {
+    overflow: visible;
+}
+
+.gpio_style>table td {
+    padding: 3px 5px;
+    font-size: 12px;
+}
+
+.green {
+    background-color: green;
+    color: #fff;
+}
+
+.black {
+    color: #fff;
+    background-color: black;
+}
+
+.blue {
+    color: #fff;
+    background-color: blue;
+}
+
+.yellow {
+    color: #000;
+    background-color: yellow;
+}
+
+.red {
+    color: #000;
+    background-color: red;
+}
+
+.orange {
+    color: #000;
+    background-color: orange;
+}
+
+.container img {
+    display: block;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@media screen and (max-width: 750px) {
+    .navbar {
+        height: 3.5rem;
+    }
+
+    .navbar__inner {
+        height: 100%;
+    }
+}
