@@ -1,10 +1,104 @@
-@media screen and (min-width: 1350px) {
-  .footer {
-    position: relative;
-  }
+.a_on1 {
+  background: url(/static/page/mingit.svg) no-repeat;
+  background-size: 100%;
+}
 
+.a_on2 {
+  background: url(/static/page/mindis.svg) no-repeat;
+  background-size: 100%;
+}
+
+.a_on3 {
+  background: url(/static/page/mintel.svg) no-repeat;
+  background-size: 100%;
+}
+
+.a_on4 {
+  cursor: pointer;
+  background: url(/static/page/minvx.svg) no-repeat;
+  background-size: 100%;
+}
+
+.a_on5 {
+  cursor: pointer;
+  background: url(/static/page/minqq.svg) no-repeat;
+  background-size: 100%;
+}
+
+.footer {
+  position: relative;
+}
+
+.footer_center {
+  border-bottom: 1px solid #565656;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_box > .footer_center > .log {
+  width: 90px;
+  height: 25.64px;
+  background: url(/static/page/logo.svg) no-repeat;
+  background-size: 100%;
+}
+
+.footer_box > .footer_center > .iconBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_box > .footer_center > .iconBox > .men {
+  color: #fff;
+  font-weight: 600;
+}
+
+.footer_box > .footer_center > .iconBox > ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_box > .footer_center > .iconBox > ul > li {
+  position: relative;
+}
+
+.footer_box > .footer_center > .iconBox > ul > li > .iconpg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.a_on4_li:hover .vxMa {
+  display: block;
+}
+
+.vxMa {
+  display: none;
+  position: absolute;
+  background-color: #565656;
+  background: url(/static/page/wxma.svg) no-repeat;
+  background-size: 100%;
+}
+
+.a_on5_li:hover .qqMa {
+  display: block;
+}
+
+.qqMa {
+  display: none;
+  position: absolute;
+  background: url(/static/page/QQma.svg) no-repeat;
+  background-size: 100%;
+}
+
+@media screen and (min-width: 1350px) {
   .container {
     margin-top: 50px;
+    max-width: 1300px !important;
   }
 
   .footer_box {
@@ -18,112 +112,40 @@
 
   .footer_center {
     width: 1300px;
-    border-bottom: 1px solid #565656;
-    height: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .footer_box > .footer_center > .log {
-    width: 90px;
-    height: 25.64px;
-    background: url(/static/page/logo.svg) no-repeat;
-    background-size: 100%;
   }
 
   .footer_box > .footer_center > .iconBox {
     width: 300px;
     height: 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 
   .footer_box > .footer_center > .iconBox > .men {
     height: 24px;
     font-size: 18px;
-    color: #fff;
-    font-weight: 500;
   }
 
   .footer_box > .footer_center > .iconBox > ul {
     width: 180px;
     height: 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 
   .footer_box > .footer_center > .iconBox > ul > li {
-    position: relative;
     width: 24px;
     height: 24px;
   }
 
-  .footer_box > .footer_center > .iconBox > ul > li > .iconpg {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-
-  .a_on4_li:hover .vxMa {
-    opacity: 1;
-  }
-
   .vxMa {
-    opacity: 0;
-    position: absolute;
-    background-color: #565656;
     top: -120px;
     left: -38px;
     width: 100px;
     height: 100px;
-    background: url(/static/page/wxma.svg) no-repeat;
-    background-size: 100%;
-  }
-
-  .a_on5_li:hover .qqMa {
-    opacity: 1;
   }
 
   .qqMa {
-    opacity: 0;
-    position: absolute;
     top: -120px;
     left: -38px;
     width: 100px;
     height: 100px;
-    background: url(/static/page/QQma.svg) no-repeat;
-    background-size: 100%;
-  }
-
-  .a_on1 {
-    background: url(/static/page/mingit.svg) no-repeat;
-    background-size: 100%;
-  }
-
-  .a_on2 {
-    background: url(/static/page/mindis.svg) no-repeat;
-    background-size: 100%;
-  }
-
-  .a_on3 {
-    background: url(/static/page/mintel.svg) no-repeat;
-    background-size: 100%;
-  }
-
-  .a_on4 {
-    cursor: pointer;
-    background: url(/static/page/minvx.svg) no-repeat;
-    background-size: 100%;
-  }
-
-  .a_on5 {
-    cursor: pointer;
-    background: url(/static/page/minqq.svg) no-repeat;
-    background-size: 100%;
   }
 
   .footer .row {
@@ -131,36 +153,7 @@
   }
 }
 
-.a_on1:hover {
-  background: url(/static/page/gitgreen.svg) no-repeat;
-  background-size: 100%;
-}
-
-.a_on2:hover {
-  background: url(/static/page/disgreen.svg) no-repeat;
-  background-size: 100%;
-}
-
-.a_on3:hover {
-  background: url(/static/page/telgreen.svg) no-repeat;
-  background-size: 100%;
-}
-
-.a_on4:hover {
-  background: url(/static/page/wxgreen.svg) no-repeat;
-  background-size: 100%;
-}
-
-.a_on5:hover {
-  background: url(/static/page/QQgreen.svg) no-repeat;
-  background-size: 100%;
-}
-
 @media screen and (max-width: 1350px) and (min-width: 1050px) {
-  .footer {
-    position: relative;
-  }
-
   .container {
     margin-top: 50px;
   }
@@ -175,113 +168,41 @@
   }
 
   .footer_center {
-    width: 1000px;
-    border-bottom: 1px solid #565656;
-    height: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .footer_box > .footer_center > .log {
-    width: 90px;
-    height: 25.64px;
-    background: url(/static/page/logo.svg) no-repeat;
-    background-size: 100%;
+    width: 95%;
   }
 
   .footer_box > .footer_center > .iconBox {
     width: 300px;
     height: 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 
   .footer_box > .footer_center > .iconBox > .men {
     height: 24px;
     font-size: 18px;
-    color: #fff;
-    font-weight: 500;
   }
 
   .footer_box > .footer_center > .iconBox > ul {
     width: 180px;
     height: 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 
   .footer_box > .footer_center > .iconBox > ul > li {
-    position: relative;
     width: 24px;
     height: 24px;
   }
 
-  .footer_box > .footer_center > .iconBox > ul > li > .iconpg {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-
-  .a_on4_li:hover .vxMa {
-    opacity: 1;
-  }
-
   .vxMa {
-    opacity: 0;
-    position: absolute;
-    background-color: #565656;
     top: -120px;
     left: -38px;
     width: 100px;
     height: 100px;
-    background: url(/static/association/wei.svg) no-repeat;
-    background-size: 100%;
-  }
-
-  .a_on5_li:hover .qqMa {
-    opacity: 1;
   }
 
   .qqMa {
-    opacity: 0;
-    position: absolute;
     top: -120px;
     left: -38px;
     width: 100px;
     height: 100px;
-    background: url(/static/association/QQ.svg) no-repeat;
-    background-size: 100%;
-  }
-
-  .a_on1 {
-    background: url(/static/page/mingit.svg) no-repeat;
-    background-size: 100%;
-  }
-
-  .a_on2 {
-    background: url(/static/page/mindis.svg) no-repeat;
-    background-size: 100%;
-  }
-
-  .a_on3 {
-    background: url(/static/page/mintel.svg) no-repeat;
-    background-size: 100%;
-  }
-
-  .a_on4 {
-    cursor: pointer;
-    background: url(/static/page/minvx.svg) no-repeat;
-    background-size: 100%;
-  }
-
-  .a_on5 {
-    cursor: pointer;
-    background: url(/static/page/minqq.svg) no-repeat;
-    background-size: 100%;
   }
 
   .footer .row {
@@ -290,10 +211,6 @@
 }
 
 @media screen and (max-width: 1050px) and (min-width: 750px) {
-  .footer {
-    position: relative;
-  }
-
   .container {
     margin-top: 50px;
   }
@@ -308,113 +225,41 @@
   }
 
   .footer_center {
-    width: 700px;
-    border-bottom: 1px solid #565656;
-    height: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .footer_box > .footer_center > .log {
-    width: 90px;
-    height: 25.64px;
-    background: url(/static/page/logo.svg) no-repeat;
-    background-size: 100%;
+    width: 95%;
   }
 
   .footer_box > .footer_center > .iconBox {
     width: 300px;
     height: 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 
   .footer_box > .footer_center > .iconBox > .men {
     height: 24px;
     font-size: 18px;
-    color: #fff;
-    font-weight: 500;
   }
 
   .footer_box > .footer_center > .iconBox > ul {
     width: 180px;
     height: 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 
   .footer_box > .footer_center > .iconBox > ul > li {
     width: 24px;
     height: 24px;
-    position: relative;
-  }
-
-  .footer_box > .footer_center > .iconBox > ul > li > .iconpg {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-
-  .a_on4_li:hover .vxMa {
-    opacity: 1;
   }
 
   .vxMa {
-    opacity: 0;
-    position: absolute;
-    background-color: #565656;
     top: -120px;
     left: -38px;
     width: 100px;
     height: 100px;
-    background: url(/static/association/wei.svg) no-repeat;
-    background-size: 100%;
-  }
-
-  .a_on5_li:hover .qqMa {
-    opacity: 1;
   }
 
   .qqMa {
-    opacity: 0;
-    position: absolute;
     top: -120px;
     left: -38px;
     width: 100px;
     height: 100px;
-    background: url(/static/association/QQ.svg) no-repeat;
-    background-size: 100%;
-  }
-
-  .a_on1 {
-    background: url(/static/page/mingit.svg) no-repeat;
-    background-size: 100%;
-  }
-
-  .a_on2 {
-    background: url(/static/page/mindis.svg) no-repeat;
-    background-size: 100%;
-  }
-
-  .a_on3 {
-    background: url(/static/page/mintel.svg) no-repeat;
-    background-size: 100%;
-  }
-
-  .a_on4 {
-    cursor: pointer;
-    background: url(/static/page/minvx.svg) no-repeat;
-    background-size: 100%;
-  }
-
-  .a_on5 {
-    cursor: pointer;
-    background: url(/static/page/minqq.svg) no-repeat;
-    background-size: 100%;
   }
 
   .footer .row {
