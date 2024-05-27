@@ -1,19 +1,17 @@
-import React from 'react';
-import clsx from 'clsx';
+import React from "react";
+import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import { useLocation } from "@docusaurus/router";
-import { ThemeClassNames } from '@docusaurus/theme-common';
-import { useDoc } from '@docusaurus/theme-common/internal';
-import TagsListInline from '@theme/TagsListInline';
-import EditMetaRow from '@theme/EditMetaRow';
+import { ThemeClassNames } from "@docusaurus/theme-common";
+import { useDoc } from "@docusaurus/theme-common/internal";
+import TagsListInline from "@theme/TagsListInline";
+import EditMetaRow from "@theme/EditMetaRow";
 import styles from "./index.module.css";
 import Translate from "@docusaurus/Translate";
 const contributorsData = require("@site/static/page/contributors.json");
 export default function DocItemFooter() {
   const { metadata } = useDoc();
-  const {
-    id,
-  } = metadata;
+  const { id } = metadata;
   let { pathname } = useLocation();
   pathname = pathname.replace("/en", "");
   const filename = "docs" + pathname + ".md";
@@ -30,7 +28,8 @@ export default function DocItemFooter() {
   return (
     <>
       <footer
-        className={clsx(ThemeClassNames.docs.docFooter, 'docusaurus-mt-lg')}>
+        className={clsx(ThemeClassNames.docs.docFooter, "docusaurus-mt-lg")}
+      >
         <div className={clsx(styles.issues_center)}>
           <Link
             to={`https://github.com/radxa-docs/docs/issues/new?title=Issue%20from%20${encodeURIComponent(
@@ -44,9 +43,10 @@ export default function DocItemFooter() {
         {canDisplayTagsRow && (
           <div
             className={clsx(
-              'row margin-top--sm',
+              "row margin-top--sm",
               ThemeClassNames.docs.docFooterTagsRow,
-            )}>
+            )}
+          >
             <div className="col">
               <TagsListInline tags={tags} />
             </div>
@@ -55,7 +55,7 @@ export default function DocItemFooter() {
         {canDisplayEditMetaRow && (
           <EditMetaRow
             className={clsx(
-              'margin-top--sm',
+              "margin-top--sm",
               ThemeClassNames.docs.docFooterEditMetaRow,
             )}
             editUrl={editUrl}
