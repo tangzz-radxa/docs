@@ -11,7 +11,7 @@ import {
   InlineWarning,
   InlineInfo,
   InlineSuccess,
-} from "../components/CustomDocItem/InlineText";
+} from ".//InlineText";
 
 export default {
   // Re-use the default mapping
