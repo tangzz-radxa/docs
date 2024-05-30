@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "./index.module.css";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
@@ -7,6 +7,8 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Translate from "@docusaurus/Translate";
 import SearchBar from "@theme/SearchBar";
 import useIsBrowser from "@docusaurus/useIsBrowser";
+import clsx from "clsx";
+
 export default () => {
   const { i18n } = useDocusaurusContext();
   const isBrowser = useIsBrowser();
@@ -19,6 +21,9 @@ export default () => {
     isBrowser ? localStorage.getItem("radxa_product_current") : 0 || 0,
   );
   const [loading, setLoading] = useState(false);
+  const itemsRef = useRef([]);
+  const [renderCount, setRenderCount] = useState(0);
+  const [rendered, setRendered] = useState(false);
 
   const svgEle = (
     <svg
@@ -51,6 +56,41 @@ export default () => {
       ? null
       : localStorage.setItem("radxa_product_current", 0);
   }, []);
+
+  useEffect(() => {
+    if (homeDocData.length === renderCount) {
+      setRendered(true);
+    }
+  }, [renderCount, homeDocData]);
+
+  useEffect(() => {
+    setRenderCount(itemsRef.current.length);
+  }, [homeDocData]);
+
+  const leftItems = homeDocData.map((item, index) => {
+    return (
+      <li
+        key={index}
+        ref={(el) => {
+          itemsRef.current[index] = el;
+          if (index === homeDocData.length - 1) {
+            setRenderCount(itemsRef.current.length);
+          }
+        }}
+        className={seriesKey == index ? styles.current_series : null}
+        onClick={() => {
+          setSeriesKey(index);
+          if (index !== seriesKey) {
+            setProductKey(0);
+            setLoading(true);
+          }
+          localStorage.setItem("radxa_doc_current", index);
+        }}
+      >
+        {currentLocale ? item.series_zh : item.series_en}
+      </li>
+    );
+  });
 
   const icons = {
     Overview: "/home/overview.svg",
@@ -88,30 +128,12 @@ export default () => {
             </div>
           </div>
         </div>
-        <div className={styles.products_center}>
+        <div
+          className={styles.products_center}
+          style={{ display: `${rendered ? "flex" : "none"}` }}
+        >
           <ul className={styles.product_lines}>
-            {homeDocData.length > 0
-              ? homeDocData.map((item, index) => {
-                  return (
-                    <li
-                      key={index}
-                      className={
-                        seriesKey == index ? styles.current_series : null
-                      }
-                      onClick={() => {
-                        setSeriesKey(index);
-                        if (index !== seriesKey) {
-                          setProductKey(0);
-                          setLoading(true);
-                        }
-                        localStorage.setItem("radxa_doc_current", index);
-                      }}
-                    >
-                      {currentLocale ? item.series_zh : item.series_en}
-                    </li>
-                  );
-                })
-              : null}
+            {homeDocData.length > 0 ? leftItems : null}
           </ul>
           <div className={styles.line_info}>
             <p>
@@ -189,6 +211,12 @@ export default () => {
                 : null}
             </div>
           </div>
+        </div>
+        <div
+          className={styles.load_box}
+          style={{ display: `${!rendered ? "flex" : "none"}` }}
+        >
+          <p className={clsx(styles.loading_spinner, styles.loading_max)}></p>
         </div>
       </div>
     </Layout>

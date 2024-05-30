@@ -247,6 +247,19 @@
   animation: spin 1s linear infinite;
 }
 
+.load_box {
+  width: 100%;
+  aspect-ratio: 192/60;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.loading_max {
+  width: 100px;
+  height: 100px;
+}
+
 @media screen and (min-width: 1450px) {
   .docs_entry > h1 {
     font-size: 57px;
