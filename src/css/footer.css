@@ -263,7 +263,16 @@
     height: 100px;
   }
 
-  .footer .row {
-    width: 600px;
+  .footer .container-fluid {
+    width: 100%;
+  }
+
+  .footer__links {
+    flex-wrap: nowrap;
+  }
+
+  .footer .footer__col {
+    width: 200px;
+    --ifm-col-width: none;
   }
 }
