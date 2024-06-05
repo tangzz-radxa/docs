@@ -24,7 +24,7 @@ export default () => {
   const itemsRef = useRef([]);
   const [renderCount, setRenderCount] = useState(0);
   const [rendered, setRendered] = useState(false);
-
+  const infoRef = useRef(null);
   const svgEle = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -79,6 +79,11 @@ export default () => {
         }}
         className={seriesKey == index ? styles.current_series : null}
         onClick={() => {
+          window.scroll({
+            top: infoRef.current.offsetTop - 50,
+            left: 0,
+            behavior: "smooth",
+          });
           setSeriesKey(index);
           if (index !== seriesKey) {
             setProductKey(0);
@@ -135,7 +140,7 @@ export default () => {
           <ul className={styles.product_lines}>
             {homeDocData.length > 0 ? leftItems : null}
           </ul>
-          <div className={styles.line_info}>
+          <div className={styles.line_info} ref={infoRef}>
             <p>
               {currentLocale
                 ? homeDocData[seriesKey].series_zh
