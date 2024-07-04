@@ -6,7 +6,7 @@ import { useLocation, useHistory } from '@docusaurus/router';
 export default function NotFoundContent({ className }) {
   const history = useHistory();
   const location = useLocation();
-
+  const regex = /\/en\//;
   useEffect(() => {
     const checkRouteExists = async (path) => {
       try {
@@ -23,11 +23,15 @@ export default function NotFoundContent({ className }) {
       for (let i = paths.length; i > 0; i--) {
         const currentPath = `/${paths.slice(0, i).join('/')}`;
         if (await checkRouteExists(currentPath)) {
+          if (regex.test(location.pathname)) {
+            setTimeout(() => {
+              window.location.reload();
+            }, 1000)
+          }
           history.replace(currentPath);
           return;
         }
       }
-
       history.replace('/');
     }
     redirectToExistingPath();
