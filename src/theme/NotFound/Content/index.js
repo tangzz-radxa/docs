@@ -1,41 +1,42 @@
-import React, { useEffect } from 'react';
+// import React, { useEffect } from 'react';
+import React from 'react';
 import clsx from 'clsx';
 import Translate from '@docusaurus/Translate';
 import Heading from '@theme/Heading';
-import { useLocation, useHistory } from '@docusaurus/router';
+// import { useLocation, useHistory } from '@docusaurus/router';
 export default function NotFoundContent({ className }) {
-  const history = useHistory();
-  const location = useLocation();
-  const regex = /\/en\//;
-  useEffect(() => {
-    const checkRouteExists = async (path) => {
-      try {
-        const response = await fetch(path, { method: 'HEAD' });
-        return response.ok;
-      } catch (error) {
-        return false;
-      }
-    };
+  // const history = useHistory();
+  // const location = useLocation();
+  // const regex = /\/en\//;
+  // useEffect(() => {
+  //   const checkRouteExists = async (path) => {
+  //     try {
+  //       const response = await fetch(path, { method: 'HEAD' });
+  //       return response.ok;
+  //     } catch (error) {
+  //       return false;
+  //     }
+  //   };
 
-    const redirectToExistingPath = async () => {
-      const paths = location.pathname.split('/').filter(Boolean);
+  //   const redirectToExistingPath = async () => {
+  //     const paths = location.pathname.split('/').filter(Boolean);
 
-      for (let i = paths.length; i > 0; i--) {
-        const currentPath = `/${paths.slice(0, i).join('/')}`;
-        if (await checkRouteExists(currentPath)) {
-          if (regex.test(location.pathname)) {
-            setTimeout(() => {
-              window.location.reload();
-            }, 1000)
-          }
-          history.replace(currentPath);
-          return;
-        }
-      }
-      history.replace('/');
-    }
-    redirectToExistingPath();
-  }, [location.pathname, history]);
+  //     for (let i = paths.length; i > 0; i--) {
+  //       const currentPath = `/${paths.slice(0, i).join('/')}`;
+  //       if (await checkRouteExists(currentPath)) {
+  //         if (regex.test(location.pathname)) {
+  //           setTimeout(() => {
+  //             window.location.reload();
+  //           }, 1000)
+  //         }
+  //         history.replace(currentPath);
+  //         return;
+  //       }
+  //     }
+  //     history.replace('/');
+  //   }
+  //   redirectToExistingPath();
+  // }, [location.pathname, history]);
 
   return (
     <main className={clsx('container margin-vert--xl', className)}>
