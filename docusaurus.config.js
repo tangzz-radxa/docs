@@ -99,7 +99,7 @@ const config = {
           src: "/page/logo.svg",
           width: 90,
           height: 20,
-          href: "https://radxa.com/",
+          href: "/",
         },
         items: [
           {
