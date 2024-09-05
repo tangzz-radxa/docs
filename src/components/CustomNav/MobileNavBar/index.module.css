@@ -1,0 +1,6 @@
+.bg_nav {
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  z-index: 901;
+}
