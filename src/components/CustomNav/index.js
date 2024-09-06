@@ -236,8 +236,8 @@ export default () => {
                     language_box.current.style.display = "block";
                   }}
                 >
-                  <Link href={"pathname:////" + (isBrowser ? window.location.host : null)} target="_self" rel="noopener noreferrer" lang="zh-CN">中文</Link>
-                  <Link href="pathname:///en/" target="_self" rel="noopener noreferrer" lang="en-US">English</Link>
+                  <Link href={"pathname:////" + (isBrowser ? window.location.host : null) + pathname.replace(/^\/en/, "")} target="_self" rel="noopener noreferrer" lang="zh-CN">中文</Link>
+                  <Link href={"pathname:///en/" + pathname} target="_self" rel="noopener noreferrer" lang="en-US">English</Link>
                 </div>
               </li>
               <li style={{ display: 'flex', alignItems: 'center', paddingRight: '0' }}>

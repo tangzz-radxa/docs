@@ -71,7 +71,6 @@ export default ({ items, lang, isBrowser }) => {
         id="bg_nav"
         ref={bg_ref}
         onClick={(e) => {
-          console.log(e.target.id);
           if (e.target.id === "bg_nav") {
             // document.documentElement.style.overflow = "auto";
             meun_ref.current.style.width = "0rem";
@@ -167,15 +166,15 @@ export default ({ items, lang, isBrowser }) => {
                   )}
                 >
                   <div className={styles_s.item2_nav}>
-                    <Link href={"pathname:////" + (isBrowser ? window.location.host : null)} target="_self" rel="noopener noreferrer" lang="zh-CN">中文</Link>
-                    <Link href="pathname:///en/" target="_self" rel="noopener noreferrer" lang="en-US">English</Link>
+                    <Link href={"pathname:////" + (isBrowser ? window.location.host : null) + pathname.replace(/^\/en/, "")} target="_self" rel="noopener noreferrer" lang="zh-CN">中文</Link>
+                    <Link href={"pathname:///en/" + pathname} target="_self" rel="noopener noreferrer" lang="en-US">English</Link>
                   </div>
                 </div>
               </div>
             </li>
           </ul>
         </div>
-      </div>
+      </div >
     </>
   );
 };
