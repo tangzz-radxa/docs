@@ -60,6 +60,7 @@ const config = {
             require.resolve("./src/css/custom.css"),
             require.resolve("./src/css/footer.css"),
             require.resolve("./src/css/doc.css"),
+            require.resolve("./src/css/navbar.css"),
           ],
         },
       }),
@@ -92,13 +93,19 @@ const config = {
         defaultMode: "light",
         disableSwitch: true,
       },
+      announcementBar: {
+        id: 'radxa-website',
+        content:
+          '<div id="bulletin"><a target="_blank" rel="noopener noreferrer" href="https://radxa.com">Home</a><a target="_blank" rel="noopener noreferrer" href="https://radxa.com/products">Products</a><a target="_blank" rel="noopener noreferrer" href="https://radxa.com/news">News</a><a target="_blank" rel="noopener noreferrer" href="https://radxa.com/services">Services</a><a target="_blank" rel="noopener noreferrer" href="https://radxa.com/support">Support</a><a target="_blank" rel="noopener noreferrer" href="https://radxa.com/about">About</a></div>',
+        backgroundColor: '#2b2b2b',
+        textColor: '#fff',
+        isCloseable: false,
+      },
       navbar: {
         hideOnScroll: true,
         logo: {
           alt: "Radxa",
-          src: "/page/logo.svg",
-          width: 90,
-          height: 20,
+          src: "/page/radxa-docs.webp",
           href: "/",
         },
         items: [
@@ -109,51 +116,106 @@ const config = {
             target: "_self",
           },
           {
-            position: "right",
-            label: "Products",
-            to: "https://radxa.com/products",
-            target: "_self",
-          },
-          {
-            position: "right",
-            label: "News",
-            to: "https://radxa.com/news",
-            target: "_self",
-          },
-          {
-            position: "right",
-            label: "About",
-            to: "https://radxa.com/about",
-            target: "_self",
-          },
-          {
-            position: "right",
-            label: "Services",
-            to: "https://radxa.com/services",
-            target: "_self",
+            type: "dropdown",
+            label: "ROCK",
+            position: "left",
+            items: [
+              {
+                label: "ROCK 2",
+                to: "/rock2",
+              },
+              {
+                label: "ROCK 3",
+                to: "/rock3",
+              },
+              {
+                label: "ROCK 4",
+                to: "/rock4",
+              },
+              {
+                label: "ROCK 5",
+                to: "/rock5",
+              },
+              {
+                label: "ROCK Pi",
+                to: "/rockpi",
+              },
+            ],
           },
           {
             type: "dropdown",
-            label: "Support",
-            position: "right",
+            label: "ZERO",
+            position: "left",
             items: [
               {
-                label: "Community",
-                href: "https://radxa.com/community",
+                label: "Zero",
+                to: "/zero/zero",
               },
               {
-                label: "Forum",
-                href: "https://forum.radxa.com/",
+                label: "Zero 2 Pro",
+                to: "/zero/zero2pro",
               },
               {
-                label: "WiKi",
-                href: "https://wiki.radxa.com/",
-              },
-              {
-                label: "Github",
-                href: "https://github.com/radxa",
+                label: "Zero 3",
+                to: "/zero/zero3",
               },
             ],
+          },
+          {
+            type: "dropdown",
+            label: "X",
+            position: "left",
+            items: [
+              {
+                label: "X2L",
+                to: "/x/x2l",
+              },
+              {
+                label: "X4",
+                to: "/x/x4",
+              },
+            ],
+          },
+          {
+            type: "dropdown",
+            label: "SoM",
+            position: "left",
+            items: [
+              {
+                label: "CM3",
+                to: "/compute-module/cm3",
+              },
+              {
+                label: "CM5",
+                to: "/compute-module/cm5",
+              }
+            ]
+          },
+          {
+            type: "dropdown",
+            label: "Network Computer",
+            position: "left",
+            items: [
+              {
+                label: "E20C",
+                to: "/e/e20c",
+              },
+            ]
+          },
+          {
+            type: "dropdown",
+            label: "Gen AI",
+            position: "left",
+            items: [
+              {
+                label: "AICore SG2300x",
+                to: "/sophon/aicore-sg2300x",
+              },
+              {
+                label: "Airbox",
+                to: "/sophon/airbox",
+              }
+            ]
           },
           {
             type: "localeDropdown",
