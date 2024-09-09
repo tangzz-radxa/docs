@@ -52,7 +52,7 @@
     }
 
     .content_node_modules-\@docusaurus-theme-classic-lib-theme-AnnouncementBar-Content-styles-module {
-        padding: 0;
+        padding: 0 !important;
     }
 
     .announcementBar_node_modules-\@docusaurus-theme-classic-lib-theme-AnnouncementBar-styles-module {
