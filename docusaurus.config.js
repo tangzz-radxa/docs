@@ -121,6 +121,7 @@ const config = {
             position: "left",
             items: [
               {
+                className: "notHighlight",
                 label: "ROCK 2 系列",
                 to: "/rock2",
               },
@@ -133,6 +134,7 @@ const config = {
                 to: "/rock2/rock2f",
               },
               {
+                className: "notHighlight",
                 label: "ROCK 3 系列",
                 to: "/rock3",
               },
@@ -149,6 +151,7 @@ const config = {
                 to: "/rock3/rock3c",
               },
               {
+                className: "notHighlight",
                 label: "ROCK 4",
                 to: "/rock4",
               },
@@ -165,6 +168,7 @@ const config = {
                 to: "/rock4/rock4se",
               },
               {
+                className: "notHighlight",
                 label: "ROCK 5",
                 to: "/rock5",
               },
@@ -185,6 +189,7 @@ const config = {
                 to: "/rock5/rock5itx",
               },
               {
+                className: "notHighlight",
                 label: "ROCK Pi",
                 to: "/rockpi",
               },
