@@ -102,7 +102,7 @@ const config = {
         isCloseable: false,
       },
       navbar: {
-        hideOnScroll: true,
+        hideOnScroll: false,
         logo: {
           alt: "Radxa",
           src: "/page/radxa-docs.webp",
