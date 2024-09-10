@@ -254,6 +254,17 @@ const config = {
           },
           {
             type: "dropdown",
+            label: "SiRider 系列",
+            position: "left",
+            items: [
+              {
+                label: "SiRider S1",
+                to: "/sirider/s1",
+              },
+            ],
+          },
+          {
+            type: "dropdown",
             label: "核心板",
             position: "left",
             items: [
