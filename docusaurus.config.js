@@ -94,11 +94,11 @@ const config = {
         disableSwitch: true,
       },
       announcementBar: {
-        id: 'radxa-website',
+        id: "radxa-website",
         content:
           '<div id="bulletin"><a target="_blank" rel="noopener noreferrer" href="https://radxa.com">Home</a><a target="_blank" rel="noopener noreferrer" href="https://radxa.com/products">Products</a><a target="_blank" rel="noopener noreferrer" href="https://radxa.com/news">News</a><a target="_blank" rel="noopener noreferrer" href="https://radxa.com/services">Services</a><a target="_blank" rel="noopener noreferrer" href="https://radxa.com/support">Support</a><a target="_blank" rel="noopener noreferrer" href="https://radxa.com/about">About</a></div>',
-        backgroundColor: '#2b2b2b',
-        textColor: '#fff',
+        backgroundColor: "#2b2b2b",
+        textColor: "#fff",
         isCloseable: false,
       },
       navbar: {
@@ -117,53 +117,113 @@ const config = {
           },
           {
             type: "dropdown",
-            label: "ROCK",
+            label: "ROCK 系列",
             position: "left",
             items: [
               {
-                label: "ROCK 2",
+                label: "ROCK 2 系列",
                 to: "/rock2",
               },
               {
-                label: "ROCK 3",
+                label: "→ ROCK 2A",
+                to: "/rock2/rock2a",
+              },
+              {
+                label: "→ ROCK 2F",
+                to: "/rock2/rock2f",
+              },
+              {
+                label: "ROCK 3 系列",
                 to: "/rock3",
+              },
+              {
+                label: "→ ROCK 3A",
+                to: "/rock3/rock3a",
+              },
+              {
+                label: "→ ROCK 3B/3B+",
+                to: "/rock3/rock3b",
+              },
+              {
+                label: "→ ROCK 3C",
+                to: "/rock3/rock3c",
               },
               {
                 label: "ROCK 4",
                 to: "/rock4",
               },
               {
+                label: "→ ROCK 4A/4B/4A+/4B+",
+                to: "/rock4/rock4ab",
+              },
+              {
+                label: "→ ROCK 4C+",
+                to: "/rock4/rock4c+",
+              },
+              {
+                label: "→ ROCK 4SE",
+                to: "/rock4/rock4se",
+              },
+              {
                 label: "ROCK 5",
                 to: "/rock5",
+              },
+              {
+                label: "→  ROCK 5A",
+                to: "/rock5/rock5a",
+              },
+              {
+                label: "→  ROCK 5B/5B+",
+                to: "/rock5/rock5b",
+              },
+              {
+                label: "→  ROCK 5C",
+                to: "/rock5/rock5c",
+              },
+              {
+                label: "→  ROCK 5 ITX",
+                to: "/rock5/rock5itx",
               },
               {
                 label: "ROCK Pi",
                 to: "/rockpi",
               },
+              {
+                label: "→ ROCK Pi S",
+                to: "/rockpi/rockpis",
+              },
+              {
+                label: "→ ROCK Pi E",
+                to: "/rockpi/rockpie",
+              },
+              {
+                label: "→ ROCK S0",
+                to: "/rockpi/rocks0",
+              },
             ],
           },
           {
             type: "dropdown",
-            label: "ZERO",
+            label: "ZERO 系列",
             position: "left",
             items: [
               {
-                label: "Zero",
+                label: "ZERO",
                 to: "/zero/zero",
               },
               {
-                label: "Zero 2 Pro",
+                label: "ZERO 2 Pro",
                 to: "/zero/zero2pro",
               },
               {
-                label: "Zero 3",
+                label: "ZERO 3W/3E",
                 to: "/zero/zero3",
               },
             ],
           },
           {
             type: "dropdown",
-            label: "X",
+            label: "X 系列",
             position: "left",
             items: [
               {
@@ -178,7 +238,18 @@ const config = {
           },
           {
             type: "dropdown",
-            label: "SoM",
+            label: "NIO 系列",
+            position: "left",
+            items: [
+              {
+                label: "NIO 12L",
+                to: "/nio/12l",
+              },
+            ],
+          },
+          {
+            type: "dropdown",
+            label: "核心板",
             position: "left",
             items: [
               {
@@ -186,36 +257,44 @@ const config = {
                 to: "/compute-module/cm3",
               },
               {
+                label: "CM3I",
+                to: "/compute-module/cm3i",
+              },
+              {
                 label: "CM5",
                 to: "/compute-module/cm5",
-              }
-            ]
+              },
+              {
+                label: "NX5",
+                to: "/compute-module/nx5",
+              },
+            ],
           },
           {
             type: "dropdown",
-            label: "Network Computer",
+            label: "网络计算",
             position: "left",
             items: [
               {
                 label: "E20C",
                 to: "/e/e20c",
               },
-            ]
+            ],
           },
           {
             type: "dropdown",
-            label: "Gen AI",
+            label: "生成式 AI",
             position: "left",
             items: [
+              {
+                label: "Airbox",
+                to: "/sophon/airbox",
+              },
               {
                 label: "AICore SG2300x",
                 to: "/sophon/aicore-sg2300x",
               },
-              {
-                label: "Airbox",
-                to: "/sophon/airbox",
-              }
-            ]
+            ],
           },
           {
             type: "localeDropdown",
@@ -251,7 +330,7 @@ const config = {
               },
               {
                 label: "Community",
-                to: "https://radxa.com/association",
+                to: "https://radxa.com/community",
                 target: "_self",
               },
             ],
