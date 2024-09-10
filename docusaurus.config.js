@@ -105,7 +105,7 @@ const config = {
         hideOnScroll: false,
         logo: {
           alt: "Radxa",
-          src: "/page/radxa-docs.webp",
+          src: "/page/radxa-docs.svg",
           href: "/",
         },
         items: [
