@@ -434,7 +434,16 @@ const config = {
         ],
       },
     }),
-  plugins: [require.resolve(path.join(__dirname, "/plugins/symlink-resolver"))],
+  plugins: [
+    require.resolve(path.join(__dirname, "/plugins/symlink-resolver")),
+    [
+      "@docusaurus/plugin-google-gtag",
+      {
+        trackingID: "G-2V3W91WFXP",
+        anonymizeIP: true,
+      },
+    ],
+  ],
 };
 
 module.exports = config;
