@@ -48,6 +48,12 @@
     color: #1c1e21;
 }
 
+@media screen and (max-width: 1600px) {
+    .navbar__logo img {
+        display: none !important;
+    }
+}
+
 @media screen and (max-width: 750px) {
     #bulletin {
         display: none;
