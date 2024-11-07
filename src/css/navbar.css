@@ -43,40 +43,6 @@
     padding: 0.25rem 1rem;
 }
 
-.navbar__inner>.navbar__items {
-    overflow-y: hidden;
-}
-
-/* 整个滚动条 */
-.navbar__inner>.navbar__items::-webkit-scrollbar {
-    width: 0px;
-    /* 滚动条宽度 */
-    height: 3px;
-    /* 横向滚动条高度 */
-}
-
-/* 滚动条滑块 */
-.navbar__inner>.navbar__items::-webkit-scrollbar-thumb {
-    background: #74bc1f;
-    /* 滑块颜色 */
-    border-radius: 10px;
-    /* 圆角 */
-}
-
-/* 滚动条滑块在悬停时 */
-.navbar__inner>.navbar__items::-webkit-scrollbar-thumb:hover {
-    background: #74bc1f;
-    /* 悬停时的滑块颜色 */
-}
-
-/* 滚动条轨道 */
-.navbar__inner>.navbar__items::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    /* 轨道颜色 */
-    border-radius: 10px;
-    /* 圆角 */
-}
-
 .notHighlight {
     background-color: transparent;
     color: #1c1e21;
@@ -85,6 +51,16 @@
 @media screen and (max-width: 1600px) {
     .navbar__logo img {
         display: none !important;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .navbar {
+        height: auto !important;
+    }
+
+    .navbar__inner>.navbar__items {
+        flex-wrap: wrap;
     }
 }
 
