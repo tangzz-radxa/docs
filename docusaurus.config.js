@@ -265,6 +265,17 @@ const config = {
           },
           {
             type: "dropdown",
+            label: "Orion 系列",
+            position: "left",
+            items: [
+              {
+                label: "Orion O6",
+                to: "/orion/o6",
+              },
+            ],
+          },
+          {
+            type: "dropdown",
             label: "核心板",
             position: "left",
             items: [
