@@ -185,6 +185,10 @@ const config = {
                 to: "/rock5/rock5c",
               },
               {
+                label: "→  ROCK 5T",
+                to: "/rock5/rock5t",
+              },
+              {
                 label: "→  ROCK 5 ITX",
                 to: "/rock5/rock5itx",
               },
