@@ -153,7 +153,7 @@ const config = {
                 ]
               },
               {
-                label: "ROCK 4",
+                label: "ROCK 4 系列",
                 to: "/rock4",
                 children: [
                   {
@@ -171,7 +171,7 @@ const config = {
                 ]
               },
               {
-                label: "ROCK 5",
+                label: "ROCK 5 系列",
                 to: "/rock5",
                 children: [
                   {
@@ -249,7 +249,7 @@ const config = {
               {
                 label: "NIO 系列",
                 to: "/nio",
-                children: [  
+                children: [
                   {
                     label: "NIO 12L",
                     to: "/nio/12l",
