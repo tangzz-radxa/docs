@@ -48,6 +48,14 @@
     color: #1c1e21;
 }
 
+.navbar{
+    height: auto;
+}
+
+.navbar__items{
+    flex-wrap: wrap;
+}
+
 @media screen and (max-width: 1600px) {
     .navbar__logo img {
         display: none !important;
