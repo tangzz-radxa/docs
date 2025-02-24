@@ -117,164 +117,164 @@ const config = {
           },
           {
             type: "dropdown",
-            label: "ROCK 系列",
+            label: "SBC",
             position: "left",
             items: [
               {
-                className: "notHighlight",
                 label: "ROCK 2 系列",
                 to: "/rock2",
+                children: [
+                  {
+                    label: "→ ROCK 2A",
+                    to: "/rock2/rock2a",
+                  },
+                  {
+                    label: "→ ROCK 2F",
+                    to: "/rock2/rock2f",
+                  },
+                ]
               },
               {
-                label: "→ ROCK 2A",
-                to: "/rock2/rock2a",
-              },
-              {
-                label: "→ ROCK 2F",
-                to: "/rock2/rock2f",
-              },
-              {
-                className: "notHighlight",
                 label: "ROCK 3 系列",
                 to: "/rock3",
+                children: [
+                  {
+                    label: "→ ROCK 3A",
+                    to: "/rock3/rock3a",
+                  },
+                  {
+                    label: "→ ROCK 3B/3B+",
+                    to: "/rock3/rock3b",
+                  },
+                  {
+                    label: "→ ROCK 3C",
+                    to: "/rock3/rock3c",
+                  },
+                ]
               },
               {
-                label: "→ ROCK 3A",
-                to: "/rock3/rock3a",
-              },
-              {
-                label: "→ ROCK 3B/3B+",
-                to: "/rock3/rock3b",
-              },
-              {
-                label: "→ ROCK 3C",
-                to: "/rock3/rock3c",
-              },
-              {
-                className: "notHighlight",
                 label: "ROCK 4",
                 to: "/rock4",
+                children: [
+                  {
+                    label: "→ ROCK 4A/4B/4A+/4B+",
+                    to: "/rock4/rock4ab",
+                  },
+                  {
+                    label: "→ ROCK 4C+",
+                    to: "/rock4/rock4c+",
+                  },
+                  {
+                    label: "→ ROCK 4SE",
+                    to: "/rock4/rock4se",
+                  },
+                ]
               },
               {
-                label: "→ ROCK 4A/4B/4A+/4B+",
-                to: "/rock4/rock4ab",
-              },
-              {
-                label: "→ ROCK 4C+",
-                to: "/rock4/rock4c+",
-              },
-              {
-                label: "→ ROCK 4SE",
-                to: "/rock4/rock4se",
-              },
-              {
-                className: "notHighlight",
                 label: "ROCK 5",
                 to: "/rock5",
+                children: [
+                  {
+                    label: "→  ROCK 5A",
+                    to: "/rock5/rock5a",
+                  },
+                  {
+                    label: "→  ROCK 5B/5B+",
+                    to: "/rock5/rock5b",
+                  },
+                  {
+                    label: "→  ROCK 5C",
+                    to: "/rock5/rock5c",
+                  },
+                  {
+                    label: "→  ROCK 5T",
+                    to: "/rock5/rock5t",
+                  },
+                  {
+                    label: "→  ROCK 5 ITX",
+                    to: "/rock5/rock5itx",
+                  },
+                ]
               },
               {
-                label: "→  ROCK 5A",
-                to: "/rock5/rock5a",
-              },
-              {
-                label: "→  ROCK 5B/5B+",
-                to: "/rock5/rock5b",
-              },
-              {
-                label: "→  ROCK 5C",
-                to: "/rock5/rock5c",
-              },
-              {
-                label: "→  ROCK 5T",
-                to: "/rock5/rock5t",
-              },
-              {
-                label: "→  ROCK 5 ITX",
-                to: "/rock5/rock5itx",
-              },
-              {
-                className: "notHighlight",
                 label: "ROCK Pi",
                 to: "/rockpi",
+                children: [
+                  {
+                    label: "→ ROCK Pi S",
+                    to: "/rockpi/rockpis",
+                  },
+                  {
+                    label: "→ ROCK Pi E",
+                    to: "/rockpi/rockpie",
+                  },
+                  {
+                    label: "→ ROCK S0",
+                    to: "/rockpi/rocks0",
+                  },
+                ]
               },
               {
-                label: "→ ROCK Pi S",
-                to: "/rockpi/rockpis",
+                label: "ZERO 系列",
+                to: "/zero",
+                children: [
+                  {
+                    label: "ZERO",
+                    to: "/zero/zero",
+                  },
+                  {
+                    label: "ZERO 2 Pro",
+                    to: "/zero/zero2pro",
+                  },
+                  {
+                    label: "ZERO 3W/3E",
+                    to: "/zero/zero3",
+                  },
+                ],
               },
               {
-                label: "→ ROCK Pi E",
-                to: "/rockpi/rockpie",
+                label: "X 系列",
+                to: "/x",
+                children: [
+                  {
+                    label: "X2L",
+                    to: "/x/x2l",
+                  },
+                  {
+                    label: "X4",
+                    to: "/x/x4",
+                  },
+                ],
               },
               {
-                label: "→ ROCK S0",
-                to: "/rockpi/rocks0",
-              },
-            ],
-          },
-          {
-            type: "dropdown",
-            label: "ZERO 系列",
-            position: "left",
-            items: [
-              {
-                label: "ZERO",
-                to: "/zero/zero",
+                label: "NIO 系列",
+                to: "/nio",
+                children: [  
+                  {
+                    label: "NIO 12L",
+                    to: "/nio/12l",
+                  },
+                ],
               },
               {
-                label: "ZERO 2 Pro",
-                to: "/zero/zero2pro",
+                label: "SiRider 系列",
+                to: "/sirider",
+                children: [
+                  {
+                    label: "SiRider S1",
+                    to: "/sirider/s1",
+                  },
+                ],
               },
               {
-                label: "ZERO 3W/3E",
-                to: "/zero/zero3",
-              },
-            ],
-          },
-          {
-            type: "dropdown",
-            label: "X 系列",
-            position: "left",
-            items: [
-              {
-                label: "X2L",
-                to: "/x/x2l",
-              },
-              {
-                label: "X4",
-                to: "/x/x4",
-              },
-            ],
-          },
-          {
-            type: "dropdown",
-            label: "NIO 系列",
-            position: "left",
-            items: [
-              {
-                label: "NIO 12L",
-                to: "/nio/12l",
-              },
-            ],
-          },
-          {
-            type: "dropdown",
-            label: "SiRider 系列",
-            position: "left",
-            items: [
-              {
-                label: "SiRider S1",
-                to: "/sirider/s1",
-              },
-            ],
-          },
-          {
-            type: "dropdown",
-            label: "Orion 系列",
-            position: "left",
-            items: [
-              {
-                label: "Orion O6",
-                to: "/orion/o6",
+                label: "Orion 系列",
+                to: "/orion",
+                children: [
+                  {
+                    label: "Orion O6",
+                    to: "/orion/o6",
+                  },
+                ],
               },
             ],
           },
