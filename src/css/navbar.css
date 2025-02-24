@@ -56,6 +56,10 @@
     flex-wrap: wrap;
 }
 
+.dropdown__menu{
+    overflow-y: visible !important;;
+}
+
 @media screen and (max-width: 1600px) {
     .navbar__logo img {
         display: none !important;
