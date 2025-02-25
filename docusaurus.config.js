@@ -276,6 +276,16 @@ const config = {
                   },
                 ],
               },
+              {
+                label: "Cubie 系列",
+                to: "/cubie",
+                children: [
+                  {
+                    label: "Cubie A5E",
+                    to: "/cubie/a5e",
+                  },
+                ],
+              },
             ],
           },
           {
