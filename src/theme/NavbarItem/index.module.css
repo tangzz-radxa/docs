@@ -1,7 +1,7 @@
 .dropdown_item2{
-    width: 10rem;
+    width: 150px;
     position: absolute;
-    right: -90%;
+    right: -150px;
     top: calc(0% - var(--ifm-navbar-item-padding-vertical) + 0.3rem);
     background-color: #fff;
     border-radius: var(--ifm-global-radius);
