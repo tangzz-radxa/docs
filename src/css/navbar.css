@@ -1,94 +1,94 @@
 #bulletin {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
 }
 
-#bulletin>a {
-    text-decoration: none;
+#bulletin > a {
+  text-decoration: none;
 }
 
-#bulletin>a:hover {
-    text-decoration: underline;
+#bulletin > a:hover {
+  text-decoration: underline;
 }
 
 .content_node_modules-\@docusaurus-theme-classic-lib-theme-AnnouncementBar-Content-styles-module {
-    font-size: 100% !important;
-    text-align: center;
+  font-size: 100% !important;
+  text-align: center;
 }
 
 .dropdown__link--active,
 .dropdown__link--active:hover,
 .dropdown__link:hover {
-    color: #fff;
+  color: #fff;
 }
 
 .dropdown__link--active,
 .dropdown__link:hover {
-    background-color: #74bc1f;
+  background-color: #74bc1f;
 }
 
-#bulletin>a:hover,
+#bulletin > a:hover,
 .navbar__link:hover,
 .navbar__link--active {
-    color: #74bc1f;
+  color: #74bc1f;
 }
 
 .navbar__link {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 .navbar__item {
-    padding: 0.25rem 1rem;
+  padding: 0.25rem 1rem;
 }
 
 .notHighlight {
-    background-color: transparent;
-    color: #1c1e21;
+  background-color: transparent;
+  color: #1c1e21;
 }
 
-.navbar{
-    height: auto;
+.navbar {
+  height: auto;
 }
 
-.navbar__items{
-    flex-wrap: wrap;
+.navbar__items {
+  flex-wrap: wrap;
 }
 
-.dropdown__menu{
-    overflow-y: visible !important;;
+.dropdown__menu {
+  overflow-y: visible !important;
 }
 
 @media screen and (max-width: 1600px) {
-    .navbar__logo img {
-        display: none !important;
-    }
+  .navbar__logo img {
+    display: none !important;
+  }
 }
 
 @media screen and (max-width: 1500px) {
-    .navbar {
-        height: auto !important;
-    }
+  .navbar {
+    height: auto !important;
+  }
 
-    .navbar__inner>.navbar__items {
-        flex-wrap: wrap;
-    }
+  .navbar__inner > .navbar__items {
+    flex-wrap: wrap;
+  }
 }
 
 @media screen and (max-width: 750px) {
-    #bulletin {
-        display: none;
-        /* align-items: center;
+  #bulletin {
+    display: none;
+    /* align-items: center;
         justify-content: center;
         gap: 1rem; */
-    }
+  }
 
-    .content_node_modules-\@docusaurus-theme-classic-lib-theme-AnnouncementBar-Content-styles-module {
-        padding: 0 !important;
-    }
+  .content_node_modules-\@docusaurus-theme-classic-lib-theme-AnnouncementBar-Content-styles-module {
+    padding: 0 !important;
+  }
 
-    .announcementBar_node_modules-\@docusaurus-theme-classic-lib-theme-AnnouncementBar-styles-module {
-        display: none !important;
-    }
+  .announcementBar_node_modules-\@docusaurus-theme-classic-lib-theme-AnnouncementBar-styles-module {
+    display: none !important;
+  }
 }
