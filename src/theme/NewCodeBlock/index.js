@@ -13,7 +13,7 @@ const NewCodeBlock = (props) => {
     if (tip && tip.trim() !== "") {
       promptPrefix = tip; // Use tip as promptPrefix if available
     } else if (type) {
-      promptPrefix = type === "device" ? "root@radxa#" : "linux-x86$";
+      promptPrefix = type === "device" ? "root@radxa#" : "linux-host$";
     }
   }
   // Apply different classes based on type (host/device)
