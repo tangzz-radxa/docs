@@ -1,47 +1,176 @@
 .textBox {
   position: relative;
+  border-bottom: none !important;
+  margin-top: 0.3rem; /* 恢复原来的边距 */
+  margin-bottom: 0.3rem;
+  padding-top: 0; /* 移除多余的内边距 */
+}
+
+.codeWrapper {
+  position: relative;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  border: none;
 }
 
 .superscript {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: inline;
-  background-color: #74bc1f;
-  padding: 0.5rem 2rem;
-  border-radius: 0.4rem 0 0.4rem 0;
-  display: block;
+  position: relative;
+  align-self: flex-end;
+  display: inline-block;
+  background-color: #444444; /* Host color - gray-black */
+  padding: 0.3rem 1.5rem;
+  border-radius: 0;
   color: #fff;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  z-index: 20; /* 提高z-index确保显示在最上层 */
+  margin: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  pointer-events: none; /* 确保不阻挡复制按钮的点击 */
+  line-height: 1;
+}
+
+.superscriptDevice {
+  position: relative;
+  align-self: flex-end;
+  display: inline-block;
+  background-color: #74bc1f; /* Device color - green */
+  padding: 0.3rem 1.5rem;
+  border-radius: 0;
+  color: #fff;
+  font-size: 0.9rem;
+  z-index: 20; /* 提高z-index确保显示在最上层 */
+  margin: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  pointer-events: none; /* 确保不阻挡复制按钮的点击 */
+  line-height: 1;
 }
 
 .tippre {
   background-color: var(--ifm-code-background);
   color: #bfc7cc;
-  border-radius: 0.4rem;
-  padding-top: 5rem;
+  border-radius: 0 0.4rem 0.4rem 0.4rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.1rem;
+  border: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  position: relative;
+  overflow: hidden;
+  margin-top: 0;
+}
+
+/* This pseudo-element covers any potential bottom borders */
+.tippre::after {
+  content: none !important;
+  display: none !important;
+}
+
+.tippre pre,
+.tippre code,
+.noBottomBorder {
+  border: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  margin-bottom: 0 !important;
+  margin-top: 0 !important; /* 移除上边距 */
+  padding-top: 0.3rem !important; /* 添加更多上内边距 */
+  padding-bottom: 0.1rem !important; /* 减少下内边距 */
+}
+
+/* Target any potential dividers or horizontal rules */
+.tippre hr,
+.tippre pre::after,
+.tippre code::after,
+.noBottomBorder::after,
+.tippre *::after,
+.tippre *::before {
+  content: none !important;
+  display: none !important;
+  border-bottom: none !important;
+}
+
+/* Remove any horizontal borders from any elements inside the code block */
+.tippre *,
+.tippre pre,
+.tippre code,
+.tippre div {
+  border-bottom: none !important;
+  border-top: none !important;
+  box-shadow: none !important;
+}
+
+.promptPrefix {
+  font-family: monospace;
+  font-weight: bold;
+  padding: 0.3rem 1rem;
+  border-radius: 0.4rem 0 0 0;
+  user-select: none;
+  margin-bottom: 0;
+  display: inline-block;
+  width: fit-content;
+  z-index: 5;
+  color: #ffffff;
+  font-size: 0.9rem;
+  margin-bottom: 0.1rem;
+}
+
+.promptDevice {
+  background-color: #74bc1f; /* 设备提示符使用绿色底 */
+  color: #ffffff;
+}
+
+.promptHost {
+  background-color: #000000; /* 主机提示符使用黑色底 */
+  color: #ffffff;
 }
 
 @media screen and (max-width: 750px) {
   .textBox {
     margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
   }
 
   .superscript {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: inline;
+    position: relative;
+    align-self: flex-end;
+    display: inline-block;
     padding: 0.2rem 1rem;
-    border-radius: none;
-    display: block;
+    border-radius: 0;
     color: #fff;
     font-size: 1.4rem;
+    margin: 0;
+    z-index: 20;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    line-height: 1;
+  }
+
+  .superscriptDevice {
+    position: relative;
+    align-self: flex-end;
+    display: inline-block;
+    padding: 0.2rem 1rem;
+    border-radius: 0;
+    color: #fff;
+    font-size: 1.4rem;
+    margin: 0;
+    z-index: 20;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    line-height: 1;
   }
 
   .tippre {
     color: #bfc7cc;
     border-radius: 0.4rem;
-    padding-top: 3rem;
+    padding-top: 0;
+    padding-bottom: 0.2rem;
+    border: none;
+    box-shadow: none;
+    margin-top: 0;
   }
 }
