@@ -328,6 +328,10 @@ const config = {
                 label: "E52C",
                 to: "/e/e52c",
               },
+              {
+                label: "E54C",
+                to: "/e/e54c",
+              },
             ],
           },
           {
