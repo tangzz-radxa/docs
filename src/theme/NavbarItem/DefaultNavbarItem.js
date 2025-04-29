@@ -21,7 +21,7 @@ function DefaultNavbarItemDesktop({
       {children && (
         <ul className={styles.dropdown_item2}>
           {
-            children.map((item,key)=>{
+            children.map((item, key) => {
               return <li key={key}>
                 <NavbarNavLink
                   label={item.label}
@@ -41,7 +41,7 @@ function DefaultNavbarItemDesktop({
   }
   return element;
 }
-function DefaultNavbarItemMobile({className, isDropdownItem, ...props}) {
+function DefaultNavbarItemMobile({ className, isDropdownItem, ...props }) {
   return (
     <li className="menu__list-item">
       <NavbarNavLink className={clsx('menu__link', className)} {...props} />

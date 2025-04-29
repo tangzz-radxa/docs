@@ -1,6 +1,8 @@
 import React from 'react';
-import {useActiveDocContext} from '@docusaurus/plugin-content-docs/client';
-import {useLayoutDoc} from '@docusaurus/theme-common/internal';
+import {
+  useActiveDocContext,
+  useLayoutDoc,
+} from '@docusaurus/plugin-content-docs/client';
 import DefaultNavbarItem from '@theme/NavbarItem/DefaultNavbarItem';
 export default function DocNavbarItem({
   docId,
@@ -8,7 +10,7 @@ export default function DocNavbarItem({
   docsPluginId,
   ...props
 }) {
-  const {activeDoc} = useActiveDocContext(docsPluginId);
+  const { activeDoc } = useActiveDocContext(docsPluginId);
   const doc = useLayoutDoc(docId, docsPluginId);
   const pageActive = activeDoc?.path === doc?.path;
   // Draft and unlisted items are not displayed in the navbar.

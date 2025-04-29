@@ -3,7 +3,7 @@ import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import { useLocation } from "@docusaurus/router";
 import { ThemeClassNames } from "@docusaurus/theme-common";
-import { useDoc } from "@docusaurus/theme-common/internal";
+import { useDoc } from "@docusaurus/plugin-content-docs/client";
 import TagsListInline from "@theme/TagsListInline";
 import EditMetaRow from "@theme/EditMetaRow";
 import styles from "./index.module.css";
