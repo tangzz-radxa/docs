@@ -1,9 +1,11 @@
 .textBox {
   position: relative;
   border-bottom: none !important;
-  margin-top: 0.3rem; /* 恢复原来的边距 */
+  margin-top: 0.3rem;
+  /* 恢复原来的边距 */
   margin-bottom: 0.3rem;
-  padding-top: 0; /* 移除多余的内边距 */
+  padding-top: 0;
+  /* 移除多余的内边距 */
 }
 
 .codeWrapper {
@@ -18,15 +20,18 @@
   position: relative;
   align-self: flex-end;
   display: inline-block;
-  background-color: #444444; /* Host color - gray-black */
+  background-color: #444444;
+  /* Host color - gray-black */
   padding: 0.3rem 1.5rem;
   border-radius: 0;
   color: #fff;
   font-size: 0.9rem;
-  z-index: 20; /* 提高z-index确保显示在最上层 */
+  z-index: 20;
+  /* 提高z-index确保显示在最上层 */
   margin: 0;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  pointer-events: none; /* 确保不阻挡复制按钮的点击 */
+  pointer-events: none;
+  /* 确保不阻挡复制按钮的点击 */
   line-height: 1;
 }
 
@@ -34,15 +39,18 @@
   position: relative;
   align-self: flex-end;
   display: inline-block;
-  background-color: #74bc1f; /* Device color - green */
+  background-color: #74bc1f;
+  /* Device color - green */
   padding: 0.3rem 1.5rem;
   border-radius: 0;
   color: #fff;
   font-size: 0.9rem;
-  z-index: 20; /* 提高z-index确保显示在最上层 */
+  z-index: 20;
+  /* 提高z-index确保显示在最上层 */
   margin: 0;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  pointer-events: none; /* 确保不阻挡复制按钮的点击 */
+  pointer-events: none;
+  /* 确保不阻挡复制按钮的点击 */
   line-height: 1;
 }
 
@@ -75,9 +83,12 @@
   border-bottom: none !important;
   box-shadow: none !important;
   margin-bottom: 0 !important;
-  margin-top: 0 !important; /* 移除上边距 */
-  padding-top: 0.3rem !important; /* 添加更多上内边距 */
-  padding-bottom: 0.1rem !important; /* 减少下内边距 */
+  margin-top: 0 !important;
+  /* 移除上边距 */
+  padding-top: 0.3rem !important;
+  /* 添加更多上内边距 */
+  padding-bottom: 0.1rem !important;
+  /* 减少下内边距 */
 }
 
 /* Target any potential dividers or horizontal rules */
@@ -106,8 +117,8 @@
   font-family: monospace;
   font-weight: bold;
   padding: 0.3rem 1rem;
-  border-radius: 0.4rem 0 0 0;
-  user-select: none;
+  border-radius: 0.4rem 0 0.4rem 0;
+  /* user-select: none; */
   margin-bottom: 0;
   display: inline-block;
   width: fit-content;
@@ -118,12 +129,14 @@
 }
 
 .promptDevice {
-  background-color: #74bc1f; /* 设备提示符使用绿色底 */
+  background-color: #74bc1f;
+  /* 设备提示符使用绿色底 */
   color: #ffffff;
 }
 
 .promptHost {
-  background-color: #000000; /* 主机提示符使用黑色底 */
+  background-color: #000000;
+  /* 主机提示符使用黑色底 */
   color: #ffffff;
 }
 
