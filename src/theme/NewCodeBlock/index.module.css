@@ -114,7 +114,6 @@
 }
 
 .promptPrefix {
-  font-family: monospace;
   font-weight: bold;
   padding: 0.3rem 1rem;
   border-radius: 0.4rem 0 0.4rem 0;
