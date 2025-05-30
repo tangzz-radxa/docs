@@ -118,6 +118,49 @@
     display: none !important;
 }
 
+/* 重置计数器 */
+.container article {
+    counter-reset: h2;
+}
+
+/* 二级标题 */
+.container h2 {
+    counter-reset: h3;
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+.container h2::before {
+    counter-increment: h2;
+    content: counter(h2) ". ";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* 三级标题 */
+.container h3 {
+    counter-reset: h4;
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+.container h3::before {
+    counter-increment: h3;
+    content: counter(h2) "." counter(h3);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.container .text--truncate {
+    padding: 0;
+}
+
+.container .text--truncate::before {
+    content: none;
+}
+
 @media screen and (max-width: 750px) {
     .navbar {
         height: 3.5rem;
