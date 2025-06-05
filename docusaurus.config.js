@@ -168,6 +168,10 @@ const config = {
                     label: "→ ROCK 4SE",
                     to: "/rock4/rock4se",
                   },
+                  {
+                    label: "→ ROCK 4D",
+                    to: "/rock4/rock4d",
+                  },
                 ]
               },
               {
@@ -323,6 +327,10 @@ const config = {
               {
                 label: "E20C",
                 to: "/e/e20c",
+              },
+              {
+                label: "E24C",
+                to: "/e/e24c",
               },
               {
                 label: "E52C",
