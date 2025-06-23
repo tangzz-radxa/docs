@@ -329,6 +329,10 @@ const config = {
                 to: "/e/e20c",
               },
               {
+                label: "E24C",
+                to: "/e/e24c",
+              },
+              {
                 label: "E52C",
                 to: "/e/e52c",
               },
