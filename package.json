@@ -32,7 +32,7 @@
   "name": "radxa-docs",
   "private": true,
   "scripts": {
-    "build": "docusaurus build",
+    "build": "NODE_OPTIONS=--max-old-space-size=8192 docusaurus build",
     "clear": "docusaurus clear",
     "deploy": "docusaurus deploy",
     "docusaurus": "docusaurus",
