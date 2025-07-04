@@ -138,11 +138,18 @@
     font-weight: bold;
 }
 
-/* 三级标题 */
+/* 三级标题 - 基础样式 */
 .container h3 {
     counter-reset: h4;
     position: relative;
     padding-left: 2.5rem;
+    /* 默认缩进 */
+}
+
+/* 从第10个三级标题开始增加缩进 */
+.container h3:nth-of-type(n+10) {
+    padding-left: 3.5rem;
+    /* 更大缩进 */
 }
 
 .container h3::before {
