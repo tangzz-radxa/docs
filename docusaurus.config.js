@@ -363,7 +363,7 @@ const config = {
             position: "left",
             items: [
               {
-                label: "智核 AX-M1",
+                label: "AX-M1",
                 to: "/aicore/ax-m1",
               },
             ],
