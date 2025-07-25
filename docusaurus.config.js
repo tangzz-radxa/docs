@@ -358,6 +358,17 @@ const config = {
             ],
           },
           {
+            type: "dropdown",
+            label: "智核系列",
+            position: "left",
+            items: [
+              {
+                label: "AX-M1",
+                to: "/aicore/ax-m1",
+              },
+            ],
+          },
+          {
             type: "localeDropdown",
             position: "right",
           },
