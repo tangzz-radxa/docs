@@ -351,10 +351,6 @@ const config = {
                 label: "Airbox",
                 to: "/sophon/airbox",
               },
-              {
-                label: "AICore SG2300x",
-                to: "/sophon/aicore-sg2300x",
-              },
             ],
           },
           {
@@ -365,6 +361,10 @@ const config = {
               {
                 label: "AX-M1",
                 to: "/aicore/ax-m1",
+              },
+              {
+                label: "SG2300X",
+                to: "/aicore/sg2300x",
               },
             ],
           },
