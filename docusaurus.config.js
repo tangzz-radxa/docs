@@ -290,6 +290,16 @@ const config = {
                   },
                 ],
               },
+              {
+                label: "Dragon 系列",
+                to: "/dragon",
+                children: [
+                  {
+                    label: "Dragon Q6A",
+                    to: "/dragon/q6a",
+                  },
+                ],
+              },
             ],
           },
           {
