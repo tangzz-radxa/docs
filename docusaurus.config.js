@@ -38,11 +38,7 @@ const config = {
   },
   future: {
     v4: true,
-    experimental_faster: {
-      rspackBundler: true, // required flag
-      rspackPersistentCache: true, // new flag
-      ssgWorkerThreads: true,
-    },
+    experimental_faster: true
   },
   presets: [
     [
