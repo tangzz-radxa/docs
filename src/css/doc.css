@@ -139,7 +139,6 @@
     counter-reset: h4;
 }
 
-
 .container h3::before {
     counter-increment: h3;
     content: counter(h2) "." counter(h3);
@@ -153,6 +152,16 @@
 
 .container .text--truncate::before {
     content: none;
+}
+
+[data-theme="dark"] .giscus-container,
+[data-theme="dark"] .container img {
+    background-color: var(--dark-background-color);
+}
+
+[data-theme="dark"] .giscus-container {
+    padding: 1rem;
+    border-radius: 1rem;
 }
 
 @media screen and (max-width: 750px) {

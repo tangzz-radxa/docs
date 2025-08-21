@@ -94,8 +94,8 @@ const config = {
         searchPagePath: false,
       },
       colorMode: {
-        defaultMode: "light",
-        disableSwitch: true,
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
       },
       announcementBar: {
         id: "radxa-website",

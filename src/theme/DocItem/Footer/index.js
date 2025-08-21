@@ -73,6 +73,7 @@ export default function DocItemFooter() {
             paddingTop: "2rem",
             borderTop: "1px solid #000",
           }}
+          className="giscus-container"
         >
           <Giscus
             id="comments"

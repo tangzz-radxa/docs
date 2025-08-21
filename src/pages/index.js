@@ -146,7 +146,7 @@ export default () => {
                 ? homeDocData[seriesKey].series_zh
                 : homeDocData[seriesKey].series_en}
             </p>
-            <p>
+            <p style={{ color: "#000" }}>
               {currentLocale
                 ? homeDocData[seriesKey].series_introduction_zh
                 : homeDocData[seriesKey].series_introduction_en}
@@ -154,65 +154,65 @@ export default () => {
             <div className={styles.photos} id="photo">
               {homeDocData[seriesKey].products.length > 0
                 ? homeDocData[seriesKey].products.map((item, index) => {
-                    return (
-                      <Link
-                        to={item.products_link}
-                        key={index}
-                        className={
-                          productKey == index ? styles.current_photo : null
-                        }
-                        onMouseMove={() => {
-                          setProductKey(index);
-                          localStorage.setItem("radxa_product_current", index);
+                  return (
+                    <Link
+                      to={item.products_link}
+                      key={index}
+                      className={
+                        productKey == index ? styles.current_photo : null
+                      }
+                      onMouseMove={() => {
+                        setProductKey(index);
+                        localStorage.setItem("radxa_product_current", index);
+                      }}
+                    >
+                      {loading ? (
+                        <div className={styles.loading_box}>
+                          <p className={styles.loading_spinner}></p>
+                        </div>
+                      ) : (
+                        <>
+                          <span>{item.products_name}</span>
+                        </>
+                      )}
+                      <img
+                        style={{ display: `${loading ? "none" : "block"}` }}
+                        src={item.products_photo_url}
+                        alt={item.products_name}
+                        onLoad={() => {
+                          setLoading(false);
                         }}
-                      >
-                        {loading ? (
-                          <div className={styles.loading_box}>
-                            <p className={styles.loading_spinner}></p>
-                          </div>
-                        ) : (
-                          <>
-                            <span>{item.products_name}</span>
-                          </>
-                        )}
-                        <img
-                          style={{ display: `${loading ? "none" : "block"}` }}
-                          src={item.products_photo_url}
-                          alt={item.products_name}
-                          onLoad={() => {
-                            setLoading(false);
-                          }}
-                        />
-                      </Link>
-                    );
-                  })
+                      />
+                    </Link>
+                  );
+                })
                 : null}
             </div>
             <div className={styles.doc_links}>
               {homeDocData[seriesKey].products[productKey].docs.length > 0 &&
-              homeDocData[seriesKey].products[productKey].docs
+                homeDocData[seriesKey].products[productKey].docs
                 ? homeDocData[seriesKey].products[productKey].docs.map(
-                    (item, index) => {
-                      return (
-                        <Link to={item.docs_link} key={index}>
-                          <img src={icons[item.docs_photo_type]} />
-                          <p className={styles.link_title}>
-                            <span>
-                              {currentLocale
-                                ? item.docs_name_zh
-                                : item.docs_name_en}{" "}
-                              {svgEle}
-                            </span>
-                            <span>
-                              {currentLocale
-                                ? item.docs_info_zh
-                                : item.docs_info_en}
-                            </span>
-                          </p>
-                        </Link>
-                      );
-                    },
-                  )
+                  (item, index) => {
+                    return (
+                      <Link to={item.docs_link} key={index}>
+                        <img src={icons[item.docs_photo_type]} />
+                        <p className={styles.link_title}>
+                          <span>
+                            {currentLocale
+                              ? item.docs_name_zh
+                              : item.docs_name_en}{" "}
+                            {svgEle}
+                          </span>
+                          <span>
+                            {currentLocale
+                              ? item.docs_info_zh
+                              : item.docs_info_en}
+                          </span>
+                        </p>
+                      </Link>
+                    );
+                  },
+                )
                 : null}
             </div>
           </div>
