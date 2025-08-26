@@ -161,16 +161,12 @@ const config = {
                 to: "/rock4",
                 children: [
                   {
-                    label: "→ ROCK 4A/4B/4A+/4B+",
-                    to: "/rock4/rock4ab",
+                    label: "→ ROCK 4A/4B/4A+/4B+/4SE",
+                    to: "/rock4/rock4ab-se",
                   },
                   {
                     label: "→ ROCK 4C+",
                     to: "/rock4/rock4c+",
-                  },
-                  {
-                    label: "→ ROCK 4SE",
-                    to: "/rock4/rock4se",
                   },
                   {
                     label: "→ ROCK 4D",
