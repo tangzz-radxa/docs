@@ -300,6 +300,10 @@ const config = {
                     label: "Cubie A7A",
                     to: "/cubie/a7a",
                   },
+                  {
+                    label: "Cubie A7Z",
+                    to: "/cubie/a7z",
+                  },
                 ],
               },
               {
