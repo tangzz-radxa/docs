@@ -154,6 +154,10 @@
     content: none;
 }
 
+.container .tab_none{
+    display: none;
+}
+
 [data-theme="dark"] .giscus-container,
 [data-theme="dark"] .container img {
     background-color: var(--dark-background-color);
