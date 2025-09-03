@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import { useWindowSize } from '@docusaurus/theme-common';
+import { useWindowSize, useColorMode } from '@docusaurus/theme-common';
 import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import DocItemPaginator from '@theme/DocItem/Paginator';
 import DocVersionBanner from '@theme/DocVersionBanner';
@@ -12,6 +12,9 @@ import DocItemContent from '@theme/DocItem/Content';
 import DocBreadcrumbs from '@theme/DocBreadcrumbs';
 import ContentVisibility from '@theme/ContentVisibility';
 import styles from './styles.module.css';
+import Giscus from "@giscus/react";
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+
 /**
  * Decide if the toc should be rendered, on mobile or desktop viewports
  */
@@ -32,6 +35,8 @@ function useDocTOC() {
   };
 }
 export default function DocItemLayout({ children }) {
+  const { i18n } = useDocusaurusContext();
+  const { colorMode } = useColorMode();
   const docTOC = useDocTOC();
   const { metadata } = useDoc();
   return (
@@ -48,6 +53,24 @@ export default function DocItemLayout({ children }) {
             <DocItemFooter />
           </article>
           <DocItemPaginator />
+        </div>
+        <div
+          style={{
+            marginTop: "2rem",
+            paddingTop: "2rem",
+            borderTop: "1px solid #000",
+          }}
+          className="giscus-container"
+        >
+          <Giscus
+            id="comments-giscus"
+            repo="radxa-docs/docs"
+            repoId="R_kgDOLlFk6A"
+            mapping="title"
+            theme={colorMode === "dark" ? "dark_dimmed" : "light"}
+            lang={i18n.currentLocale === "zh" ? "zh-CN" : "en"}
+            loading="lazy"
+          />
         </div>
       </div>
       {docTOC.desktop && <div className="col col--3">{docTOC.desktop}</div>}

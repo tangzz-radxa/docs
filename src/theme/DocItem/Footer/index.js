@@ -8,12 +8,9 @@ import TagsListInline from "@theme/TagsListInline";
 import EditMetaRow from "@theme/EditMetaRow";
 import styles from "./index.module.css";
 import Translate from "@docusaurus/Translate";
-import Giscus from "@giscus/react";
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 const contributorsData = require("@site/static/page/contributors.json");
 export default function DocItemFooter() {
   const { metadata } = useDoc();
-  const { i18n } = useDocusaurusContext();
   const { id } = metadata;
   let { pathname } = useLocation();
   pathname = pathname.replace("/en", "");
@@ -67,26 +64,6 @@ export default function DocItemFooter() {
             lastUpdatedBy={lastUpdatedBy}
           />
         )}
-        <div
-          style={{
-            marginTop: "2rem",
-            paddingTop: "2rem",
-            borderTop: "1px solid #000",
-          }}
-          className="giscus-container"
-        >
-          <Giscus
-            id="comments"
-            repo="radxa-docs/docs"
-            repoId="R_kgDOLlFk6A"
-            mapping="title"
-            theme="preferred_color_scheme"
-            lang={i18n.currentLocale === "zh" ? "zh-CN" : "en"}
-            loading="lazy"
-          // category="Announcements"
-          // categoryId="DIC_kwDOLlFk6M4CuX5G"
-          />
-        </div>
       </footer>
       {contributorsIndex && (
         <h3
