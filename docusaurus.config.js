@@ -328,6 +328,10 @@ const config = {
                 to: "/compute-module/cm3j",
               },
               {
+                label: "CM4",
+                to: "/compute-module/cm4",
+              },
+              {
                 label: "CM5",
                 to: "/compute-module/cm5",
               },
