@@ -385,6 +385,10 @@ const config = {
                 to: "/aicore/ax-m1",
               },
               {
+                label: "DX-M1",
+                to: "/aicore/dx-m1",
+              },
+              {
                 label: "SG2300X",
                 to: "/aicore/sg2300x",
               },
