@@ -265,4 +265,13 @@
   line-height: 120%;
   border-bottom: 1px solid #D5D8DD;
   padding: 10px 15px 5px;
+  margin: 0;
+}
+
+.right-list>div>ol {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5px 15px;
+  margin: 0;
 }
