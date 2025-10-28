@@ -1,19 +1,19 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useLayoutEffect, useRef } from "react";
 import styles from "./index.module.css";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
-import { getDocs } from "../utils/getDocs";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Translate from "@docusaurus/Translate";
 import SearchBar from "@theme/SearchBar";
 import useIsBrowser from "@docusaurus/useIsBrowser";
 import clsx from "clsx";
-
+import home_data from "./home-data.json";
+import CenteredTabs from "../components/CenteredTabs";
 export default () => {
   const { i18n } = useDocusaurusContext();
   const isBrowser = useIsBrowser();
   const currentLocale = i18n.currentLocale === "zh";
-  const homeDocData = getDocs().Home.sidebar_custom_props.product_docs || [];
+  const [indexCategory, setIndexCategory] = useState(Object.keys(home_data)[0])
   const [seriesKey, setSeriesKey] = useState(
     isBrowser ? localStorage.getItem("radxa_doc_current") : 0 || 0,
   );
@@ -57,23 +57,27 @@ export default () => {
       : localStorage.setItem("radxa_product_current", 0);
   }, []);
 
-  useEffect(() => {
-    if (homeDocData.length === renderCount) {
+  useLayoutEffect(() => {
+    if (home_data[indexCategory].length === renderCount) {
       setRendered(true);
     }
-  }, [renderCount, homeDocData]);
+  }, [renderCount, home_data[indexCategory].length]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setRenderCount(itemsRef.current.length);
-  }, [homeDocData]);
+  }, [home_data[indexCategory].length]);
 
-  const leftItems = homeDocData.map((item, index) => {
+  useLayoutEffect(() => {
+    setSeriesKey(0)
+  }, [indexCategory])
+
+  const leftItems = home_data[indexCategory].map((item, index) => {
     return (
       <li
         key={index}
         ref={(el) => {
           itemsRef.current[index] = el;
-          if (index === homeDocData.length - 1) {
+          if (index === home_data[indexCategory].length - 1) {
             setRenderCount(itemsRef.current.length);
           }
         }}
@@ -110,119 +114,143 @@ export default () => {
 
   return (
     <Layout>
-      <div className={styles.docs_home_main}>
-        <div className={styles.docs_entry}>
-          <h1>
-            <Translate id="radxa.docs" />
-          </h1>
-          <p>
-            <Translate id="radxa.docs.info1" />
-          </p>
-          <div className={styles.search_box}>
+      <section className={styles["doc-header-container"]}>
+        <div className={styles["doc-header"]} id="doc-contact">
+          <h1><Translate id="radxa.docs" /></h1>
+          <div>
             <SearchBar />
+            <img src="./doc-search.svg" />
           </div>
-          <div className={styles.hot_topic}>
-            <p>
-              <Translate id="radxa.docs.hot" />
-            </p>
+        </div>
+      </section>
+      <section className={styles["doc-series-container"]}
+        style={{ display: `${rendered ? "block" : "none"}` }}
+      >
+        <div>
+          <div className={styles["pr-list"]}>
+            <div className={styles["pr-category"]}>
+              <CenteredTabs datalist={Object.keys(home_data)} indexCategory={indexCategory} setIndexCategory={setIndexCategory} />
+            </div>
+            <div className={styles["pr-series"]}>
+              <ul className={styles.product_lines}>
+                {home_data[indexCategory].length > 0 && leftItems}
+              </ul>
+              <div className={styles.line_info} ref={infoRef}
+              >
+                <p>
+                  {currentLocale
+                    ? home_data[indexCategory][seriesKey]?.series_zh
+                    : home_data[indexCategory][seriesKey]?.series_en}
+                </p>
+                <p style={{ color: "#000" }}>
+                  {currentLocale
+                    ? home_data[indexCategory][seriesKey]?.series_introduction_zh
+                    : home_data[indexCategory][seriesKey]?.series_introduction_en}
+                </p>
+                <div className={styles.photos} id="photo">
+                  {
+                    home_data[indexCategory][seriesKey]?.products.length > 0
+                    && home_data[indexCategory][seriesKey]?.products.map((item, index) => {
+                      return (
+                        <Link
+                          to={item?.products_link}
+                          key={index}
+                          className={
+                            productKey == index ? styles.current_photo : null
+                          }
+                          onMouseMove={() => {
+                            setProductKey(index);
+                            localStorage.setItem("radxa_product_current", index);
+                          }}
+                        >
+                          {loading ? (
+                            <div className={styles.loading_box}>
+                              <p className={styles.loading_spinner}></p>
+                            </div>
+                          ) : (
+                            <>
+                              <span>{item?.products_name}</span>
+                            </>
+                          )}
+                          <img
+                            style={{ display: `${loading ? "none" : "block"}` }}
+                            src={item?.products_photo_url}
+                            alt={item?.products_name}
+                            onLoad={() => {
+                              setLoading(false);
+                            }}
+                          />
+                        </Link>
+                      );
+                    })
+                  }
+                </div>
+                <div className={styles.doc_links}>
+                  {
+                    home_data[indexCategory].length > 0 &&
+                    home_data[indexCategory][seriesKey]?.products[productKey]?.docs.map(
+                      (item, index) => {
+                        return (
+                          <Link to={item.docs_link} key={index}>
+                            <img src={icons[item.docs_photo_type]} />
+                            <p className={styles.link_title}>
+                              <span>
+                                {currentLocale
+                                  ? item.docs_name_zh
+                                  : item.docs_name_en}{" "}
+                                {svgEle}
+                              </span>
+                              <span>
+                                {currentLocale
+                                  ? item.docs_info_zh
+                                  : item.docs_info_en}
+                              </span>
+                            </p>
+                          </Link>
+                        );
+                      },
+                    )
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={styles["right-list"]}>
             <div>
-              <Link to="/rock3">ROCK 3 Family</Link>
-              <Link to="/rock5">ROCK 5 Family</Link>
-              <Link to="/zero">ZERO Family</Link>
-              <Link to="/nio">NIO Family</Link>
+              <p>Hot Topic</p>
+              <ol>
+                <li>Read for precision, not for breadth, and specialize, not for variety. --(Song) Huang Tingjian</li>
+                <li>真理是诚实人的助手。——网络收集</li>
+                <li>真理是诚实人的助手。——网络收集</li>
+                <li>真理是诚实人的助手。——网络收集</li>
+              </ol>
+            </div>
+            <div>
+              <p>Hot Topic</p>
+              <ol>
+                <li>Read for precision, not for breadth, and specialize, not for variety. --(Song) Huang Tingjian</li>
+                <li>真理是诚实人的助手。——网络收集</li>
+                <li>真理是诚实人的助手。——网络收集</li>
+                <li>真理是诚实人的助手。——网络收集</li>
+              </ol>
+            </div>
+            <div>
+              <p>Hot Topic</p>
+              <ol>
+                <li>Read for precision, not for breadth, and specialize, not for variety. --(Song) Huang Tingjian</li>
+                <li>真理是诚实人的助手。——网络收集</li>
+                <li>真理是诚实人的助手。——网络收集</li>
+                <li>真理是诚实人的助手。——网络收集</li>
+              </ol>
             </div>
           </div>
         </div>
-        <div
-          className={styles.products_center}
-          style={{ display: `${rendered ? "flex" : "none"}` }}
-        >
-          <ul className={styles.product_lines}>
-            {homeDocData.length > 0 ? leftItems : null}
-          </ul>
-          <div className={styles.line_info} ref={infoRef}>
-            <p>
-              {currentLocale
-                ? homeDocData[seriesKey].series_zh
-                : homeDocData[seriesKey].series_en}
-            </p>
-            <p style={{ color: "#000" }}>
-              {currentLocale
-                ? homeDocData[seriesKey].series_introduction_zh
-                : homeDocData[seriesKey].series_introduction_en}
-            </p>
-            <div className={styles.photos} id="photo">
-              {homeDocData[seriesKey].products.length > 0
-                ? homeDocData[seriesKey].products.map((item, index) => {
-                  return (
-                    <Link
-                      to={item.products_link}
-                      key={index}
-                      className={
-                        productKey == index ? styles.current_photo : null
-                      }
-                      onMouseMove={() => {
-                        setProductKey(index);
-                        localStorage.setItem("radxa_product_current", index);
-                      }}
-                    >
-                      {loading ? (
-                        <div className={styles.loading_box}>
-                          <p className={styles.loading_spinner}></p>
-                        </div>
-                      ) : (
-                        <>
-                          <span>{item.products_name}</span>
-                        </>
-                      )}
-                      <img
-                        style={{ display: `${loading ? "none" : "block"}` }}
-                        src={item.products_photo_url}
-                        alt={item.products_name}
-                        onLoad={() => {
-                          setLoading(false);
-                        }}
-                      />
-                    </Link>
-                  );
-                })
-                : null}
-            </div>
-            <div className={styles.doc_links}>
-              {homeDocData[seriesKey].products[productKey].docs.length > 0 &&
-                homeDocData[seriesKey].products[productKey].docs
-                ? homeDocData[seriesKey].products[productKey].docs.map(
-                  (item, index) => {
-                    return (
-                      <Link to={item.docs_link} key={index}>
-                        <img src={icons[item.docs_photo_type]} />
-                        <p className={styles.link_title}>
-                          <span>
-                            {currentLocale
-                              ? item.docs_name_zh
-                              : item.docs_name_en}{" "}
-                            {svgEle}
-                          </span>
-                          <span>
-                            {currentLocale
-                              ? item.docs_info_zh
-                              : item.docs_info_en}
-                          </span>
-                        </p>
-                      </Link>
-                    );
-                  },
-                )
-                : null}
-            </div>
-          </div>
-        </div>
-        <div
-          className={styles.load_box}
-          style={{ display: `${!rendered ? "flex" : "none"}` }}
-        >
-          <p className={clsx(styles.loading_spinner, styles.loading_max)}></p>
-        </div>
+      </section>
+      <div
+        className={styles.load_box}
+        style={{ display: `${!rendered ? "flex" : "none"}` }}
+      >
+        <p className={clsx(styles.loading_spinner, styles.loading_max)}></p>
       </div>
     </Layout>
   );

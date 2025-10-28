@@ -1,0 +1,42 @@
+.tabs-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  background: #F4F4F6;
+}
+
+.tabs-list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.tabs-list>li.active {
+  background: #FBFBFC;
+  color: #74BC1F;
+}
+
+.tabs-list>li {
+  color: #737373;
+  font-family: "Familjen Grotesk";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  padding: 18px 14px;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.absolute_line {
+  position: absolute;
+  bottom: 0;
+  height: 3px;
+  background-color: #74BC1F;
+  transition: all 0.3s ease-out;
+}

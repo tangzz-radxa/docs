@@ -31,6 +31,10 @@ a:hover {
   text-decoration: none;
 }
 
+#doc-contact .DocSearch-Button {
+  width: 420px !important;
+}
+
 [data-theme="light"] .DocSearch {
   /* --docsearch-primary-color: var(--ifm-color-primary); */
   /* --docsearch-text-color: var(--ifm-font-color-base); */
@@ -39,7 +43,7 @@ a:hover {
   /* 弹窗 */
   --docsearch-modal-background: var(--ifm-color-secondary-lighter);
   /* 搜索框 */
-  --docsearch-searchbox-background: var(--ifm-color-secondary);
+  --docsearch-searchbox-background: #fff;
   --docsearch-searchbox-focus-background: var(--ifm-color-white);
   /* 条目 */
   --docsearch-hit-color: var(--ifm-font-color-base);
