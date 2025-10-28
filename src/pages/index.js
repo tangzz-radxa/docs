@@ -119,7 +119,7 @@ export default () => {
           <h1><Translate id="radxa.docs" /></h1>
           <div>
             <SearchBar />
-            <img src="./doc-search.svg" />
+            <img src="/home/doc-search.svg" />
           </div>
         </div>
       </section>
