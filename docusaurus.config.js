@@ -100,7 +100,7 @@ const config = {
       announcementBar: {
         id: "radxa-website",
         content:
-          '<div id="bulletin"><a target="_blank" rel="noopener noreferrer" href="https://radxa.com">Home</a><a target="_blank" rel="noopener noreferrer" href="https://radxa.com/products">Products</a><a target="_blank" rel="noopener noreferrer" href="https://radxa.com/news">News</a><a target="_blank" rel="noopener noreferrer" href="https://radxa.com/services">Services</a><a target="_blank" rel="noopener noreferrer" href="https://radxa.com/support">Support</a><a target="_blank" rel="noopener noreferrer" href="https://radxa.com/about">About</a></div>',
+          '<div id="bulletin"><a target="_blank" rel="noopener noreferrer" href="https://radxa.com">Home</a><a target="_blank" rel="noopener noreferrer" href="https://radxa.com/products">Products</a><a target="_blank" rel="noopener noreferrer" href="https://radxa.com/news">News</a><a target="_blank" rel="noopener noreferrer" href="https://radxa.com/services">Services</a><a target="_blank" rel="noopener noreferrer" href="https://radxa.com/community">Support</a><a target="_blank" rel="noopener noreferrer" href="https://radxa.com/about">About</a></div>',
         backgroundColor: "#2b2b2b",
         textColor: "#fff",
         isCloseable: false,
