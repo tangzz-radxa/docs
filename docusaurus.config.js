@@ -38,7 +38,7 @@ const config = {
   },
   future: {
     v4: true,
-    experimental_faster: true
+    experimental_faster: true,
   },
   presets: [
     [
@@ -136,7 +136,7 @@ const config = {
                     label: "→ ROCK 2F",
                     to: "/rock2/rock2f",
                   },
-                ]
+                ],
               },
               {
                 label: "ROCK 3 系列",
@@ -154,7 +154,7 @@ const config = {
                     label: "→ ROCK 3C",
                     to: "/rock3/rock3c",
                   },
-                ]
+                ],
               },
               {
                 label: "ROCK 4 系列",
@@ -172,7 +172,7 @@ const config = {
                     label: "→ ROCK 4D",
                     to: "/rock4/rock4d",
                   },
-                ]
+                ],
               },
               {
                 label: "ROCK 5 系列",
@@ -198,7 +198,7 @@ const config = {
                     label: "→  ROCK 5 ITX",
                     to: "/rock5/rock5itx",
                   },
-                ]
+                ],
               },
               {
                 label: "ROCK Pi",
@@ -216,7 +216,7 @@ const config = {
                     label: "→ ROCK S0",
                     to: "/rockpi/rocks0",
                   },
-                ]
+                ],
               },
               {
                 label: "ZERO 系列",
@@ -366,12 +366,16 @@ const config = {
           },
           {
             type: "dropdown",
-            label: "生成式 AI",
+            label: "边缘计算",
             position: "left",
             items: [
               {
                 label: "Airbox",
-                to: "/sophon/airbox",
+                to: "/fogwise/airbox",
+              },
+              {
+                label: "Airbox Q900",
+                to: "/fogwise/airbox-q900",
               },
             ],
           },
