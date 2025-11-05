@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title_en": "A7A Getting Started",
+    "title_zh": "A7A 上手指南",
+    "link_url": "/cubie/a7a/getting-started"
+  },
+  {
+    "id": 2,
+    "title_en": "A7Z Getting Started",
+    "title_zh": "A7Z 上手指南",
+    "link_url": "/cubie/a7z/getting-started"
+  }
+]

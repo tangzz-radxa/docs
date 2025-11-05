@@ -272,6 +272,17 @@
   margin: 0;
 }
 
+.right-list>div>ol>li>a {
+  color: #2B2B2B;
+  font-family: "Familjen Grotesk";
+  font-size: 16px;
+}
+
+.right-list>div>ol>li>a:hover {
+  color: #74bc1f;
+  text-decoration: underline;
+}
+
 @media screen and (min-width: 1450px) {}
 
 @media screen and (max-width: 1450px) and (min-width: 1050px) {}
