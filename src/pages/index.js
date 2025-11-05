@@ -7,8 +7,11 @@ import Translate from "@docusaurus/Translate";
 import SearchBar from "@theme/SearchBar";
 import useIsBrowser from "@docusaurus/useIsBrowser";
 import clsx from "clsx";
-import home_data from "./home-data.json";
 import CenteredTabs from "../components/CenteredTabs";
+import home_data from "./home-data.json";
+import category_data from "./category.json";
+import official_selection from "./official-selection.json";
+
 export default () => {
   const { i18n } = useDocusaurusContext();
   const isBrowser = useIsBrowser();
@@ -129,7 +132,7 @@ export default () => {
         <div>
           <div className={styles["pr-list"]}>
             <div className={styles["pr-category"]}>
-              <CenteredTabs datalist={Object.keys(home_data)} indexCategory={indexCategory} setIndexCategory={setIndexCategory} />
+              <CenteredTabs datalist={Object.keys(home_data)} indexCategory={indexCategory} setIndexCategory={setIndexCategory} categoryData={category_data} currentLocale={currentLocale} />
             </div>
             <div className={styles["pr-series"]}>
               <ul className={styles.product_lines}>
@@ -217,7 +220,7 @@ export default () => {
           </div>
           <div className={styles["right-list"]}>
             <div>
-              <p>Hot Topic</p>
+              <p>{currentLocale ? "热门话题" : "Hot Topic"}</p>
               <ol>
                 <li>Read for precision, not for breadth, and specialize, not for variety. --(Song) Huang Tingjian</li>
                 <li>真理是诚实人的助手。——网络收集</li>
@@ -226,7 +229,7 @@ export default () => {
               </ol>
             </div>
             <div>
-              <p>Hot Topic</p>
+              <p>{currentLocale ? "更新" : "Update"}</p>
               <ol>
                 <li>Read for precision, not for breadth, and specialize, not for variety. --(Song) Huang Tingjian</li>
                 <li>真理是诚实人的助手。——网络收集</li>
@@ -235,12 +238,19 @@ export default () => {
               </ol>
             </div>
             <div>
-              <p>Hot Topic</p>
+              <p>{currentLocale ? "官方精选" : "Official Selection"}</p>
               <ol>
-                <li>Read for precision, not for breadth, and specialize, not for variety. --(Song) Huang Tingjian</li>
-                <li>真理是诚实人的助手。——网络收集</li>
-                <li>真理是诚实人的助手。——网络收集</li>
-                <li>真理是诚实人的助手。——网络收集</li>
+                {
+                  official_selection.length > 0 && official_selection.map((item, index) => {
+                    return (
+                      <li key={index}>
+                        <Link to={item.link_url} >
+                          {currentLocale ? item.title_zh : item.title_en}
+                        </Link>
+                      </li>
+                    )
+                  })
+                }
               </ol>
             </div>
           </div>

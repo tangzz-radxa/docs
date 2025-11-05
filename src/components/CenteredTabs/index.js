@@ -2,7 +2,7 @@ import { useState, useRef, useLayoutEffect } from 'react';
 import styles from './index.module.css';
 import clsx from 'clsx';
 
-const CenteredTabs = ({ datalist, setIndexCategory }) => {
+const CenteredTabs = ({ datalist, setIndexCategory, categoryData, currentLocale }) => {
   const [activeTab, setActiveTab] = useState(0);
   const tabsContainerRef = useRef(null);
   const tabRefs = useRef([]);
@@ -39,23 +39,27 @@ const CenteredTabs = ({ datalist, setIndexCategory }) => {
   return (
     <div className={styles["tabs-container"]} ref={tabsContainerRef}>
       <ol className={styles["tabs-list"]}>
-        {datalist.map((tab, index) => (
-          <li
-            key={index}
-            ref={el => tabRefs.current[index] = el}
-            className={clsx(
-              styles["tab-button"],
-              activeTab === index ? styles['active'] : ''
-            )}
-            onClick={() => {
-              setIndexCategory(tab)
-              setActiveTab(index);
-              centerTab(index);
-            }}
-          >
-            {tab}
-          </li>
-        ))}
+        {datalist.map((tab, index) => {
+          return (
+            <li
+              key={index}
+              ref={el => tabRefs.current[index] = el}
+              className={clsx(
+                styles["tab-button"],
+                activeTab === index ? styles['active'] : ''
+              )}
+              onClick={() => {
+                setIndexCategory(tab)
+                setActiveTab(index);
+                centerTab(index);
+              }}
+            >
+              {
+                categoryData[tab] && currentLocale ? categoryData[tab].zh : categoryData[tab].en
+              }
+            </li>
+          )
+        })}
       </ol>
       <span className={styles["absolute_line"]} ref={tabLine}></span>
     </div>
