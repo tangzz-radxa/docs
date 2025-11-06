@@ -100,7 +100,7 @@ const config = {
       announcementBar: {
         id: "radxa-website",
         content:
-          '<div id="bulletin"><a target="_blank" rel="noopener noreferrer" href="https://radxa.com">Home</a><a target="_blank" rel="noopener noreferrer" href="https://radxa.com/products">Products</a><a target="_blank" rel="noopener noreferrer" href="https://radxa.com/news">News</a><a target="_blank" rel="noopener noreferrer" href="https://radxa.com/services">Services</a><a target="_blank" rel="noopener noreferrer" href="https://radxa.com/community">Support</a><a target="_blank" rel="noopener noreferrer" href="https://radxa.com/about">About</a></div>',
+          '<div id="bulletin"><a target="_blank" rel="noopener noreferrer" href="https://radxa.com">Home</a><a target="_blank" rel="noopener noreferrer" href="https://radxa.com/products">Products</a><a target="_blank" rel="noopener noreferrer" href="https://radxa.com/news">News</a><a target="_blank" rel="noopener noreferrer" href="https://radxa.com/services">Services</a><a target="_blank" rel="noopener noreferrer" href="https://radxa.com/support">Support</a><a target="_blank" rel="noopener noreferrer" href="https://radxa.com/about">About</a></div>',
         backgroundColor: "#2b2b2b",
         textColor: "#fff",
         isCloseable: false,
@@ -527,6 +527,12 @@ const config = {
       {
         trackingID: "G-2V3W91WFXP",
         anonymizeIP: true,
+      },
+    ],
+    [
+      require.resolve(path.join(__dirname, "/plugins/baidu-analytics/src/index.js")),
+      {
+        trackingID: 'b95e7f9830b48df01fcb1c3267e7d73b',
       },
     ],
   ],
