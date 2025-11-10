@@ -71,6 +71,7 @@ export default function DocItemLayout({ children }) {
             lang={i18n.currentLocale === "zh" ? "zh-CN" : "en"}
             loading="lazy"
           />
+          <p style={{ fontSize: ".8rem", color: "#74bc1f", textAlign: "center" }}>{i18n.currentLocale === "zh" ? "您需要登录 GitHub 才能发表评论。如果您已登录，请忽略此消息。" : "You need to be logged into GitHub to post a comment. If you are already logged in, please ignore this message."}</p>
         </div>
       </div>
       {docTOC.desktop && <div className="col col--3">{docTOC.desktop}</div>}
