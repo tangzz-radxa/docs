@@ -60,7 +60,7 @@
           ]
         },
         {
-          "products_name": "ROCK 3B",
+          "products_name": "ROCK 3B/3B+",
           "products_photo_url": "/home/product-pictures/rock3b.webp",
           "products_link": "/rock3/rock3b",
           "docs": [
@@ -98,7 +98,7 @@
       "series_introduction_zh": "ROCK 4 是瑞莎基于 Rockchip RK3399/RK3399-T/OP1 开发的一系列 SBC（单板计算机)。 他们可以用来运行 Android 或一些 Linux 发行版以及 BSD 发行版。",
       "products": [
         {
-          "products_name": "ROCK 4A",
+          "products_name": "ROCK 4A/4A+",
           "products_photo_url": "/home/product-pictures/rock4a.webp",
           "products_link": "/rock4/rock4ab-se",
           "docs": [
@@ -113,7 +113,7 @@
           ]
         },
         {
-          "products_name": "ROCK 4B",
+          "products_name": "ROCK 4B/4B+",
           "products_photo_url": "/home/product-pictures/rock4b.webp",
           "products_link": "/rock4/rock4ab-se",
           "docs": [
@@ -432,6 +432,29 @@
       ]
     },
     {
+      "series_en": "NIO Family",
+      "series_zh": "NIO 系列",
+      "series_introduction_en": "The Radxa NIO series represents an innovative leap in the field of IoT. These single-board computers are built on MediaTek's Genio IoT system platform and are designed to meet the demands of various levels of IoT applications. ",
+      "series_introduction_zh": "瑞莎 NIO 系列代表了物联网领域的一次创新飞跃，这些单板计算机基于联发科的 Genio 物联网系统平台打造，专为满足不同级别的物联网应用需求而设计。",
+      "products": [
+        {
+          "products_name": "NIO 12L",
+          "products_photo_url": "/home/product-pictures/nio12l.webp",
+          "products_link": "/nio/12l",
+          "docs": [
+            {
+              "docs_link": "/nio/12l",
+              "docs_photo_type": "Overview",
+              "docs_name_en": "Overview",
+              "docs_name_zh": "NIO 12L 概览",
+              "docs_info_en": "Overview of the NIO 12L",
+              "docs_info_zh": "NIO 12L 概览"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "series_en": "SiRider Family",
       "series_zh": "SiRider 系列",
       "series_introduction_en": "SiRider is a high-performance single board computer series jointly launched by Radxa and Siengine.",
@@ -500,7 +523,7 @@
         },
         {
           "products_name": "Cubie A7A",
-          "products_photo_url": "/en/home/product-pictures/a7a.webp",
+          "products_photo_url": "/home/product-pictures/a7a.webp",
           "products_link": "/cubie/a7a",
           "docs": [
             {
@@ -515,7 +538,7 @@
         },
         {
           "products_name": "Cubie A7Z",
-          "products_photo_url": "/en/home/product-pictures/a7z.webp",
+          "products_photo_url": "/home/product-pictures/a7z.webp",
           "products_link": "/cubie/a7z",
           "docs": [
             {
@@ -538,7 +561,7 @@
       "products": [
         {
           "products_name": "Dragon Q6A",
-          "products_photo_url": "/home/product-pictures/dragon_q6a.webp",
+          "products_photo_url": "/home/product-pictures/dragon-q6a.webp",
           "products_link": "/dragon/q6a",
           "docs": [
             {
