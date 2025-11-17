@@ -11,6 +11,7 @@ import CenteredTabs from "../components/CenteredTabs";
 import home_data from "./home-data.json";
 import category_data from "./category.json";
 import official_selection from "./official-selection.json";
+import axios from "axios";
 
 export default () => {
   const { i18n } = useDocusaurusContext();
@@ -28,6 +29,31 @@ export default () => {
   const [renderCount, setRenderCount] = useState(0);
   const [rendered, setRendered] = useState(false);
   const infoRef = useRef(null);
+  const [hotTopics, setHotTopics] = useState([]);
+  const [hotUpdates, setHotUpdates] = useState([]);
+
+  useEffect(() => {
+    axios.get("https://docs.radxa.com/json/baidu_tongji_data.json").then((res) => {
+      const data = res.data.data.items[0];
+      const filteredData = data.filter(subArray =>
+        !subArray.some(item =>
+          item.name.includes('welcome') ||
+          item.name === "https://docs.radxa.com" ||
+          item.name === "https://docs.radxa.com/en"
+        )
+      );
+      setHotTopics(filteredData);
+    }).catch((err) => {
+    })
+    axios.get("https://docs.radxa.com/json/commit_update_data.json").then((res) => {
+      const filteredData = res.data.items.filter(item => {
+        return item.title.indexOf("Merge") !== 0
+      });
+      setHotUpdates(filteredData);
+    }).catch((err) => {
+    })
+  }, []);
+
   const svgEle = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -219,22 +245,39 @@ export default () => {
             </div>
           </div>
           <div className={styles["right-list"]}>
-            <div>
+            <div style={{ display: `${hotTopics.length > 0 ? "block" : "none"}` }}>
               <p>{currentLocale ? "热门话题" : "Hot Topic"}</p>
               <ol>
-                <li>Read for precision, not for breadth, and specialize, not for variety. --(Song) Huang Tingjian</li>
-                <li>真理是诚实人的助手。——网络收集</li>
-                <li>真理是诚实人的助手。——网络收集</li>
-                <li>真理是诚实人的助手。——网络收集</li>
+                {
+                  hotTopics.length > 0 && hotTopics.map((item, index) => {
+                    const current = item[0];
+                    if (index < 5)
+                      return (
+                        <li key={index} style={{ lineHeight: "120%" }}>
+                          <Link to={item[0].name} >
+                            {current.title}
+                          </Link>
+                        </li>
+                      )
+                  })
+                }
               </ol>
             </div>
-            <div>
+            <div style={{ display: `${hotUpdates.length > 0 ? "block" : "none"}` }}>
               <p>{currentLocale ? "更新" : "Update"}</p>
               <ol>
-                <li>Read for precision, not for breadth, and specialize, not for variety. --(Song) Huang Tingjian</li>
-                <li>真理是诚实人的助手。——网络收集</li>
-                <li>真理是诚实人的助手。——网络收集</li>
-                <li>真理是诚实人的助手。——网络收集</li>
+                {
+                  hotUpdates.length > 0 && hotUpdates.map((item, index) => {
+                    if (index < 5)
+                      return (
+                        <li key={index} style={{ lineHeight: "120%" }}>
+                          <Link to={item.url} >
+                            {item.title}
+                          </Link>
+                        </li>
+                      )
+                  })
+                }
               </ol>
             </div>
             <div>
