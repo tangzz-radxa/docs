@@ -121,7 +121,7 @@ const config = {
           },
           {
             type: "dropdown",
-            label: "SBC",
+            label: "单板计算机",
             position: "left",
             items: [
               {
@@ -374,7 +374,7 @@ const config = {
                 to: "/fogwise/airbox",
               },
               {
-                label: "Airbox Q900",
+                label: "AIRbox Q900",
                 to: "/fogwise/airbox-q900",
               },
             ],
