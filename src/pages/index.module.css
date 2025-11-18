@@ -283,6 +283,32 @@
   text-decoration: underline;
 }
 
+.hot-topic>li {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  white-space: wrap;
+  line-height: 100%;
+  gap: 0 5px;
+}
+
+.hot-topic>li>a {
+  white-space: nowrap;
+}
+
+.hot-topic>li>svg {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3px
+}
+
+.hot-topic>li>svg>path {
+  stroke: #74bc1f;
+}
+
 @media screen and (min-width: 1450px) {}
 
 @media screen and (max-width: 1450px) and (min-width: 1050px) {

@@ -33,6 +33,7 @@ export default () => {
   const [hotUpdates, setHotUpdates] = useState([]);
 
   useEffect(() => {
+    const specialPathRegex = /\/common|\/_/;
     axios.get("https://docs.radxa.com/json/baidu_tongji_data.json").then((res) => {
       const data = res.data.data.items[0];
       const filteredData = data.filter(subArray =>
@@ -47,7 +48,7 @@ export default () => {
     })
     axios.get("https://docs.radxa.com/json/commit_update_data.json").then((res) => {
       const filteredData = res.data.items.filter(item => {
-        return item.title.indexOf("Merge") !== 0
+        return item.title.indexOf("Merge") !== 0 && !specialPathRegex.test(item.page_url)
       });
       setHotUpdates(filteredData);
     }).catch((err) => {
@@ -247,16 +248,28 @@ export default () => {
           <div className={styles["right-list"]}>
             <div style={{ display: `${hotTopics.length > 0 ? "block" : "none"}` }}>
               <p>{currentLocale ? "热门话题" : "Hot Topic"}</p>
-              <ol>
+              <ol className={styles["hot-topic"]}>
                 {
                   hotTopics.length > 0 && hotTopics.map((item, index) => {
                     const current = item[0];
                     if (index < 5)
                       return (
-                        <li key={index} style={{ lineHeight: "120%" }}>
-                          <Link to={item[0].name} >
-                            {current.title}
-                          </Link>
+                        <li key={index}>
+                          {
+                            current.breadcrumbs.length > 0 && current.breadcrumbs.map((_item, _index) => {
+                              if (_index > 0)
+                                return (
+                                  <>
+                                    <Link to={_index === current.breadcrumbs.length - 1 ? current.name.replace("/en", "").replace("https://docs.radxa.com/", "") : _item.url.replace("/en", "")} key={_index}>
+                                      {_item.title}
+                                    </Link>
+                                    {
+                                      _index !== current.breadcrumbs.length - 1 && svgEle
+                                    }
+                                  </>
+                                )
+                            })
+                          }
                         </li>
                       )
                   })
@@ -271,7 +284,7 @@ export default () => {
                     if (index < 5)
                       return (
                         <li key={index} style={{ lineHeight: "120%" }}>
-                          <Link to={item.url} >
+                          <Link to={item.page_url.replace("/en", "")} >
                             {item.title}
                           </Link>
                         </li>
