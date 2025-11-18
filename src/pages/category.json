@@ -3,24 +3,20 @@
     "en": "Single Board Computers",
     "zh": "单板计算机"
   },
-  "Computer on Modules": {
-    "en": "Computer on Modules",
-    "zh": "模块化计算机"
+  "System on Modules": {
+    "en": "System on Modules",
+    "zh": "核心板"
   },
-  "Fogwise® Edge Computing": {
-    "en": "Fogwise® Edge Computing",
-    "zh": "Fogwise® 边缘计算"
+  "Edge Computing": {
+    "en": "Edge Computing",
+    "zh": "边缘计算"
   },
   "Network Computer": {
     "en": "Network Computer",
-    "zh": "网络计算机"
+    "zh": "网络计算"
   },
-  "Palmshell® Mini PC": {
-    "en": "Palmshell® Mini PC",
-    "zh": "Palmshell® 迷你电脑"
-  },
-  "Accessories": {
-    "en": "Accessories",
-    "zh": "配件"
+  "AICore Series": {
+    "en": "AICore Series",
+    "zh": "智核系列"
   }
 }

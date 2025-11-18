@@ -60,7 +60,7 @@
           ]
         },
         {
-          "products_name": "ROCK 3B",
+          "products_name": "ROCK 3B/3B+",
           "products_photo_url": "/home/product-pictures/rock3b.webp",
           "products_link": "/rock3/rock3b",
           "docs": [
@@ -98,7 +98,7 @@
       "series_introduction_zh": "ROCK 4 是瑞莎基于 Rockchip RK3399/RK3399-T/OP1 开发的一系列 SBC（单板计算机)。 他们可以用来运行 Android 或一些 Linux 发行版以及 BSD 发行版。",
       "products": [
         {
-          "products_name": "ROCK 4A",
+          "products_name": "ROCK 4A/4A+",
           "products_photo_url": "/home/product-pictures/rock4a.webp",
           "products_link": "/rock4/rock4ab-se",
           "docs": [
@@ -113,7 +113,7 @@
           ]
         },
         {
-          "products_name": "ROCK 4B",
+          "products_name": "ROCK 4B/4B+",
           "products_photo_url": "/home/product-pictures/rock4b.webp",
           "products_link": "/rock4/rock4ab-se",
           "docs": [
@@ -432,6 +432,29 @@
       ]
     },
     {
+      "series_en": "NIO Family",
+      "series_zh": "NIO 系列",
+      "series_introduction_en": "The Radxa NIO series represents an innovative leap in the field of IoT. These single-board computers are built on MediaTek's Genio IoT system platform and are designed to meet the demands of various levels of IoT applications. ",
+      "series_introduction_zh": "瑞莎 NIO 系列代表了物联网领域的一次创新飞跃，这些单板计算机基于联发科的 Genio 物联网系统平台打造，专为满足不同级别的物联网应用需求而设计。",
+      "products": [
+        {
+          "products_name": "NIO 12L",
+          "products_photo_url": "/home/product-pictures/nio12l.webp",
+          "products_link": "/nio/12l",
+          "docs": [
+            {
+              "docs_link": "/nio/12l",
+              "docs_photo_type": "Overview",
+              "docs_name_en": "Overview",
+              "docs_name_zh": "NIO 12L 概览",
+              "docs_info_en": "Overview of the NIO 12L",
+              "docs_info_zh": "NIO 12L 概览"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "series_en": "SiRider Family",
       "series_zh": "SiRider 系列",
       "series_introduction_en": "SiRider is a high-performance single board computer series jointly launched by Radxa and Siengine.",
@@ -500,7 +523,7 @@
         },
         {
           "products_name": "Cubie A7A",
-          "products_photo_url": "/en/home/product-pictures/a7a.webp",
+          "products_photo_url": "/home/product-pictures/a7a.webp",
           "products_link": "/cubie/a7a",
           "docs": [
             {
@@ -515,7 +538,7 @@
         },
         {
           "products_name": "Cubie A7Z",
-          "products_photo_url": "/en/home/product-pictures/a7z.webp",
+          "products_photo_url": "/home/product-pictures/a7z.webp",
           "products_link": "/cubie/a7z",
           "docs": [
             {
@@ -538,7 +561,7 @@
       "products": [
         {
           "products_name": "Dragon Q6A",
-          "products_photo_url": "/home/product-pictures/dragon_q6a.webp",
+          "products_photo_url": "/home/product-pictures/dragon-q6a.webp",
           "products_link": "/dragon/q6a",
           "docs": [
             {
@@ -554,12 +577,12 @@
       ]
     }
   ],
-  "Computer on Modules": [
+  "System on Modules": [
     {
-      "series_en": "Compute Module",
-      "series_zh": "计算模块系列",
-      "series_introduction_en": "Compute Module is a compact series of computing modules implemented by Rockchip SoC, known for their small size and compact layout.",
-      "series_introduction_zh": "Compute Module 是由 Rockchip SoC 所实现的，具有小尺寸和紧凑布局的计算模块系列。",
+      "series_en": "System on Module",
+      "series_zh": "核心板",
+      "series_introduction_en": "System on Module is a compact series of computing modules implemented by Rockchip SoC, known for their small size and compact layout.",
+      "series_introduction_zh": "核心板是由瑞芯微 SoC 所实现的，具有小尺寸和紧凑布局的特点。",
       "products": [
         {
           "products_name": "Radxa CM4",
@@ -667,107 +690,6 @@
           ]
         }
       ]
-    },
-    {
-      "series_en": "AICore Family",
-      "series_zh": "AICore 系列",
-      "series_introduction_en": "Radxa AICore Series is a cost-effective, high-performance AI acceleration module",
-      "series_introduction_zh": "AICore 系列是 Radxa 推出高性能、高算力和高性价比的 AI 加速模组系列",
-      "products": [
-        {
-          "products_name": "AX-M1",
-          "products_photo_url": "/en/home/product-pictures/ax-m1.webp",
-          "products_link": "/aicore/ax-m1",
-          "docs": [
-            {
-              "docs_link": "/aicore/ax-m1",
-              "docs_photo_type": "Overview",
-              "docs_name_en": "Overview",
-              "docs_name_zh": "AICore AX-M1 概览",
-              "docs_info_en": "Overview of the ax-m1",
-              "docs_info_zh": "AICore AX-M1 概览"
-            }
-          ]
-        },
-        {
-          "products_name": "DX-M1",
-          "products_photo_url": "/en/home/product-pictures/dx-m1.webp",
-          "products_link": "/aicore/dx-m1",
-          "docs": [
-            {
-              "docs_link": "/aicore/dx-m1",
-              "docs_photo_type": "Overview",
-              "docs_name_en": "Overview",
-              "docs_name_zh": "AICore DX-M1 概览",
-              "docs_info_en": "Overview of the dx-m1",
-              "docs_info_zh": "AICore DX-M1 概览"
-            }
-          ]
-        },
-        {
-          "products_name": "SG2300X",
-          "products_photo_url": "/en/home/product-pictures/sg2300x.webp",
-          "products_link": "/aicore/sg2300x",
-          "docs": [
-            {
-              "docs_link": "/aicore/sg2300x",
-              "docs_photo_type": "Overview",
-              "docs_name_en": "Overview",
-              "docs_name_zh": "AICore SG2300X 概览",
-              "docs_info_en": "Overview of the sg2300x",
-              "docs_info_zh": "AICore SG2300X 概览"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "series_en": "NIO Family",
-      "series_zh": "NIO 系列",
-      "series_introduction_en": "NIO is Radxa's New Launched SBC series",
-      "series_introduction_zh": "瑞莎 NIO 系列代表了物联网领域的一次创新飞跃，这些单板计算机基于联发科的 Genio 物联网系统平台打造，专为满足不同级别的物联网应用需求而设计。NIO 系列集低功耗、高性能、丰富的多媒体功能和独立AI处理器于一体，为用户提供多样化选择，以适应不同的应用场景。",
-      "products": [
-        {
-          "products_name": "NIO 12L",
-          "products_photo_url": "/home/product-pictures/nio12l.webp",
-          "products_link": "/nio/12l",
-          "docs": [
-            {
-              "docs_link": "/nio/12l",
-              "docs_photo_type": "Overview",
-              "docs_name_en": "Overview",
-              "docs_name_zh": "Radxa NIO 12L 概览",
-              "docs_info_en": "Overview of the Radxa NIO 12L",
-              "docs_info_zh": "Radxa NIO 12L 概览"
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  "Fogwise® Edge Computing": [
-    {
-      "series_en": "SG Family",
-      "series_zh": "SG 系列",
-      "series_introduction_en": "SG series is a series of computing modules and edge computing boxes developed by Radxa based on SOPHGO SG2300X. It has up to 32TOPS@INT8 computing power, powerful and complete deep learning toolchain, and up to 32-channel video processing capability. It is widely used and highly reliable.",
-      "series_introduction_zh": "SG 系列是瑞莎基于 SOPHGO SG2300X 研发的一系列计算模块和边缘智算盒子。它有高达32TOPS@INT8的算力， 具备强大完备的深度学习工具链、最高达32路视频处理能力。用途广泛，可靠性高。",
-      "products": [
-        {
-          "products_name": "Fogwise® AirBox",
-          "products_photo_url": "/home/product-pictures/airbox.webp",
-          "products_link": "/sophon/airbox",
-          "docs": [
-            {
-              "docs_link": "/sophon/airbox",
-              "docs_photo_type": "Overview",
-              "docs_name_en": "Overview",
-              "docs_name_zh": "Radxa Fogwise® AirBox 概览",
-              "docs_info_en": "Overview of the Radxa Fogwise® AirBox",
-              "docs_info_zh": "Radxa Fogwise® AirBox 概览"
-            }
-          ]
-        }
-      ]
     }
   ],
   "Network Computer": [
@@ -834,6 +756,101 @@
               "docs_name_zh": "Radxa E54C 概览",
               "docs_info_en": "Overview of the E54C",
               "docs_info_zh": "Radxa E54C 概览"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Edge Computing": [
+    {
+      "series_en": "Fogwise® Family",
+      "series_zh": "Fogwise® 系列",
+      "series_introduction_en": "Radxa's FogWise® Edge Computing Series is built on an open ecosystem and industrial-grade design. It delivers integrated capabilities that seamlessly bridge on-device inference with cloud-edge synergy. The product portfolio, which includes edge AI computing boxes, industrial gateways, and edge servers, empowers enterprises to rapidly deploy stable and scalable edge intelligence across diverse scenarios.",
+      "series_introduction_zh": "瑞莎 FogWise® 边缘计算系列以开放生态和工业级设计为底座，提供从设备端推理到云边协同的一体化能力；产品覆盖边缘智算盒、工业网关、边缘服务器，助力企业在多场景快速落地稳定、可规模化的边缘智能。",
+      "products": [
+        {
+          "products_name": "Fogwise® AirBox",
+          "products_photo_url": "/home/product-pictures/airbox.webp",
+          "products_link": "/fogwise/airbox",
+          "docs": [
+            {
+              "docs_link": "/fogwise/airbox",
+              "docs_photo_type": "Overview",
+              "docs_name_en": "Overview",
+              "docs_name_zh": "Radxa Fogwise® AirBox 概览",
+              "docs_info_en": "Overview of the Radxa Fogwise® AirBox",
+              "docs_info_zh": "Radxa Fogwise® AirBox 概览"
+            }
+          ]
+        },
+        {
+          "products_name": "Fogwise® AIRbox Q900",
+          "products_photo_url": "/home/product-pictures/airbox-q900.webp",
+          "products_link": "/fogwise/airbox-q900",
+          "docs": [
+            {
+              "docs_link": "/fogwise/airbox-q900",
+              "docs_photo_type": "Overview",
+              "docs_name_en": "Overview",
+              "docs_name_zh": "Radxa Fogwise® AIRbox Q900 概览",
+              "docs_info_en": "Overview of the Radxa Fogwise® AIRbox Q900",
+              "docs_info_zh": "Radxa Fogwise® AIRbox Q900 概览"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "AICore Series": [
+    {
+      "series_en": "AICore Series",
+      "series_zh": "智核系列",
+      "series_introduction_en": "The Radxa AICore Series is a high-performance, high-computing-power, and cost-effective AI acceleration module launched by Radxa.",
+      "series_introduction_zh": "瑞莎智核系列是瑞莎推出的高性能、高算力和高性价比的 AI 加速模组。",
+      "products": [
+        {
+          "products_name": "AX-M1",
+          "products_photo_url": "/home/product-pictures/ax-m1.webp",
+          "products_link": "/aicore/ax-m1",
+          "docs": [
+            {
+              "docs_link": "/aicore/ax-m1",
+              "docs_photo_type": "Overview",
+              "docs_name_en": "Overview",
+              "docs_name_zh": "AICore AX-M1 概览",
+              "docs_info_en": "Overview of the ax-m1",
+              "docs_info_zh": "AICore AX-M1 概览"
+            }
+          ]
+        },
+        {
+          "products_name": "DX-M1",
+          "products_photo_url": "/home/product-pictures/dx-m1.webp",
+          "products_link": "/aicore/dx-m1",
+          "docs": [
+            {
+              "docs_link": "/aicore/dx-m1",
+              "docs_photo_type": "Overview",
+              "docs_name_en": "Overview",
+              "docs_name_zh": "AICore DX-M1 概览",
+              "docs_info_en": "Overview of the dx-m1",
+              "docs_info_zh": "AICore DX-M1 概览"
+            }
+          ]
+        },
+        {
+          "products_name": "SG2300X",
+          "products_photo_url": "/home/product-pictures/sg2300x.webp",
+          "products_link": "/aicore/sg2300x",
+          "docs": [
+            {
+              "docs_link": "/aicore/sg2300x",
+              "docs_photo_type": "Overview",
+              "docs_name_en": "Overview",
+              "docs_name_zh": "AICore SG2300X 概览",
+              "docs_info_en": "Overview of the sg2300x",
+              "docs_info_zh": "AICore SG2300X 概览"
             }
           ]
         }
