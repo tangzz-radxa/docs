@@ -172,7 +172,7 @@ export default () => {
                     ? home_data[indexCategory][seriesKey]?.series_zh
                     : home_data[indexCategory][seriesKey]?.series_en}
                 </p>
-                <p style={{ color: "#000" }}>
+                <p>
                   {currentLocale
                     ? home_data[indexCategory][seriesKey]?.series_introduction_zh
                     : home_data[indexCategory][seriesKey]?.series_introduction_en}

@@ -7,7 +7,6 @@
   width: 90%;
   margin: 40px auto;
   border-radius: 15px;
-  background: #EBEDF0;
   padding: 50px 47.5px;
 }
 
@@ -67,8 +66,7 @@
 .product_lines>li {
   padding: 12px 15px;
   border-radius: 10px;
-  background: #F9F9F9;
-  color: rgba(0, 0, 0, 0.80);
+  /* color: rgba(0, 0, 0, 0.80); */
   font-family: "Familjen Grotesk";
   font-size: 20px;
   font-style: normal;
@@ -98,7 +96,7 @@
 }
 
 .line_info>p:nth-of-type(2) {
-  color: #666;
+  /* color: #666; */
   font-family: "Familjen Grotesk";
   font-size: 16px;
   font-style: normal;
@@ -123,11 +121,10 @@
 .photos>a:hover {
   border-color: #74bc1f;
   box-shadow: 0 0 6.206px 0 rgba(0, 0, 0, 0.25);
-  background-color: #fff;
 }
 
 .photos>a>span {
-  color: #555;
+  color: var(--homepage-text1-color);
   font-family: "Familjen Grotesk";
   font-size: 18px;
   font-style: normal;
@@ -151,7 +148,6 @@
 .doc_links>a {
   border-radius: 20px;
   border: 1px solid #F4F4F4;
-  background: #FFF;
   display: flex;
   align-items: center;
   padding: 13px;
@@ -160,7 +156,6 @@
 
 .doc_links>a:hover {
   border-color: #74BC1F;
-  background: #FFF;
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.05);
 }
 
@@ -170,7 +165,7 @@
 }
 
 .link_title>span:nth-of-type(1) {
-  color: #333;
+  color: var(--homepage-text1-color);
   font-family: "Familjen Grotesk";
   font-size: 24px;
   font-style: normal;
@@ -182,7 +177,7 @@
 }
 
 .link_title>span:nth-of-type(2) {
-  color: rgba(0, 0, 0, 0.80);
+  color: var(--homepage-text1-color);
   font-family: "Familjen Grotesk";
   font-size: 18px;
   font-style: normal;
@@ -249,11 +244,9 @@
 .right-list>div {
   border-radius: 10px;
   border: 1px solid #D5D8DD;
-  background: #FFF;
 }
 
 .right-list>div>p {
-  color: #2B2B2B;
   font-family: "Familjen Grotesk";
   font-size: 22px;
   font-style: normal;
@@ -273,7 +266,7 @@
 }
 
 .right-list>div>ol>li>a {
-  color: #2B2B2B;
+  color: var(--homepage-link-color);
   font-family: "Familjen Grotesk";
   font-size: 16px;
 }
@@ -307,6 +300,12 @@
 
 .hot-topic>li>svg>path {
   stroke: #74bc1f;
+}
+
+.doc_links>a,
+.product_lines>li,
+.doc-header {
+  background: var(--homepage-background-color);
 }
 
 @media screen and (min-width: 1450px) {}

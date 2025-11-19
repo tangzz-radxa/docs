@@ -3,7 +3,7 @@
   overflow: hidden;
   position: relative;
   border-radius: 10px;
-  background: #F4F4F6;
+  background: var(--homepage-background-color);
 }
 
 .tabs-list {
