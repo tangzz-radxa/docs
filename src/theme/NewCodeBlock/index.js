@@ -45,8 +45,9 @@ const NewCodeBlock = (props) => {
   let enhancedChildren = props.children;
   if (props.children && props.children.props) {
     enhancedChildren = React.cloneElement(props.children, {
-      className: `${props.children.props.className || ""} ${styles.noBottomBorder
-        }`,
+      className: `${props.children.props.className || ""} ${
+        styles.noBottomBorder
+      }`,
     });
   }
 
@@ -54,13 +55,11 @@ const NewCodeBlock = (props) => {
     <div className={styles.textBox}>
       <div className={styles.codeWrapper}>
         <div className={styles.tippre}>
-          {
-            promptPrefix ? (
-              <div className={`${styles.promptPrefix} ${promptStyleClass}`}>
-                {promptPrefix}
-              </div>
-            ) : null
-          }
+          {promptPrefix ? (
+            <div className={`${styles.promptPrefix} ${promptStyleClass}`}>
+              {promptPrefix}
+            </div>
+          ) : null}
           {enhancedChildren}
         </div>
       </div>

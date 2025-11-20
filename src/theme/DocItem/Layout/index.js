@@ -1,19 +1,19 @@
-import React from 'react';
-import clsx from 'clsx';
-import { useWindowSize, useColorMode } from '@docusaurus/theme-common';
-import { useDoc } from '@docusaurus/plugin-content-docs/client';
-import DocItemPaginator from '@theme/DocItem/Paginator';
-import DocVersionBanner from '@theme/DocVersionBanner';
-import DocVersionBadge from '@theme/DocVersionBadge';
-import DocItemFooter from '@theme/DocItem/Footer';
-import DocItemTOCMobile from '@theme/DocItem/TOC/Mobile';
-import DocItemTOCDesktop from '@theme/DocItem/TOC/Desktop';
-import DocItemContent from '@theme/DocItem/Content';
-import DocBreadcrumbs from '@theme/DocBreadcrumbs';
-import ContentVisibility from '@theme/ContentVisibility';
-import styles from './styles.module.css';
+import React from "react";
+import clsx from "clsx";
+import { useWindowSize, useColorMode } from "@docusaurus/theme-common";
+import { useDoc } from "@docusaurus/plugin-content-docs/client";
+import DocItemPaginator from "@theme/DocItem/Paginator";
+import DocVersionBanner from "@theme/DocVersionBanner";
+import DocVersionBadge from "@theme/DocVersionBadge";
+import DocItemFooter from "@theme/DocItem/Footer";
+import DocItemTOCMobile from "@theme/DocItem/TOC/Mobile";
+import DocItemTOCDesktop from "@theme/DocItem/TOC/Desktop";
+import DocItemContent from "@theme/DocItem/Content";
+import DocBreadcrumbs from "@theme/DocBreadcrumbs";
+import ContentVisibility from "@theme/ContentVisibility";
+import styles from "./styles.module.css";
 import Giscus from "@giscus/react";
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 /**
  * Decide if the toc should be rendered, on mobile or desktop viewports
@@ -25,7 +25,7 @@ function useDocTOC() {
   const canRender = !hidden && toc.length > 0;
   const mobile = canRender ? <DocItemTOCMobile /> : undefined;
   const desktop =
-    canRender && (windowSize === 'desktop' || windowSize === 'ssr') ? (
+    canRender && (windowSize === "desktop" || windowSize === "ssr") ? (
       <DocItemTOCDesktop />
     ) : undefined;
   return {
@@ -41,7 +41,7 @@ export default function DocItemLayout({ children }) {
   const { metadata } = useDoc();
   return (
     <div className="row">
-      <div className={clsx('col', !docTOC.hidden && styles.docItemCol)}>
+      <div className={clsx("col", !docTOC.hidden && styles.docItemCol)}>
         <ContentVisibility metadata={metadata} />
         <DocVersionBanner />
         <div className={styles.docItemContainer}>
@@ -71,7 +71,13 @@ export default function DocItemLayout({ children }) {
             lang={i18n.currentLocale === "zh" ? "zh-CN" : "en"}
             loading="lazy"
           />
-          <p style={{ fontSize: ".8rem", color: "#74bc1f", textAlign: "center" }}>{i18n.currentLocale === "zh" ? "您需要登录 GitHub 才能发表评论。如果您已登录，请忽略此消息。" : "You need to be logged into GitHub to post a comment. If you are already logged in, please ignore this message."}</p>
+          <p
+            style={{ fontSize: ".8rem", color: "#74bc1f", textAlign: "center" }}
+          >
+            {i18n.currentLocale === "zh"
+              ? "您需要登录 GitHub 才能发表评论。如果您已登录，请忽略此消息。"
+              : "You need to be logged into GitHub to post a comment. If you are already logged in, please ignore this message."}
+          </p>
         </div>
       </div>
       {docTOC.desktop && <div className="col col--3">{docTOC.desktop}</div>}

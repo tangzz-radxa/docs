@@ -3,17 +3,17 @@ import styles from "./index.module.css";
 import Link from "@docusaurus/Link";
 import { useLocation } from "@docusaurus/router";
 import SearchBar from "@theme/SearchBar";
-import { Dropdown } from 'antd';
+import { Dropdown } from "antd";
 import siteConfig from "@generated/docusaurus.config";
 import Translate from "@docusaurus/Translate";
-import useBaseUrl from '@docusaurus/useBaseUrl';
-import useIsBrowser from '@docusaurus/useIsBrowser';
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import useIsBrowser from "@docusaurus/useIsBrowser";
 import MobileNavBar from "./MobileNavBar";
 
 export default () => {
   const isBrowser = useIsBrowser();
   const navbarConfig = siteConfig.themeConfig.navbar;
-  const currentLanguage = useBaseUrl('/');
+  const currentLanguage = useBaseUrl("/");
   const { pathname } = useLocation();
   const support_box = useRef(null);
   const [sFlag, setSflag] = useState(false);
@@ -39,112 +39,120 @@ export default () => {
   );
 
   const svgEle2 = (
-    <svg viewBox="0 0 24 24" width='20' height='20' aria-hidden="true" className="iconLanguage_nlXk">
-      <path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z">
-      </path>
+    <svg
+      viewBox="0 0 24 24"
+      width="20"
+      height="20"
+      aria-hidden="true"
+      className="iconLanguage_nlXk"
+    >
+      <path
+        fill="currentColor"
+        d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"
+      ></path>
     </svg>
-  )
+  );
 
   const items = [
     {
-      key: '1',
-      label: 'ROCK',
+      key: "1",
+      label: "ROCK",
       children: [
         {
-          key: '1-1',
-          label: <Link to='/rock2'>ROCK 2</Link>,
+          key: "1-1",
+          label: <Link to="/rock2">ROCK 2</Link>,
         },
         {
-          key: '1-2',
-          label: <Link to='/rock3'>ROCK 3</Link>,
+          key: "1-2",
+          label: <Link to="/rock3">ROCK 3</Link>,
         },
         {
-          key: '1-3',
-          label: <Link to='/rock4'>ROCK 4</Link>,
+          key: "1-3",
+          label: <Link to="/rock4">ROCK 4</Link>,
         },
         {
-          key: '1-4',
-          label: <Link to='/rock5'>ROCK 5</Link>,
+          key: "1-4",
+          label: <Link to="/rock5">ROCK 5</Link>,
         },
       ],
     },
     {
-      key: '2',
-      label: 'ZERO',
+      key: "2",
+      label: "ZERO",
       children: [
         {
-          key: '2-1',
-          label: <Link to='/zero/zero'>Zero</Link>,
+          key: "2-1",
+          label: <Link to="/zero/zero">Zero</Link>,
         },
         {
-          key: '2-2',
-          label: <Link to='/zero/zero2pro'>Zero 2 Pro</Link>,
+          key: "2-2",
+          label: <Link to="/zero/zero2pro">Zero 2 Pro</Link>,
         },
         {
-          key: '2-3',
-          label: <Link to='/zero/zero3'>Zero 3</Link>,
+          key: "2-3",
+          label: <Link to="/zero/zero3">Zero 3</Link>,
         },
       ],
     },
     {
-      key: '3',
-      label: 'X',
+      key: "3",
+      label: "X",
       children: [
         {
-          key: '3-1',
-          label: <Link to='/x/x2l'>X2L</Link>,
+          key: "3-1",
+          label: <Link to="/x/x2l">X2L</Link>,
         },
         {
-          key: '3-2',
-          label: <Link to='/x/x4'>X4</Link>,
+          key: "3-2",
+          label: <Link to="/x/x4">X4</Link>,
         },
       ],
     },
     {
-      key: '4',
-      label: 'SoM',
+      key: "4",
+      label: "SoM",
       children: [
         {
-          key: '4-1',
-          label: <Link to='/compute-module/cm3'>CM3</Link>,
+          key: "4-1",
+          label: <Link to="/compute-module/cm3">CM3</Link>,
         },
         {
-          key: '4-2',
-          label: <Link to='/compute-module/cm5'>CM5</Link>,
+          key: "4-2",
+          label: <Link to="/compute-module/cm5">CM5</Link>,
         },
       ],
     },
     {
-      key: '5',
-      label: 'NIO',
+      key: "5",
+      label: "NIO",
       children: [
         {
-          key: '5-1',
-          label: <Link to='/nio/12l'>NIO 12L</Link>,
+          key: "5-1",
+          label: <Link to="/nio/12l">NIO 12L</Link>,
         },
       ],
     },
     {
-      key: '6',
-      label: 'Network Computer',
+      key: "6",
+      label: "Network Computer",
       children: [
         {
-          key: '6-1',
-          label: <Link to='/e/e20c'>E20C</Link>,
+          key: "6-1",
+          label: <Link to="/e/e20c">E20C</Link>,
         },
       ],
     },
     {
-      key: '7',
-      label: 'Gen AI',
+      key: "7",
+      label: "Gen AI",
       children: [
         {
-          key: '7-1',
-          label: <Link to='/sophon/aicore-sg2300x'>AICore SG2300x</Link>,
+          key: "7-1",
+          label: <Link to="/sophon/aicore-sg2300x">AICore SG2300x</Link>,
         },
         {
-          key: '7-2',
-          label: <Link to='/sophon/airbox'>Airbox</Link>,
+          key: "7-2",
+          label: <Link to="/sophon/airbox">Airbox</Link>,
         },
       ],
     },
@@ -159,16 +167,16 @@ export default () => {
           </Link>
           <div className={styles.navbar_items}>
             <ul>
-              <li style={{ paddingLeft: '0' }}>
-                <Link href="/welcome"><Translate id="home.page.welcome" /></Link>
+              <li style={{ paddingLeft: "0" }}>
+                <Link href="/welcome">
+                  <Translate id="home.page.welcome" />
+                </Link>
               </li>
               <li>
                 <Dropdown
-                  menu={
-                    {
-                      items,
-                    }
-                  }
+                  menu={{
+                    items,
+                  }}
                 >
                   <a onClick={(e) => e.preventDefault()}>
                     <Translate id="home.page.series" /> {svgEle}
@@ -178,7 +186,9 @@ export default () => {
             </ul>
             <ul>
               <li style={pathname == "/" ? index_li_style : null}>
-                <Link href="https://radxa.com/"><Translate id="home.page.home" /></Link>
+                <Link href="https://radxa.com/">
+                  <Translate id="home.page.home" />
+                </Link>
               </li>
               <li>
                 <Link href="https://radxa.com/products">
@@ -186,10 +196,14 @@ export default () => {
                 </Link>
               </li>
               <li>
-                <Link href="https://radxa.com/news"><Translate id="home.page.news" /></Link>
+                <Link href="https://radxa.com/news">
+                  <Translate id="home.page.news" />
+                </Link>
               </li>
               <li>
-                <Link href="https://radxa.com/services"><Translate id="home.page.services" /></Link>
+                <Link href="https://radxa.com/services">
+                  <Translate id="home.page.services" />
+                </Link>
               </li>
               <li
                 onMouseEnter={() => {
@@ -202,7 +216,9 @@ export default () => {
                 }}
                 style={sFlag ? index_li_style : null}
               >
-                <Link><Translate id="home.page.support" /> {svgEle}</Link>
+                <Link>
+                  <Translate id="home.page.support" /> {svgEle}
+                </Link>
                 <div
                   ref={support_box}
                   className={styles.down_menu}
@@ -228,7 +244,10 @@ export default () => {
                 }}
                 style={sFlag ? index_li_style : null}
               >
-                <Link>{svgEle2} {currentLanguage === '/' ? '中文' : 'English'} {svgEle}</Link>
+                <Link>
+                  {svgEle2} {currentLanguage === "/" ? "中文" : "English"}{" "}
+                  {svgEle}
+                </Link>
                 <div
                   ref={language_box}
                   className={styles.down_menu}
@@ -236,18 +255,46 @@ export default () => {
                     language_box.current.style.display = "block";
                   }}
                 >
-                  <Link href={"pathname:////" + (isBrowser ? window.location.host : null) + pathname.replace(/^\/en/, "")} target="_self" rel="noopener noreferrer" lang="zh-CN">中文</Link>
-                  <Link href={"pathname:///en/" + pathname} target="_self" rel="noopener noreferrer" lang="en-US">English</Link>
+                  <Link
+                    href={
+                      "pathname:////" +
+                      (isBrowser ? window.location.host : null) +
+                      pathname.replace(/^\/en/, "")
+                    }
+                    target="_self"
+                    rel="noopener noreferrer"
+                    lang="zh-CN"
+                  >
+                    中文
+                  </Link>
+                  <Link
+                    href={"pathname:///en/" + pathname}
+                    target="_self"
+                    rel="noopener noreferrer"
+                    lang="en-US"
+                  >
+                    English
+                  </Link>
                 </div>
               </li>
-              <li style={{ display: 'flex', alignItems: 'center', paddingRight: '0' }}>
+              <li
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  paddingRight: "0",
+                }}
+              >
                 <SearchBar />
               </li>
             </ul>
           </div>
         </div>
       </nav>
-      <MobileNavBar items={items} lang={currentLanguage} isBrowser={isBrowser} />
+      <MobileNavBar
+        items={items}
+        lang={currentLanguage}
+        isBrowser={isBrowser}
+      />
     </>
   );
 };

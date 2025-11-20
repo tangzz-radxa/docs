@@ -1,32 +1,32 @@
 [
   {
     "id": 1,
+    "link_url": "/fogwise/airbox-q900/getting-started/quickly-start",
     "title_en": "AIRbox Q900 Getting Started",
-    "title_zh": "AIRbox Q900 快速上手",
-    "link_url": "/fogwise/airbox-q900/getting-started/quickly-start"
+    "title_zh": "AIRbox Q900 快速上手"
   },
   {
     "id": 2,
+    "link_url": "/dragon/q6a/getting-started/quickly_start",
     "title_en": "Dragon Q6A Getting Started",
-    "title_zh": "Dragon Q6A 快速上手",
-    "link_url": "/dragon/q6a/getting-started/quickly_start"
+    "title_zh": "Dragon Q6A 快速上手"
   },
   {
     "id": 3,
+    "link_url": "/aicore/ax-m1",
     "title_en": "AICore AX-M1 Product Overview",
-    "title_zh": "AICore AX-M1 产品概述",
-    "link_url": "/aicore/ax-m1"
+    "title_zh": "AICore AX-M1 产品概述"
   },
   {
     "id": 4,
+    "link_url": "/cubie/a7a",
     "title_en": "A7A Product Overview",
-    "title_zh": "A7A 产品概述",
-    "link_url": "/cubie/a7a"
+    "title_zh": "A7A 产品概述"
   },
   {
     "id": 5,
+    "link_url": "/cubie/a7z",
     "title_en": "A7Z Product Overview",
-    "title_zh": "A7Z 产品概述",
-    "link_url": "/cubie/a7z"
+    "title_zh": "A7Z 产品概述"
   }
 ]

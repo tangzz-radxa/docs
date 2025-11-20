@@ -10,7 +10,7 @@
   --ifm-color-primary-lightest: #3cad6e;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --homepage-background-color: #f9f9f9;
-  --homepage-link-color: #2B2B2B;
+  --homepage-link-color: #2b2b2b;
   --homepage-text1-color: #555;
 }
 
@@ -23,7 +23,7 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  --dark-background-color: rgba(255, 255, 255, .8);
+  --dark-background-color: rgba(255, 255, 255, 0.8);
   --homepage-background-color: #2b2d2f;
   --homepage-link-color: #dddadd;
   --homepage-text1-color: #e3e3e3;
@@ -42,7 +42,7 @@ a:hover {
 }
 
 @media screen and (max-width: 750px) {
-  .theme-announcement-bar>div {
+  .theme-announcement-bar > div {
     padding: 0 !important;
   }
 
@@ -84,9 +84,11 @@ a:hover {
   --docsearch-hit-background: var(--ifm-color-emphasis-100);
   /* 页脚 */
   --docsearch-footer-background: var(--ifm-background-surface-color);
-  --docsearch-key-gradient: linear-gradient(-26.5deg,
-      var(--ifm-color-emphasis-200) 0%,
-      var(--ifm-color-emphasis-100) 100%);
+  --docsearch-key-gradient: linear-gradient(
+    -26.5deg,
+    var(--ifm-color-emphasis-200) 0%,
+    var(--ifm-color-emphasis-100) 100%
+  );
 }
 
 @font-face {

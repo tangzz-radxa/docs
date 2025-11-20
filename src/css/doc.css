@@ -1,179 +1,179 @@
 /* 文档默认style */
 .navbar__logo {
-    height: 30px;
-    margin-right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 30px;
+  margin-right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar__logo img {
-    margin-top: -8px;
-    height: 100%;
+  margin-top: -8px;
+  height: 100%;
 }
 
 .markdown li {
-    list-style: unset;
+  list-style: unset;
 }
 
 .menu__link--active {
-    color: #6aa700 !important;
-    font-weight: 600 !important;
+  color: #6aa700 !important;
+  font-weight: 600 !important;
 }
 
 .ant-select-item-option-active {
-    opacity: 1;
-    background-color: #74bc1f !important;
+  opacity: 1;
+  background-color: #74bc1f !important;
 }
 
 .footer {
-    background-color: #090909 !important;
+  background-color: #090909 !important;
 }
 
 .footer_box {
-    background-color: #090909 !important;
+  background-color: #090909 !important;
 }
 
 .theme-doc-sidebar-item-category-level-1 {
-    border-left: 1.5px solid #000;
+  border-left: 1.5px solid #000;
 }
 
 .theme-doc-sidebar-item-category-level-2 {
-    border-left: 1.5px solid #666;
+  border-left: 1.5px solid #666;
 }
 
 .menu__list-item--collapsed {
-    border: none;
+  border: none;
 }
 
 .theme-doc-sidebar-item-category-level-3 {
-    border-left: 1.5px solid #ccc;
+  border-left: 1.5px solid #ccc;
 }
 
 .menu__link--active {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .menu__list-item--collapsed {
-    border: none;
+  border: none;
 }
 
 .menu [tabindex="0"] {
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 22px;
-    color: #999999;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: #999999;
 }
 
 .navbar__inner {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 /* 文档自定义style */
-.gpio_style>table {
-    overflow: visible;
+.gpio_style > table {
+  overflow: visible;
 }
 
-.gpio_style>table td {
-    padding: 3px 5px;
-    font-size: 12px;
+.gpio_style > table td {
+  padding: 3px 5px;
+  font-size: 12px;
 }
 
 .green {
-    background-color: green;
-    color: #fff;
+  background-color: green;
+  color: #fff;
 }
 
 .black {
-    color: #fff;
-    background-color: black;
+  color: #fff;
+  background-color: black;
 }
 
 .blue {
-    color: #fff;
-    background-color: blue;
+  color: #fff;
+  background-color: blue;
 }
 
 .yellow {
-    color: #000;
-    background-color: yellow;
+  color: #000;
+  background-color: yellow;
 }
 
 .red {
-    color: #000;
-    background-color: red;
+  color: #000;
+  background-color: red;
 }
 
 .orange {
-    color: #000;
-    background-color: orange;
+  color: #000;
+  background-color: orange;
 }
 
 .container img {
-    display: block;
-    margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .hidden {
-    display: none !important;
+  display: none !important;
 }
 
 /* 重置计数器 */
 .container article {
-    counter-reset: h2;
+  counter-reset: h2;
 }
 
 /* 二级标题 */
 .container h2 {
-    counter-reset: h3;
-    position: relative;
+  counter-reset: h3;
+  position: relative;
 }
 
 .container h2::before {
-    counter-increment: h2;
-    content: counter(h2) ". ";
+  counter-increment: h2;
+  content: counter(h2) ". ";
 }
 
 /* 三级标题 - 基础样式 */
 .container h3 {
-    counter-reset: h4;
+  counter-reset: h4;
 }
 
 .container h3::before {
-    counter-increment: h3;
-    content: counter(h2) "." counter(h3);
-    font-weight: bold;
-    margin-right: .5rem;
+  counter-increment: h3;
+  content: counter(h2) "." counter(h3);
+  font-weight: bold;
+  margin-right: 0.5rem;
 }
 
 .container .text--truncate {
-    padding: 0;
+  padding: 0;
 }
 
 .container .text--truncate::before {
-    content: none;
+  content: none;
 }
 
-.container .tab_none{
-    display: none;
+.container .tab_none {
+  display: none;
 }
 
 [data-theme="dark"] .giscus-container,
 [data-theme="dark"] .container img {
-    background-color: var(--dark-background-color);
+  background-color: var(--dark-background-color);
 }
 
 [data-theme="dark"] .giscus-container {
-    padding: 1rem;
-    border-radius: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
 }
 
 @media screen and (max-width: 750px) {
-    .navbar {
-        height: 3.5rem;
-    }
+  .navbar {
+    height: 3.5rem;
+  }
 
-    .navbar__inner {
-        height: 100%;
-    }
+  .navbar__inner {
+    height: 100%;
+  }
 }

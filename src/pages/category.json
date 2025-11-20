@@ -1,11 +1,7 @@
 {
-  "Single Board Computers": {
-    "en": "Single Board Computers",
-    "zh": "单板计算机"
-  },
-  "System on Modules": {
-    "en": "System on Modules",
-    "zh": "核心板"
+  "AICore Series": {
+    "en": "AICore Series",
+    "zh": "智核系列"
   },
   "Edge Computing": {
     "en": "Edge Computing",
@@ -15,8 +11,12 @@
     "en": "Network Computer",
     "zh": "网络计算"
   },
-  "AICore Series": {
-    "en": "AICore Series",
-    "zh": "智核系列"
+  "Single Board Computers": {
+    "en": "Single Board Computers",
+    "zh": "单板计算机"
+  },
+  "System on Modules": {
+    "en": "System on Modules",
+    "zh": "核心板"
   }
 }

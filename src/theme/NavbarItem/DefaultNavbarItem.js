@@ -1,7 +1,7 @@
-import React from 'react';
-import clsx from 'clsx';
-import styles from './index.module.css';
-import NavbarNavLink from '@theme/NavbarItem/NavbarNavLink';
+import React from "react";
+import clsx from "clsx";
+import styles from "./index.module.css";
+import NavbarNavLink from "@theme/NavbarItem/NavbarNavLink";
 function DefaultNavbarItemDesktop({
   children,
   className,
@@ -12,7 +12,7 @@ function DefaultNavbarItemDesktop({
     <>
       <NavbarNavLink
         className={clsx(
-          isDropdownItem ? 'dropdown__link' : 'navbar__item navbar__link',
+          isDropdownItem ? "dropdown__link" : "navbar__item navbar__link",
           className,
         )}
         isDropdownLink={isDropdownItem}
@@ -20,31 +20,26 @@ function DefaultNavbarItemDesktop({
       />
       {children && (
         <ul className={styles.dropdown_item2}>
-          {
-            children.map((item, key) => {
-              return <li key={key}>
-                <NavbarNavLink
-                  label={item.label}
-                  to={item.to}
-                />
+          {children.map((item, key) => {
+            return (
+              <li key={key}>
+                <NavbarNavLink label={item.label} to={item.to} />
               </li>
-            })
-          }
+            );
+          })}
         </ul>
       )}
     </>
   );
   if (isDropdownItem || children?.length > 0) {
-    return <li
-      className={styles.menu2_li_hover}
-    >{element}</li>;
+    return <li className={styles.menu2_li_hover}>{element}</li>;
   }
   return element;
 }
 function DefaultNavbarItemMobile({ className, isDropdownItem, ...props }) {
   return (
     <li className="menu__list-item">
-      <NavbarNavLink className={clsx('menu__link', className)} {...props} />
+      <NavbarNavLink className={clsx("menu__link", className)} {...props} />
     </li>
   );
 }
@@ -59,7 +54,7 @@ export default function DefaultNavbarItem({
       {...props}
       activeClassName={
         props.activeClassName ??
-        (mobile ? 'menu__link--active' : 'navbar__link--active')
+        (mobile ? "menu__link--active" : "navbar__link--active")
       }
     />
   );

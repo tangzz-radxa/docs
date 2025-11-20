@@ -1,24 +1,29 @@
-import React from 'react';
-import { useThemeConfig } from '@docusaurus/theme-common';
-import { useNavbarSecondaryMenu } from '@docusaurus/theme-common/internal';
-import Translate from '@docusaurus/Translate';
-import ComponentTypes from '@theme/NavbarItem/ComponentTypes';
+import React from "react";
+import { useThemeConfig } from "@docusaurus/theme-common";
+import { useNavbarSecondaryMenu } from "@docusaurus/theme-common/internal";
+import Translate from "@docusaurus/Translate";
+import ComponentTypes from "@theme/NavbarItem/ComponentTypes";
 
 function SecondaryMenuBackButton(props) {
-  const NavbarItemComponent = ComponentTypes['localeDropdown'];
+  const NavbarItemComponent = ComponentTypes["localeDropdown"];
   const _props = {
     mobile: true,
     dropdownItemsBefore: [],
     dropdownItemsAfter: [],
-    position: 'right',
-    type: 'localeDropdown',
-  }
+    position: "right",
+    type: "localeDropdown",
+  };
   return (
-    <div style={{ marginBottom: '1rem' }}>
-      <button {...props} type="button" className="clean-btn navbar-sidebar__back">
+    <div style={{ marginBottom: "1rem" }}>
+      <button
+        {...props}
+        type="button"
+        className="clean-btn navbar-sidebar__back"
+      >
         <Translate
           id="theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel"
-          description="The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)">
+          description="The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
+        >
           ← Back to main menu
         </Translate>
       </button>

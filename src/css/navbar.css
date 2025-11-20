@@ -5,11 +5,11 @@
   gap: 50px;
 }
 
-#bulletin>a {
+#bulletin > a {
   text-decoration: none;
 }
 
-#bulletin>a:hover {
+#bulletin > a:hover {
   text-decoration: underline;
 }
 
@@ -33,7 +33,7 @@
   background-color: #74bc1f;
 }
 
-#bulletin>a:hover,
+#bulletin > a:hover,
 .navbar__link:hover,
 .navbar__link--active {
   color: #74bc1f;
@@ -75,7 +75,7 @@
     height: auto !important;
   }
 
-  .navbar__inner>.navbar__items {
+  .navbar__inner > .navbar__items {
     flex-wrap: wrap;
   }
 }

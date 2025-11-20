@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 import {
   useActiveDocContext,
   useLayoutDoc,
-} from '@docusaurus/plugin-content-docs/client';
-import DefaultNavbarItem from '@theme/NavbarItem/DefaultNavbarItem';
+} from "@docusaurus/plugin-content-docs/client";
+import DefaultNavbarItem from "@theme/NavbarItem/DefaultNavbarItem";
 export default function DocNavbarItem({
   docId,
   label: staticLabel,

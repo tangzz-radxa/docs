@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 import {
   useVersions,
   useActiveDocContext,
   useDocsVersionCandidates,
   useDocsPreferredVersion,
-} from '@docusaurus/plugin-content-docs/client';
-import { translate } from '@docusaurus/Translate';
-import { useLocation } from '@docusaurus/router';
-import DefaultNavbarItem from '@theme/NavbarItem/DefaultNavbarItem';
-import DropdownNavbarItem from '@theme/NavbarItem/DropdownNavbarItem';
+} from "@docusaurus/plugin-content-docs/client";
+import { translate } from "@docusaurus/Translate";
+import { useLocation } from "@docusaurus/router";
+import DefaultNavbarItem from "@theme/NavbarItem/DefaultNavbarItem";
+import DropdownNavbarItem from "@theme/NavbarItem/DropdownNavbarItem";
 function getVersionMainDoc(version) {
   return version.docs.find((doc) => doc.id === version.mainDocId);
 }
@@ -52,11 +52,11 @@ export default function DocsVersionDropdownNavbarItem({
   const dropdownLabel =
     mobile && items.length > 1
       ? translate({
-        id: 'theme.navbar.mobileVersionsDropdown.label',
-        message: 'Versions',
-        description:
-          'The label for the navbar versions dropdown on mobile view',
-      })
+          id: "theme.navbar.mobileVersionsDropdown.label",
+          message: "Versions",
+          description:
+            "The label for the navbar versions dropdown on mobile view",
+        })
       : dropdownVersion.label;
   const dropdownTo =
     mobile && items.length > 1

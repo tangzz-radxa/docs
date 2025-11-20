@@ -1,8 +1,13 @@
-import { useState, useRef, useLayoutEffect } from 'react';
-import styles from './index.module.css';
-import clsx from 'clsx';
+import { useState, useRef, useLayoutEffect } from "react";
+import styles from "./index.module.css";
+import clsx from "clsx";
 
-const CenteredTabs = ({ datalist, setIndexCategory, categoryData, currentLocale }) => {
+const CenteredTabs = ({
+  datalist,
+  setIndexCategory,
+  categoryData,
+  currentLocale,
+}) => {
   const [activeTab, setActiveTab] = useState(0);
   const tabsContainerRef = useRef(null);
   const tabRefs = useRef([]);
@@ -16,7 +21,8 @@ const CenteredTabs = ({ datalist, setIndexCategory, categoryData, currentLocale 
       const containerRect = container.getBoundingClientRect();
       const tabRect = tab.getBoundingClientRect();
 
-      const targetScrollLeft = tab.offsetLeft - (containerRect.width / 2) + (tabRect.width / 2);
+      const targetScrollLeft =
+        tab.offsetLeft - containerRect.width / 2 + tabRect.width / 2;
 
       if (tabLine.current) {
         tabLine.current.style.left = `${tab.offsetLeft}px`;
@@ -25,7 +31,7 @@ const CenteredTabs = ({ datalist, setIndexCategory, categoryData, currentLocale 
 
       container.scrollTo({
         left: targetScrollLeft,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   };
@@ -43,22 +49,22 @@ const CenteredTabs = ({ datalist, setIndexCategory, categoryData, currentLocale 
           return (
             <li
               key={index}
-              ref={el => tabRefs.current[index] = el}
+              ref={(el) => (tabRefs.current[index] = el)}
               className={clsx(
                 styles["tab-button"],
-                activeTab === index ? styles['active'] : ''
+                activeTab === index ? styles["active"] : "",
               )}
               onClick={() => {
-                setIndexCategory(tab)
+                setIndexCategory(tab);
                 setActiveTab(index);
                 centerTab(index);
               }}
             >
-              {
-                categoryData[tab] && currentLocale ? categoryData[tab].zh : categoryData[tab].en
-              }
+              {categoryData[tab] && currentLocale
+                ? categoryData[tab].zh
+                : categoryData[tab].en}
             </li>
-          )
+          );
         })}
       </ol>
       <span className={styles["absolute_line"]} ref={tabLine}></span>
