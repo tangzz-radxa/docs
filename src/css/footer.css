@@ -96,6 +96,12 @@
   background-size: 100%;
 }
 
+.footer__links > .footer__col {
+  flex: none;
+  width: auto;
+  min-width: 200px;
+}
+
 @media screen and (min-width: 1350px) {
   .container {
     margin-top: 50px;
@@ -147,10 +153,6 @@
     left: -38px;
     width: 100px;
     height: 100px;
-  }
-
-  .footer .row {
-    width: 600px;
   }
 }
 
@@ -204,10 +206,6 @@
     left: -38px;
     width: 100px;
     height: 100px;
-  }
-
-  .footer .row {
-    width: 600px;
   }
 }
 
@@ -274,5 +272,11 @@
   .footer .footer__col {
     width: 200px;
     --ifm-col-width: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .footer_center {
+    display: none !important;
   }
 }

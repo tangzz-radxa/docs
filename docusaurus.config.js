@@ -442,7 +442,7 @@ const config = {
             items: [
               {
                 label: "Wiki",
-                href: "https://wiki.radxa.com/",
+                href: "https://docs.radxa.com/",
               },
               {
                 label: "Forum",
@@ -530,9 +530,11 @@ const config = {
       },
     ],
     [
-      require.resolve(path.join(__dirname, "/plugins/baidu-analytics/src/index.js")),
+      require.resolve(
+        path.join(__dirname, "/plugins/baidu-analytics/src/index.js"),
+      ),
       {
-        trackingID: 'b95e7f9830b48df01fcb1c3267e7d73b',
+        trackingID: "b95e7f9830b48df01fcb1c3267e7d73b",
       },
     ],
   ],
