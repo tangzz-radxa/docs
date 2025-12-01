@@ -658,6 +658,21 @@
           "products_link": "/orion/o6",
           "products_name": "Orion O6",
           "products_photo_url": "/home/product-pictures/o6.webp"
+        },
+        {
+          "docs": [
+            {
+              "docs_info_en": "Overview of the orion o6n",
+              "docs_info_zh": "Radxa Orion O6N 概览",
+              "docs_link": "/orion/o6n",
+              "docs_name_en": "Overview",
+              "docs_name_zh": "Orion O6N 概览",
+              "docs_photo_type": "Overview"
+            }
+          ],
+          "products_link": "/orion/o6n",
+          "products_name": "Orion O6N",
+          "products_photo_url": "/home/product-pictures/o6n.webp"
         }
       ],
       "series_en": "Orion Family",

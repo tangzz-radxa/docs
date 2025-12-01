@@ -278,6 +278,10 @@ const config = {
                     label: "Orion O6",
                     to: "/orion/o6",
                   },
+                  {
+                    label: "Orion O6N",
+                    to: "/orion/o6n",
+                  },
                 ],
               },
               {
