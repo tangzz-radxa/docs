@@ -557,6 +557,24 @@ const config = {
         trackingID: "b95e7f9830b48df01fcb1c3267e7d73b",
       },
     ],
+    [
+      "@docusaurus/plugin-client-redirects",
+      {
+        createRedirects(existingPath) {
+          if (existingPath.includes('/som')) {
+            return [
+              existingPath.replace('/som', '/compute-module'),
+              existingPath.replace('/som/cm/cm3i', '/compute-module/cm3i'),
+              existingPath.replace('/som/cm/cm3j', '/compute-module/cm3j'),
+              existingPath.replace('/som/cm/cm3', '/compute-module/cm3'),
+              existingPath.replace('/som/cm/cm5', '/compute-module/cm5'),
+              existingPath.replace('/som/nx/nx5', '/compute-module/nx5'),
+            ];
+          }
+          return undefined;
+        },
+      }
+    ],
   ],
 };
 
