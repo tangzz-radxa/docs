@@ -567,6 +567,7 @@ const config = {
               existingPath.replace('/som/cm/cm3i', '/compute-module/cm3i'),
               existingPath.replace('/som/cm/cm3j', '/compute-module/cm3j'),
               existingPath.replace('/som/cm/cm3', '/compute-module/cm3'),
+              existingPath.replace('/som/cm/cm4', '/compute-module/cm4'),
               existingPath.replace('/som/cm/cm5', '/compute-module/cm5'),
               existingPath.replace('/som/nx/nx5', '/compute-module/nx5'),
             ];
