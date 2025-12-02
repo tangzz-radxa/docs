@@ -863,13 +863,13 @@
             {
               "docs_info_en": "Overview of the Radxa NX5",
               "docs_info_zh": "Radxa NX5 概览",
-              "docs_link": "/som/cm/nx5",
+              "docs_link": "/som/nx/nx5",
               "docs_name_en": "Overview",
               "docs_name_zh": "Radxa NX5 概览",
               "docs_photo_type": "Overview"
             }
           ],
-          "products_link": "/som/cm/nx5",
+          "products_link": "/som/nx/nx5",
           "products_name": "Radxa NX5",
           "products_photo_url": "/home/product-pictures/nx5.webp"
         },
