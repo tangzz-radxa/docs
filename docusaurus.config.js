@@ -316,32 +316,48 @@ const config = {
           },
           {
             type: "dropdown",
-            label: "核心板",
+            label: "核心模组",
             position: "left",
             items: [
               {
-                label: "CM3",
-                to: "/compute-module/cm3",
+                label: "CM 系列",
+                to: "/som/cm",
+                children: [
+                  {
+                    label: "CM3",
+                    to: "/som/cm/cm3",
+                  },
+                  {
+                    label: "CM3I",
+                    to: "/som/cm/cm3i",
+                  },
+                  {
+                    label: "CM3J",
+                    to: "/som/cm/cm3j",
+                  },
+                  {
+                    label: "CM4",
+                    to: "/som/cm/cm4",
+                  },
+                  {
+                    label: "CM5",
+                    to: "/som/cm/cm5",
+                  },
+                ],
               },
               {
-                label: "CM3I",
-                to: "/compute-module/cm3i",
-              },
-              {
-                label: "CM3J",
-                to: "/compute-module/cm3j",
-              },
-              {
-                label: "CM4",
-                to: "/compute-module/cm4",
-              },
-              {
-                label: "CM5",
-                to: "/compute-module/cm5",
-              },
-              {
-                label: "NX5",
-                to: "/compute-module/nx5",
+                label: "NX 系列",
+                to: "/som/nx",
+                children: [
+                  {
+                    label: "NX5",
+                    to: "/som/nx/nx5",
+                  },
+                  {
+                    label: "Orin NX",
+                    to: "/som/nx/orin-nx",
+                  },
+                ],
               },
             ],
           },

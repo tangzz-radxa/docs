@@ -757,7 +757,7 @@
       "series_zh": "Dragon 系列"
     }
   ],
-  "System on Modules": [
+  "Computer on Modules": [
     {
       "products": [
         {
@@ -765,13 +765,13 @@
             {
               "docs_info_en": "Overview of the Radxa CM4",
               "docs_info_zh": "Radxa CM4 概览",
-              "docs_link": "/compute-module/cm4",
+              "docs_link": "/som/cm/cm4",
               "docs_name_en": "Overview",
               "docs_name_zh": "Radxa CM4 概览",
               "docs_photo_type": "Overview"
             }
           ],
-          "products_link": "/compute-module/cm4",
+          "products_link": "/som/cm/cm4",
           "products_name": "Radxa CM4",
           "products_photo_url": "/home/product-pictures/cm4.webp"
         },
@@ -780,13 +780,13 @@
             {
               "docs_info_en": "Overview of the Radxa CM5",
               "docs_info_zh": "Radxa CM5 概览",
-              "docs_link": "/compute-module/cm5",
+              "docs_link": "/som/cm/cm5",
               "docs_name_en": "Overview",
               "docs_name_zh": "Radxa CM5 概览",
               "docs_photo_type": "Overview"
             }
           ],
-          "products_link": "/compute-module/cm5",
+          "products_link": "/som/cm/cm5",
           "products_name": "Radxa CM5",
           "products_photo_url": "/home/product-pictures/cm5.webp"
         },
@@ -795,13 +795,13 @@
             {
               "docs_info_en": "Overview of the Radxa CM3",
               "docs_info_zh": "Radxa CM3 概览",
-              "docs_link": "/compute-module/cm3",
+              "docs_link": "/som/cm/cm3",
               "docs_name_en": "Overview",
               "docs_name_zh": "Radxa CM3 概览",
               "docs_photo_type": "Overview"
             }
           ],
-          "products_link": "/compute-module/cm3",
+          "products_link": "/som/cm/cm3",
           "products_name": "Radxa CM3",
           "products_photo_url": "/home/product-pictures/cm3.webp"
         },
@@ -810,13 +810,13 @@
             {
               "docs_info_en": "Overview of the Radxa CM3I",
               "docs_info_zh": "Radxa CM3I 概览",
-              "docs_link": "/compute-module/cm3i",
+              "docs_link": "/som/cm/cm3i",
               "docs_name_en": "Overview",
               "docs_name_zh": "Radxa CM3I 概览",
               "docs_photo_type": "Overview"
             }
           ],
-          "products_link": "/compute-module/cm3i",
+          "products_link": "/som/cm/cm3i",
           "products_name": "Radxa CM3I",
           "products_photo_url": "/home/product-pictures/cm3i.webp"
         },
@@ -825,13 +825,13 @@
             {
               "docs_info_en": "Overview of the Radxa CM3J",
               "docs_info_zh": "Radxa CM3J 概览",
-              "docs_link": "/compute-module/cm3j",
+              "docs_link": "/som/cm/cm3j",
               "docs_name_en": "Overview",
               "docs_name_zh": "Radxa CM3J 概览",
               "docs_photo_type": "Overview"
             }
           ],
-          "products_link": "/compute-module/cm3j",
+          "products_link": "/som/cm/cm3j",
           "products_name": "Radxa CM3J",
           "products_photo_url": "/home/product-pictures/cm3j.webp"
         },
@@ -840,7 +840,7 @@
             {
               "docs_info_en": "Overview of the Radxa CM3S",
               "docs_info_zh": "Radxa CM3S 概览",
-              "docs_link": "/compute-module/cm3i",
+              "docs_link": "/som/cm/cm3s",
               "docs_name_en": "Overview",
               "docs_name_zh": "Radxa CM3S 概览",
               "docs_photo_type": "Overview"
@@ -849,27 +849,50 @@
           "products_link": "",
           "products_name": "Radxa CM3S",
           "products_photo_url": "/home/product-pictures/cm3s.webp"
-        },
+        }
+      ],
+      "series_en": "CM Series",
+      "series_introduction_en": "CM Series is a compact series of computing modules implemented by Rockchip SoC, known for their small size and compact layout.",
+      "series_introduction_zh": "CM 系列是由瑞芯微 SoC 所实现的，具有小尺寸和紧凑布局的特点。",
+      "series_zh": "CM 系列"
+    },
+    {
+      "products": [
         {
           "docs": [
             {
               "docs_info_en": "Overview of the Radxa NX5",
               "docs_info_zh": "Radxa NX5 概览",
-              "docs_link": "/compute-module/nx5",
+              "docs_link": "/som/cm/nx5",
               "docs_name_en": "Overview",
               "docs_name_zh": "Radxa NX5 概览",
               "docs_photo_type": "Overview"
             }
           ],
-          "products_link": "/compute-module/nx5",
+          "products_link": "/som/cm/nx5",
           "products_name": "Radxa NX5",
           "products_photo_url": "/home/product-pictures/nx5.webp"
+        },
+        {
+          "docs": [
+            {
+              "docs_info_en": "Overview of the Orin NX",
+              "docs_info_zh": "Orin NX 概览",
+              "docs_link": "/som/nx/orin-nx",
+              "docs_name_en": "Overview",
+              "docs_name_zh": "Orin NX 概览",
+              "docs_photo_type": "Overview"
+            }
+          ],
+          "products_link": "/som/nx/orin-nx",
+          "products_name": "Orin NX",
+          "products_photo_url": "/home/product-pictures/orin-nx.webp"
         }
       ],
-      "series_en": "System on Module",
-      "series_introduction_en": "System on Module is a compact series of computing modules implemented by Rockchip SoC, known for their small size and compact layout.",
-      "series_introduction_zh": "核心板是由瑞芯微 SoC 所实现的，具有小尺寸和紧凑布局的特点。",
-      "series_zh": "核心板"
+      "series_en": "NX Series",
+      "series_introduction_en": "",
+      "series_introduction_zh": "",
+      "series_zh": "NX 系列"
     }
   ]
 }
