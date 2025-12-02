@@ -15,8 +15,8 @@
     "en": "Single Board Computers",
     "zh": "单板计算机"
   },
-  "System on Modules": {
-    "en": "System on Modules",
-    "zh": "核心板"
+  "Computer on Module": {
+    "en": "Computer on Module",
+    "zh": "核心模组"
   }
 }

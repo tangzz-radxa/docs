@@ -316,32 +316,48 @@ const config = {
           },
           {
             type: "dropdown",
-            label: "核心板",
+            label: "核心模组",
             position: "left",
             items: [
               {
-                label: "CM3",
-                to: "/compute-module/cm3",
+                label: "CM 系列",
+                to: "/som/cm",
+                children: [
+                  {
+                    label: "CM3",
+                    to: "/som/cm/cm3",
+                  },
+                  {
+                    label: "CM3I",
+                    to: "/som/cm/cm3i",
+                  },
+                  {
+                    label: "CM3J",
+                    to: "/som/cm/cm3j",
+                  },
+                  {
+                    label: "CM4",
+                    to: "/som/cm/cm4",
+                  },
+                  {
+                    label: "CM5",
+                    to: "/som/cm/cm5",
+                  },
+                ],
               },
               {
-                label: "CM3I",
-                to: "/compute-module/cm3i",
-              },
-              {
-                label: "CM3J",
-                to: "/compute-module/cm3j",
-              },
-              {
-                label: "CM4",
-                to: "/compute-module/cm4",
-              },
-              {
-                label: "CM5",
-                to: "/compute-module/cm5",
-              },
-              {
-                label: "NX5",
-                to: "/compute-module/nx5",
+                label: "NX 系列",
+                to: "/som/nx",
+                children: [
+                  {
+                    label: "NX5",
+                    to: "/som/nx/nx5",
+                  },
+                  {
+                    label: "Orin NX",
+                    to: "/som/nx/orin-nx",
+                  },
+                ],
               },
             ],
           },
@@ -540,6 +556,25 @@ const config = {
       {
         trackingID: "b95e7f9830b48df01fcb1c3267e7d73b",
       },
+    ],
+    [
+      "@docusaurus/plugin-client-redirects",
+      {
+        createRedirects(existingPath) {
+          if (existingPath.includes('/som')) {
+            return [
+              existingPath.replace('/som', '/compute-module'),
+              existingPath.replace('/som/cm/cm3i', '/compute-module/cm3i'),
+              existingPath.replace('/som/cm/cm3j', '/compute-module/cm3j'),
+              existingPath.replace('/som/cm/cm3', '/compute-module/cm3'),
+              existingPath.replace('/som/cm/cm4', '/compute-module/cm4'),
+              existingPath.replace('/som/cm/cm5', '/compute-module/cm5'),
+              existingPath.replace('/som/nx/nx5', '/compute-module/nx5'),
+            ];
+          }
+          return undefined;
+        },
+      }
     ],
   ],
 };
