@@ -861,6 +861,21 @@
         {
           "docs": [
             {
+              "docs_info_en": "Overview of the Radxa NX4",
+              "docs_info_zh": "Radxa NX4 概览",
+              "docs_link": "/som/nx/nx4",
+              "docs_name_en": "Overview",
+              "docs_name_zh": "Radxa NX4 概览",
+              "docs_photo_type": "Overview"
+            }
+          ],
+          "products_link": "/som/nx/nx4",
+          "products_name": "Radxa NX4",
+          "products_photo_url": "/home/product-pictures/nx4.webp"
+        },
+        {
+          "docs": [
+            {
               "docs_info_en": "Overview of the Radxa NX5",
               "docs_info_zh": "Radxa NX5 概览",
               "docs_link": "/som/nx/nx5",
