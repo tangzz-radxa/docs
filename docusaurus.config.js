@@ -350,6 +350,10 @@ const config = {
                 to: "/som/nx",
                 children: [
                   {
+                    label: "NX4",
+                    to: "/som/nx/nx4",
+                  },
+                  {
                     label: "NX5",
                     to: "/som/nx/nx5",
                   },
