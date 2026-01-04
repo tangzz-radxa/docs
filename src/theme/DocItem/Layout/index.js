@@ -80,7 +80,7 @@ export default function DocItemLayout({ children }) {
           </p>
         </div>
         <p style={{ textAlign: "center", marginTop: "2rem", marginBottom: "0" }}>
-          <a href="https://docs.radxa.com">Radxa-docs</a> © 2026 by <a href="https://radxa.com"> Radxa Ltd.</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/"> CC BY 4.0</a>
+          <a href="https://docs.radxa.com">Radxa-docs</a> © 2026 by <a href="https://radxa.com"> Radxa Computer (Shenzhen) Co.,Ltd.</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/"> CC BY 4.0</a>
         </p>
       </div>
       {docTOC.desktop && <div className="col col--3">{docTOC.desktop}</div>}
