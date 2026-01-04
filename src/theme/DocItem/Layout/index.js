@@ -79,6 +79,9 @@ export default function DocItemLayout({ children }) {
               : "You need to be logged into GitHub to post a comment. If you are already logged in, please ignore this message."}
           </p>
         </div>
+        <p style={{ textAlign: "center", marginTop: "2rem", marginBottom: "0" }}>
+          <a href="https://docs.radxa.com">Radxa-docs</a> © 2026 by <a href="https://radxa.com"> Radxa Ltd.</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/"> CC BY 4.0</a>
+        </p>
       </div>
       {docTOC.desktop && <div className="col col--3">{docTOC.desktop}</div>}
     </div>
