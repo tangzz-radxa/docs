@@ -726,6 +726,21 @@
           "products_link": "/cubie/a7z",
           "products_name": "Cubie A7Z",
           "products_photo_url": "/home/product-pictures/a7z.webp"
+        },
+        {
+          "docs": [
+            {
+              "docs_info_en": "Overview of the cubie a7s",
+              "docs_info_zh": "Radxa Cubie A7S 概览",
+              "docs_link": "/cubie/a7s",
+              "docs_name_en": "Overview",
+              "docs_name_zh": "Cubie A7S 概览",
+              "docs_photo_type": "Overview"
+            }
+          ],
+          "products_link": "/cubie/a7s",
+          "products_name": "Cubie A7S",
+          "products_photo_url": "/home/product-pictures/a7s.webp"
         }
       ],
       "series_en": "Cubie Series",
