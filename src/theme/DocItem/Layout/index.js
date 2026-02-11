@@ -67,6 +67,8 @@ export default function DocItemLayout({ children }) {
             id="comments-giscus"
             repo="radxa-docs/docs"
             repoId="R_kgDOLlFk6A"
+            category="General"
+            categoryId="DIC_kwDOLlFk6M4CuX5H"
             mapping="title"
             theme={colorMode === "dark" ? "dark_dimmed" : "light"}
             lang={i18n.currentLocale === "zh" ? "zh-CN" : "en"}
