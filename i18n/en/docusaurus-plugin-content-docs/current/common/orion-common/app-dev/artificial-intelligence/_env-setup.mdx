@@ -56,6 +56,28 @@ conda activate noe
 
 </NewCodeBlock>
 
+After creating and activating the environment, it is recommended to verify the Python version first:
+
+<NewCodeBlock tip="Linux PC" type="PC">
+
+```bash
+python3 --version
+```
+
+</NewCodeBlock>
+
+Make sure the output shows `Python 3.10.x` before proceeding. If it shows a different version (e.g., 3.13), the conda environment is not active in the current terminal — run `conda activate noe` again.
+
+:::tip[Use source instead of bash to run the script]
+`bash env_setup.sh` executes in a subshell, which may not inherit the conda environment from the current terminal. Consider using:
+
+```bash
+source env_setup.sh
+```
+
+This runs the script in the current shell, ensuring it correctly finds Python 3.10 from the conda environment.
+:::
+
 ### Use the script to set up the development environment
 
 <NewCodeBlock tip="Linux PC" type="PC">
