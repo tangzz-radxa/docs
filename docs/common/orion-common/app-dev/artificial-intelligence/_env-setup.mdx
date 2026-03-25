@@ -56,6 +56,28 @@ conda activate noe
 
 </NewCodeBlock>
 
+创建并激活环境后，建议先确认 Python 版本符合要求：
+
+<NewCodeBlock tip="Linux PC" type="PC">
+
+```bash
+python3 --version
+```
+
+</NewCodeBlock>
+
+确保输出为 `Python 3.10.x`，再继续运行 `env_setup.sh`。如果显示系统自带的 Python 版本（如 3.13），说明当前终端尚未激活 conda 环境，需要重新执行 `conda activate noe`。
+
+:::tip[使用 source 而非 bash 运行脚本]
+`bash env_setup.sh` 会在子 shell 中执行，可能无法继承当前终端的 conda 环境。建议改用：
+
+```bash
+source env_setup.sh
+```
+
+这样脚本会在当前 shell 中运行，可正确找到 conda 环境中的 Python 3.10。
+:::
+
 ### 使用脚本配置开发环境
 
 <NewCodeBlock tip="Linux PC" type="PC">
