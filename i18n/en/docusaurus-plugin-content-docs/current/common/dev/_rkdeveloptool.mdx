@@ -96,3 +96,21 @@ Download links for the required Loader and Image files can be found below.
 ```bash
 sudo rkdeveloptool rd
 ```
+
+---
+
+## Troubleshooting
+
+### Device Not Detected on macOS
+
+If `rkdeveloptool ld` returns "no found any device" on macOS, try the following steps in order:
+
+1. **Verify the device is in Maskrom mode**: Check System Information to confirm a Rockchip USB device is detected
+2. **Use sudo for USB access**: macOS enforces strict USB device permissions. Try:
+
+```bash
+sudo rkdeveloptool ld
+```
+
+3. **Check the USB cable**: Use a cable that supports data transfer — some cables are charge-only
+4. **Try a USB 2.0 port**: If using a USB 3.0 port, try switching to a USB 2.0 port

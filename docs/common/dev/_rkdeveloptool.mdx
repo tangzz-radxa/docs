@@ -94,3 +94,21 @@ sudo rkdeveloptool wl 0 <image>
 ```bash
 sudo rkdeveloptool rd
 ```
+
+---
+
+## 故障排查
+
+### macOS 上设备未识别
+
+如果在 macOS 上运行 `rkdeveloptool ld` 提示 "no found any device"，请依次尝试以下步骤：
+
+1. **确认设备已进入 Maskrom 模式**：在 System Information（系统信息）中检查是否出现 Rockchip USB 设备
+2. **使用 sudo 提升权限**：macOS 对 USB 设备访问有严格限制，尝试：
+
+```bash
+sudo rkdeveloptool ld
+```
+
+3. **检查 USB 线缆**：请使用支持数据传输的 USB 线缆，部分线缆仅支持充电
+4. **尝试 USB 2.0 端口**：如果使用的是 USB 3.0 端口，尝试换用 USB 2.0 端口
