@@ -29,6 +29,22 @@ sidebar_position: 150
 
 :::
 
+## 百度网盘下载
+
+:::tip
+百度网盘分享链接定期更新镜像文件。建议通过百度网盘下载最新镜像。
+
+**版本说明：**
+- **R 版本**：经过测试的稳定版本，推荐使用
+- **T 版本**：测试版本（仅用于评估）
+:::
+
+- [百度网盘下载（radxa-dragon-q6a）](https://pan.baidu.com/s/56vG8RCxe-5T_27AWQcREGA#list/path=%2Fsharelink3108273493-988411983016443%2Fimage-release%2Fradxa-dragon-q6a&parentPath=%2Fsharelink3108273493-988411983016443)
+
+:::note
+百度网盘分享链接可能需要密码。请在百度网盘分享页面查看密码。
+:::
+
 :::tip 固件信息
 
 可以根据以下方式判断系统 SPI 固件版本信息：
