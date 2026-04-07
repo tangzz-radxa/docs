@@ -14,7 +14,7 @@ ROCK 5B/5B+ can be booted from microSD card or EMMC, depending on the boot metho
 
 ### Erase SPI Flash
 
-Before using a microSD card/eMMC to boot an SBC with SPI Flash, If there is data in SPI Flash, the SPI Flash needs to be erased. Refer to [Erase SPI Flash](../../low-level-dev/maskrom/erase)
+Before using a microSD card/eMMC to boot an SBC with SPI Flash, If there is data in SPI Flash, the SPI Flash needs to be erased. Refer to [Erase SPI Flash](../../getting-started/install-os/erase_spi-flash)
 
 <details>
 
@@ -86,7 +86,7 @@ Please go to [Resource Download](../../download) to download the corresponding i
 
 #### Linux systems are written using rkdeveloptool
 
-[rkdeveloptool](../../low-level-dev/maskrom/linux)
+[rkdeveloptool](../../low-level-dev/install-os/rkdevtool_use#tab-linux)
 
 </TabItem>
 
@@ -94,7 +94,7 @@ Please go to [Resource Download](../../download) to download the corresponding i
 
 #### Mac systems are written using rkdeveloptool
 
-[rkdeveloptool](../../low-level-dev/maskrom/mac-os)
+[rkdeveloptool](../../low-level-dev/install-os/rkdevtool_use#tab-macos)
 
 </TabItem>
 
@@ -102,7 +102,7 @@ Please go to [Resource Download](../../download) to download the corresponding i
 
 #### Windows systems write with rkdevtool
 
-[rkdevtool](../../low-level-dev/maskrom/windows)
+[rkdevtool](../../low-level-dev/install-os/rkdevtool_use#tab-windows)
 
 </TabItem>
 
@@ -137,7 +137,7 @@ Please go to [Resource Download](../../download) to download the corresponding i
 
 #### Linux systems are written using rkdeveloptool
 
-[rkdeveloptool](../../low-level-dev/maskrom/linux)
+[rkdeveloptool](../../low-level-dev/install-os/rkdevtool_use#tab-linux)
 
 </TabItem>
 
@@ -145,7 +145,7 @@ Please go to [Resource Download](../../download) to download the corresponding i
 
 #### Mac systems are written using rkdeveloptool
 
-[rkdeveloptool](../../low-level-dev/maskrom/mac-os)
+[rkdeveloptool](../../low-level-dev/install-os/rkdevtool_use#tab-macos)
 
 </TabItem>
 
