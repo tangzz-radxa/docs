@@ -4,17 +4,6 @@ sidebar_position: 150
 
 # Resource Downloads
 
-:::caution MEGA Link Access Notice
-Some MEGA links may not be accessible in certain regions or network environments. If you encounter access issues, please try the following:
-
-1. **Use VPN or Proxy Service**: Some regions may restrict access to MEGA
-2. **Use MEGA Official Client**: Download and install the [MEGA Official Client](https://mega.io/desktop) for a better download experience
-3. **Contact Technical Support**: If the above methods don't work, please contact us at [support@radxa.com](mailto:support@radxa.com) for assistance
-4. **Check Network Connection**: Ensure your network connection is stable and try refreshing the page
-
-We are actively working to find more stable alternative download sources. If you have accessible image files, please share them via GitHub Issue.
-:::
-
 ## System Images
 
 :::tip Beginner's Recommendation
@@ -42,17 +31,17 @@ We strongly recommend that beginners download GPT format Radxa OS official image
 #### GPT System Images (Recommended)
 
 - [Radxa OS - Debian 11 Bullseye KDE](https://github.com/radxa-build/radxa-cubie-a5e/releases/download/rsdk-b1/radxa-cubie-a5e_bullseye_kde_b1.output_512.img.xz)
-- [Tina Linux - Debian 11 Bullseye XFCE](https://mega.nz/file/g7AWVBZJ#xkDOIJYHvgUngdKUgW7D_aSaVPifyYZDOG0fUOtgAMk) ⚠️ *MEGA link, may not be accessible in some regions*
+- [Tina Linux - Debian 11 Bullseye XFCE](https://mega.nz/file/g7AWVBZJ#xkDOIJYHvgUngdKUgW7D_aSaVPifyYZDOG0fUOtgAMk)
 
 #### FEL System Images
 
-- [Tina Linux - Debian 11 XFCE](https://mega.nz/file/g7AWVBZJ#xkDOIJYHvgUngdKUgW7D_aSaVPifyYZDOG0fUOtgAMk) ⚠️ *MEGA link, may not be accessible in some regions*
+- [Tina Linux - Debian 11 XFCE](https://mega.nz/file/g7AWVBZJ#xkDOIJYHvgUngdKUgW7D_aSaVPifyYZDOG0fUOtgAMk)
 
 ### Android
 
 #### FEL System Images
 
-- [Android 13](https://mega.nz/file/NjxmXBbT#EaY4bTCNCKTWp8e9r9q2da9EijEovJdlJx_7_xXP-akk) ⚠️ *MEGA link, may not be accessible in some regions*
+- [Android 13](https://mega.nz/file/NjxmXBbT#EaY4bTCNCKTWp8e9r9q2da9EijEovJdlJx_7_xXP-akk)
 
 ## Flashing Tools
 
