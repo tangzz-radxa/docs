@@ -8,8 +8,8 @@ imports_resolve_to:
   - docs/common/dev/_a733-video-codec.mdx
 ---
 
-# 视频编解码
-
 import ALLWINNERVIDEOCODEC from '../../../common/dev/\_a733-video-codec.mdx';
+
+# 视频编解码
 
 <ALLWINNERVIDEOCODEC />

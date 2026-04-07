@@ -7,8 +7,8 @@ imports_resolve_to:
   - i18n/en/docusaurus-plugin-content-docs/current/common/dev/_a733-video-codec.mdx
 ---
 
-# Video Codec
-
 import ALLWINNERVIDEOCODEC from '../../../common/dev/\_a733-video-codec.mdx';
+
+# Video Codec
 
 <ALLWINNERVIDEOCODEC />
