@@ -24,3 +24,31 @@ DISPLAY=:0 gst-launch-1.0 v4l2src device=/dev/video1 en-awisp=1 en-largemode=1 !
 ```
 
 </NewCodeBlock>
+
+## R6 Firmware Camera Commands
+
+The following examples apply to Cubie A7A with R6 firmware images.
+
+### 3840x2160 (4K)
+
+For IMX214 / IMX415 cameras.
+
+<NewCodeBlock tip='radxa@cubie-a7a$' type="device">
+
+```bash
+DISPLAY=:0 gst-launch-1.0 v4l2src device=/dev/video1 en-awisp=1 en-largemode=1 ! video/x-raw,format=NV12,width=3840,height=2160,framerate=30/1 ! xvimagesink
+```
+
+</NewCodeBlock>
+
+### 4208x3120 (4K+)
+
+For IMX214 cameras.
+
+<NewCodeBlock tip='radxa@cubie-a7a$' type="device">
+
+```bash
+DISPLAY=:0 gst-launch-1.0 v4l2src device=/dev/video1 en-awisp=1 en-largemode=1 ! video/x-raw,format=NV12,width=4208,height=3120,framerate=30/1 ! xvimagesink
+```
+
+</NewCodeBlock>

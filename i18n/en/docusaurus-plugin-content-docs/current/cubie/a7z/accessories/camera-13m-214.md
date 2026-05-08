@@ -44,6 +44,16 @@ DISPLAY=:0 gst-launch-1.0 v4l2src device=/dev/video0 en-awisp=1 en-largemode=0 !
 
 </NewCodeBlock>
 
+### 3840x2160 (4K) preview (IMX214 / IMX415)
+
+<NewCodeBlock tip='radxa@cubie-a7z$' type="device">
+
+```bash
+DISPLAY=:0 gst-launch-1.0 v4l2src device=/dev/video1 en-awisp=1 en-largemode=1 ! video/x-raw,format=NV12,width=3840,height=2160,framerate=30/1 ! xvimagesink
+```
+
+</NewCodeBlock>
+
 ## Troubleshooting
 
 - If no `/dev/video*` nodes appear, first confirm that you are using a recent official image, then reseat the FPC cable and verify its orientation and latch state
