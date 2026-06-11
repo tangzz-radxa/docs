@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # 电源选择
 
-ROCK 3B 支持多种供电方式、智能电源适配器以及固定电压：
+ROCK 3B / 3B+ 支持多种供电方式、智能电源适配器以及固定电压：
 
 - USB PD 2.0 支持 USB Type C PD 2.0、9V/2A、12V/2A、15V/2A、20V/2A
 

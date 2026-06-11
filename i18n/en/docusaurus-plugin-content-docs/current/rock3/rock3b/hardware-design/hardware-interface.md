@@ -10,7 +10,14 @@ sidebar_position: 1
 
 ## Physical photographs
 
-<img src="/img/rock3/3b/rock3b-interfaces.webp" alt="rk3568 chip block diagram" style={{ width: "80%" }} />
+<Tabs queryString="versions">
+    <TabItem value="ROCK 3B">
+        <img src="/img/rock3/3b/rock3b-interfaces.webp" alt="rock 3b interfaces" style={{ width: "80%" }} />
+    </TabItem>
+    <TabItem value="ROCK 3B+">
+        <img src="/img/rock3/3b/rock3b-plus-overview.webp" alt="rock 3b+ interfaces" style={{ width: "80%" }} />
+    </TabItem>
+</Tabs>
 
 ## Interface details
 

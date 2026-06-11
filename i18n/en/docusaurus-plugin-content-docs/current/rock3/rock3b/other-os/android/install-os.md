@@ -9,24 +9,24 @@ import Rkdeveloptool from "../../../../common/dev/\_rkdeveloptoolV3.mdx";
 
 # Install the operating system
 
-This document introduces how to install Android image to Rock 3B.
+This document introduces how to install Android image to ROCK 3B / 3B+.
 
-Rock 3B can boot from microSD card, eMMC, SSD, so install os on microSD card, eMMC or SSD based on your choose.
+ROCK 3B / 3B+ can boot from microSD card, eMMC (module on ROCK 3B, onboard on ROCK 3B+), SSD, so install os on microSD card, eMMC or SSD based on your choose.
 
 <Tabs queryString="target">
 
 <TabItem value="microsd/emmc" label="Install OS on microSD card/eMMC">
 
-Before starting ROCK 3B using microSD card/eMMC, it is necessary to erase the SPI as follows:
+Before starting the ROCK 3B / 3B+ using microSD card/eMMC, it is necessary to erase the SPI as follows:
 
 1. Please go to [Download Summary](../../../images) to download image.
 
 2. Enter maskrom mode
 
 - Disconnect the board from the power supply.
-- Remove the SD card, NVME SSD and insert the eMMC module.
-- Connect the USB3.0 port of the Radxa ROCK 3B to the PC side with USB cable.
-- Short circuit Maskrom Key with DuPont wire to power on the Radxa ROCK 3B.
+- Remove the SD card, NVME SSD. Insert the eMMC module (ROCK 3B only — ROCK 3B+ has onboard eMMC and does not require a module).
+- Connect the USB3.0 port of the Radxa ROCK 3B / 3B+ to the PC side with USB cable.
+- Short circuit Maskrom Key with DuPont wire to power on the Radxa ROCK 3B / 3B+.
 - Check for USB devices
   - Linux/macOS: Check if "Bus 001 Device 112: ID 2207:350a Fuzhou Rockchip Electronics Company" is displayed after running lsusb.
   - Windows: Open RKDevTool and you will see the device in "maskrom mode".
@@ -74,11 +74,11 @@ Please go to [Resource Download](../../../images) to download the corresponding 
 
 ## Start the system
 
-- After successfully burning the microSD card/ eMMC as described above, insert the slot of the ROCK 3B.
-- The power supply interface of ROCK 3B is [USB 2.0 OTG Type C port](../../hardware-design/hardware-interface), please use Type-C cable to connect the power supply port and the adapter.
+- After successfully burning the microSD card/ eMMC as described above, insert the slot of the ROCK 3B / 3B+.
+- The power supply interface of ROCK 3B / 3B+ is [USB 2.0 OTG Type C port](../../hardware-design/hardware-interface), please use Type-C cable to connect the power supply port and the adapter.
 
 :::tip
-Radxa ROCK 3B supports QC 3.0/2.0 adapter, 9V/2A, 12V/1.5A. Radxa recommends using the [Radxa Power PD30W](../../../../accessories/power/pd-30w).
+Radxa ROCK 3B / 3B+ supports QC 3.0/2.0 adapter, 9V/2A, 12V/1.5A. Radxa recommends using the [Radxa Power PD30W](../../../../accessories/power/pd-30w).
 :::
 
 </TabItem>
@@ -101,8 +101,8 @@ Please go to [Resource Download](../../../images) to download image.
 2. Enter Maskrom mode.
 
 - Disconnect power to the board
-- Remove the SD card,eMMC module and insert the NVME SSD.
-- Connect the USB3.0 port of the Radxa ROCK 3B to the PC with USB A-A.
+- Remove the SD card and eMMC module (ROCK 3B only — ROCK 3B+ has onboard eMMC and does not require a module). Insert the NVME SSD.
+- Connect the USB3.0 port of the Radxa ROCK 3B / 3B+ to the PC with USB A-A.
 - Short the Maskrom key.
 - Power up the board.
 - Unplug the short DuPont wire
@@ -161,10 +161,10 @@ If the operation is normal, RKDevTool will prompt `A MASKROM device was found`.
 
 ## System startup
 
-### Rock 3B
+### Rock 3B / 3B+
 
-- Power on the Rock 3B via the DC adapter.
-- The Rock 3B will boot up with the green power LED on.
+- Power on the ROCK 3B / 3B+ via the DC adapter.
+- The ROCK 3B / 3B+ will boot up with the green power LED on.
 
 </TabItem>
 

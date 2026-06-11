@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # Power supply options
 
-ROCK 3B supports multiple power supply options, smart power adapters, and fixed voltage:
+ROCK 3B / 3B+ supports multiple power supply options, smart power adapters, and fixed voltage:
 
 - USB PD 2.0 Support USB Type C PD 2.0, 9V/2A, 12V/2A, 15V/2A, 20V/2A
 

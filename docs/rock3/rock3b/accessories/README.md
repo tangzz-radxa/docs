@@ -4,7 +4,7 @@ sidebar_position: 99
 
 # 配件
 
-本页面列出了与 ROCK 3B 兼容的官方配件。
+本页面列出了与 ROCK 3B / 3B+ 兼容的官方配件。
 
 ## 配件列表
 
@@ -16,7 +16,7 @@ sidebar_position: 99
 | 摄像头   | Camera 8M 219      | 8MP IMX219 摄像头模块，广泛兼容的摄像头选择              | [查看详情](https://radxa.com/products/accessories/camera-8m-219)      |
 | 无线模块 | Wireless Module A8 | 支持 Wi-Fi 6 和蓝牙 5.2 的无线网卡模块                   | [查看详情](https://radxa.com/products/accessories/wireless-module-a8) |
 | PoE 扩展 | 25W PoE+ HAT       | 通过以太网供电的扩展板，支持 IEEE 802.3at 标准           | [查看详情](https://radxa.com/products/accessories/25w-poe-plus-hat)   |
-| 存储扩展 | eMMC Module        | 高速 eMMC 存储模块，提供 16GB/32GB/64GB/128GB 容量选择   | [查看详情](https://radxa.com/products/accessories/emmc-module)        |
+| 存储扩展 | eMMC Module        | 高速 eMMC 存储模块，提供 16GB/32GB/64GB/128GB 容量选择（仅适用于 ROCK 3B，ROCK 3B+ 已板载 eMMC） | [查看详情](https://radxa.com/products/accessories/emmc-module)        |
 | 存储扩展 | eMMC to uSD        | eMMC 转 microSD 卡适配器                                 | [查看详情](https://radxa.com/products/accessories/emmc-to-usd)        |
 | 存储扩展 | eMMC USB3 Reader   | USB 3.0 eMMC 读卡器，支持高速读写                        | [查看详情](https://radxa.com/products/accessories/emmc-usb3-reader)   |
 | 散热方案 | Heatsink 4012      | 通用型散热器，尺寸 40x12mm                               | [查看详情](https://radxa.com/products/accessories/heatsink-4012)      |

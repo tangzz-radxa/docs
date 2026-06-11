@@ -23,10 +23,10 @@ import Rkdeveloptool from "../../../../common/dev/\_rkdeveloptoolV3.mdx";
 
 2. 设备进入 maskrom 模式，连接到PC端
 
-- 断开瑞莎 ROCK 3B电源
-- 移除 SD 卡，eMMC 模块，NVME SSD
-- 用 USB 线缆（A-A）连接 Rock 3B 的 USB3.0 口 和 PC 端
-- 使用杜邦线短接 Maskrom Key，给瑞莎 ROCK 3B上电
+- 断开瑞莎 ROCK 3B / 3B+ 电源
+- 移除 SD 卡，eMMC 模块（ROCK 3B+ 无需移除，板载 eMMC），NVME SSD
+- 用 USB 线缆（A-A）连接 Rock 3B / 3B+ 的 USB3.0 口 和 PC 端
+- 使用杜邦线短接 Maskrom Key，给瑞莎 ROCK 3B / 3B+ 上电
 - 查看是否有 USB 设备
   - Linux/macOS: 检查执行 lsusb 后是否有显示 "Bus 001 Device 112: ID 2207:350a Fuzhou Rockchip Electronics Company"
   - Windows: 打开 RKDevTool 您会看到设备处于 "maskrom mode".
@@ -74,11 +74,11 @@ rkdeveloptool rd
 
 ## 启动系统
 
-- 按照上述步骤成功烧录 microSD 卡/ eMMC 后，插入 Radxa ROCK 3B 的对应插槽内。
-- ROCK 3B 的供电接口为 [USB 2.0 OTG Type C port](../../hardware-design/hardware-interface)，请使用 Type-C 线缆连接供电口和适配器。
+- 按照上述步骤成功烧录 microSD 卡/ eMMC 后，插入瑞莎 ROCK 3B / 3B+ 的对应插槽内。
+- ROCK 3B / 3B+ 的供电接口为 [USB 2.0 OTG Type C port](../../hardware-design/hardware-interface)，请使用 Type-C 线缆连接供电口和适配器。
 
 :::tip
-Radxa ROCK 3B 支持 QC 3.0/2.0 适配器, 9V/2A，12V/1.5A。瑞莎推荐使用 [Radxa Power PD30W](../../../../accessories/power/pd-30w)。
+瑞莎 ROCK 3B / 3B+ 支持 QC 3.0/2.0 适配器, 9V/2A，12V/1.5A。瑞莎推荐使用 [Radxa Power PD30W](../../../../accessories/power/pd-30w)。
 :::
 
 ## 参考文档
@@ -103,11 +103,11 @@ Radxa ROCK 3B 支持 QC 3.0/2.0 适配器, 9V/2A，12V/1.5A。瑞莎推荐使用
 1. 将 usb 线缆连接到主机
 2. 进入 maskrom 模式
 
-- 断开瑞莎 ROCK 3B电源
-- 移除 SD 卡和 eMMC 模块,插入 NVME SSD
-- 用 USB A-A 连接 Radxa ROCK 3B 的 USB3.0 口 和 PC 端
-- 使用杜邦线短接 Maskrom Key，给瑞莎 ROCK 3B上电
-- 给瑞莎 ROCK 3B上电
+- 断开瑞莎 ROCK 3B / 3B+ 电源
+- 移除 SD 卡和 eMMC 模块（ROCK 3B+ 无需移除，板载 eMMC），插入 NVME SSD
+- 用 USB A-A 连接瑞莎 ROCK 3B / 3B+ 的 USB3.0 口 和 PC 端
+- 使用杜邦线短接 Maskrom Key，给瑞莎 ROCK 3B / 3B+ 上电
+- 给瑞莎 ROCK 3B / 3B+ 上电
 - 查看是否有 USB 设备
   _ Linux/macOS: 检查执行 lsusb 后是否有显示 "Bus 001 Device 112: ID 2207:350a Fuzhou Rockchip Electronics Company"
   _ Windows: 打开 RKDevTool 您会看到设备处于 "maskrom mode".
