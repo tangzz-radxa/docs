@@ -60,7 +60,7 @@ If starting with iStoreOS system, the default username is root and the password 
 
 <TabItem value="withemmc" label="With onboard EMMC">
 
-Comes with factory-installed [iStoreOS](../istoreos) system, which boots automatically when powered on, no flashing required.
+Comes with factory-installed [iStoreOS](../download) system, which boots automatically when powered on, no flashing required.
 
 </TabItem>
 

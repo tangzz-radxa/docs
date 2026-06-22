@@ -60,7 +60,7 @@ import Etcher from '../../../common/general/\_etcherV2.mdx';
 
 <TabItem value="withemmc" label="带板载EMMC">
 
-出厂自带 [iStoreOS](../istoreos) 系统，上电自启动，不需要烧录。
+出厂自带 [iStoreOS](../download) 系统，上电自启动，不需要烧录。
 
 </TabItem>
 
