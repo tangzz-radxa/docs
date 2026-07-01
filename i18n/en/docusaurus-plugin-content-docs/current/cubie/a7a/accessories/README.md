@@ -26,4 +26,4 @@ This page lists the official accessories compatible with Cubie A7A.
 
 ## 3D-Printed Cases
 
-- [Third-Party 3D-Printed Cases](./3d-case): Community-designed cases for Cubie A7A
+- [Third-Party 3D-Printed Cases](/cubie/a7a/accessories/3d-case): Community-designed cases for Cubie A7A

@@ -27,4 +27,4 @@ sidebar_position: 99
 
 ## 3D 打印外壳
 
-- [第三方 3D 打印外壳](./3d-case)：社区设计的 ROCK 5B 专用外壳
+- [第三方 3D 打印外壳](/rock5/rock5b/accessories/3d-case)：社区设计的 ROCK 5B 专用外壳

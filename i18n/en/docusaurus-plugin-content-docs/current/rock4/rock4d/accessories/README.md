@@ -28,4 +28,4 @@ This page lists the official accessories compatible with ROCK 4D.
 
 ## 3D-Printed Cases
 
-- [Third-Party 3D-Printed Cases](./3d-case): Community-designed cases for ROCK 4D
+- [Third-Party 3D-Printed Cases](/rock4/rock4d/accessories/3d-case): Community-designed cases for ROCK 4D
